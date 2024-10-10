@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destino-visit-Burma</title>
+    <title>Destino-visit to Burma</title>
+    <link rel="icon" type="image/x-icon" href="images/Screenshot 2024-09-13 142916.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"> <!-- Material Symbols Outlined -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Sevillana&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      href="/C++/Web Application Development/pj-logo.jpg"
+      type="image.jpg"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+</head>
+  <style>
+    header {
+          position: relative;
+      width: 100%;
+      height: 700px;
+
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(images/Kachin.jpg);
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px); /* Apply blur to background */
+      z-index: -1; /* Make sure it's behind content */
+    }
+  
+    .logo {
+      border-radius: 50%;
+      margin-top:5px ;
+      margin-left: 30px;
+    }
+   
+    ul {
+      list-style-type: none;
+
+      margin-left: 300px;
+    }
+    li {
+      display: inline-block;
+      list-style-type: none;
+      background-color: #161D6f;
+      color: white;
+      padding: 5px 15px 5px 15px;
+      border-radius: 50px;
+      margin-top: 10px;
+      margin-right: 30px;
+      font-weight: bold;
+      
+    }
+    .nav-link {
+      color: whitesmoke;
+    }
+    
+   
+
+    .search-container {
+      position: absolute;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 50px;
+      padding: 5px;
+      margin: 10px;
+      padding: 0;
+    }
+
+    .search-input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      width: 150px;
+      font-size: 16px;
+      border-radius: 25px;
+    }
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 10px;
+      margin: 0;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .search-btn:hover .search-icon {
+      color: #007bff;
+    }
+    li:hover {
+      background-color: whitesmoke;
+      color: black;
+    }
+    
+    
+    .dropdown-item:hover {
+      color: rgb(36, 15, 226);
+
+    }
+
+pre {
+      color:whitesmoke;
+      font-size: 35px;
+     margin-top: 150px;
+     margin-left: 0;
+     padding-left: 0;
+     font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+    }
+        /* <!--style starter for section card --> */
+ place{
+      width: 100%;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+        }
+        place h1  {
+           margin-top: 3vw;
+            text-align: center;
+            color:#D27C2C ;
+        }
+        place h2  {
+          
+            text-align: center;
+            color:#D27C2C ;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            overflow: hidden; /* Hide overflowing cards */
+            position: relative; /* For arrow positioning */
+        }
+        .cards-wrapper {
+            display: flex;
+            transition: transform 0.5s ease; /* Smooth transition */
+        }
+        .card {
+            position: relative;
+            width:260px; /* Width of the cards */
+            height: 400px; /* Height of the cards */
+            margin: 20px;
+            text-decoration: none;
+            color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.6s ease;
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+        }
+        .card:hover{
+            transform: translateY(-20px);
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            height: auto;
+        }
+        .arrow {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for exact centering */
+            background-color: white; /* White background for visibility */
+            border: 2px solid black; /* Border color */
+            border-radius: 50%; /* Round button */
+            padding: 5px;
+            z-index: 1; /* Ensure arrows are above cards */
+            box-shadow: 0 4px 10px white;
+            display: none; /* Hide arrows initially */
+        }
+        .left-arrow {
+            left: 1px; /* Position closer to the first card */
+        }
+        .right-arrow {
+            right: 1px; /* Position closer to the fourth card */
+        }
+        .arrow.visible {
+            display: block; /* Show arrows when needed */
+        }
+
+/* background attachment fixed */
+article{
+  background-image: url(images/11.avif);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1; /* Make sure it's behind content */
+  overflow: hidden;
+  font-size: 45px;
+  color: rgb(218, 195, 69);
+  font-weight: 1000;
+  transition: 0.5s;
+  font-family: "Roboto Slab", serif;
+  margin-top: 7vw;
+}
+
+
+
+/* <!--second style starter for section card scrolling--> */
+main .sectioncard{
+   width: 65%;
+   height: 300px;
+   background-color:whitesmoke;
+   border-radius: 25px;
+   margin-top: 5vw;
+   margin-left: 17vw;
+  
+}
+
+main .sectioncard img{
+  width: 380px; 
+  height:260px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: 19px;
+  float: left;
+  overflow: hidden;
+  
+}  
+
+main .sectiontext  p{
+  color: black;
+  text-indent: 25px;
+  float: left;
+  width: 55%;
+  text-align: center;
+  margin-top: 1vw;
+ 
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  align-items: center; 
+  margin-left: 7vw;
+  margin-top: 2vw;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.button4:hover {
+  background-color: #555555;
+  color: white;
+}
+
+/* food in State */
+figure{
+  width: 100%;
+  height: 750px;
+  margin-top: 3vw;
+}
+figure h3{
+  font-weight: 700px;
+  text-align: center;
+  color: black;
+  margin-top: 4vw;
+  font-family: 'Poppons', sans-serif;
+}
+figure h4{
+  font-weight: 700px;
+  text-align: center;
+  color: #D27C2C;
+  font-family: 'Poppons', sans-serif;
+}
+figure .card{
+  width: 16rem; 
+  height: auto;
+  margin-top: 5vw;
+  margin-left: 3vw; 
+  border-radius: 25px;
+  width: 20%;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+figure .card img{
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  height: 200px;
+}
+
+/* background attachment */
+summary{
+  background-image: url(images/16.avif);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1; /* Make sure it's behind content */
+  overflow: hidden;
+  font-size: 45px;
+  color: rgb(218, 195, 69);
+  font-weight: 1000;
+  transition: 0.5s;
+  font-family: "Roboto Slab", serif;
+  margin-top: 7vw;
+}
+
+/* card hover section hotel section */
+section {
+  margin-top: 5vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+ 
+ 
+  
+}  
+.cardwwtg{
+  width: 325px;
+  height: 380px;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 2px 4px rgba(0,0,0, 0.3);
+  overflow: hidden;
+  float: left;
+  transition: transform 0.6s ease; 
+  margin-left: 2vw;
+ }
+.cardwwtg:hover{
+  transform: translateY(-20px);
+ } 
+ .cardwwtg img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  overflow: hidden;
+ } 
+ .card-content{
+  padding: 10px;
+ }
+ .card-content h1{
+  font-size: 24px;
+ }
+ .card-content p{
+  font-size: 13px;
+  color: black;
+  margin-bottom: 20px;
+ }
+ .button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  align-items: center; 
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 3vw;
+  overflow: hidden;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+/* gallery */
+aside{
+  margin-top: 3vw;
+  padding: 0;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 10px;
+}
+aside img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .grid-wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 150px; /* Default row height */
+            grid-auto-flow: dense;
+        }
+        .grid-wrapper > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-wrapper > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        /* Different heights for specific classes */
+        .grid-wrapper .tall {
+            grid-row: span 2; /* Makes the image twice the height */
+        }
+        .grid-wrapper .short {
+            grid-row: span 1; /* Default height */
+        }
+        .grid-wrapper .wide {
+            grid-column: span 2; /* Makes the image twice the width */
+        }
+        .grid-wrapper .big {
+            grid-column: span 2;
+            grid-row: span 2; /* Big image taking up more space */
+        }
+
+
+        picture{ 
+  height:30vw;
+  width:100% ;
+  text-align: center;  
+  float: left;  
+  margin-top: 6vw;
+
+    }
+
+     
+</style>
+  </header>
+<body>
+  <header>
+    
+    <!--Navigation Bar-->
+    <!--Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="70px" height="70px">
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!--Home-->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+            </li>
+            <!--Where to go-->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="index.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Where to go
+              </a>
+              <ul class="dropdown-menu">
+                <a class="dropdown-item" href="Yangon.html">Yangon Region</a>
+                <a class="dropdown-item" href="Mandalay.html">Mandalay Region</a>
+                <a class="dropdown-item" href="Saging.html">Saging Region</a>
+                <a class="dropdown-item" href="Bago.html">Bago Region</a>
+                <a class="dropdown-item" href="Ayeyawady.html">Ayeyarwady</a>
+                <a class="dropdown-item" href="Taninthayi.html">Tanintharyi Region</a>
+                <a class="dropdown-item" href="Mgaway.html">Magway Region</a>
+                <a class="dropdown-item" href="Kachin.html">Kachin State</a>
+                <a class="dropdown-item" href="Kayain.html">Kayin State</a>
+                <a class="dropdown-item" href="Kayar.html">Kayar State</a>
+                <a class="dropdown-item" href="Chinstate.html">Chin State</a>
+                <a class="dropdown-item" href="Mon.html">Mon State</a>
+                <a class="dropdown-item" href="Shan.html">Shan State</a>
+                <a class="dropdown-item" href="Rakhine.html">Rakhine State</a>
+               
+               </ul>
+            <!--Events & Festival-->
+            <li class="nav-item">
+              <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
+            </li>
+            <!--About Us-->
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <!--Search box-->
+            <form class="d-flex">
+              <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+                <input 
+                  type="text"
+                  placeholder="Search..."
+                  class="search-input"
+                />
+                <button class="search-btn" type="submit">
+                </button>
+              </div>
+            </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Home page texts-->
+    <pre>
+      WELCOME TO  DESTINO 
+         TRAVEL OVER                 
+            AROUND BURMA      
+            
+    </pre>
+  </header>
+
+
+  <place><!--here is the stater for section card-->
+    <h1 id="sectionA">Some Attractive Places</h1>
+    <h2>In Burma</h2>
+    <div class="container" id="cardContainer">
+        <div class="cards-wrapper" id="cardsWrapper">
+            <a href="Kachin.html" class="card">
+                <img src="images/1.avif" alt="Image 1">
+                <div class="caption">Kalaw<br>Shan State</div>
+            </a>
+            <a href="Chinstate.html" class="card">
+                <img src="images/10.avif" alt="Image 2">
+                <div class="caption">Image 2</div>
+            </a>
+            <a href="Kayar.html" class="card">
+                <img src="images/11.avif" alt="Image 3">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Mon.html" class="card">
+                <img src="images/12.avif" alt="Image 4">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            
+            <a href="Rakhine.html" class="card hidden">
+                <img src="images/13.avif" alt="Image 5">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Mandalay.html" class="card hidden">
+                <img src="images/13.avif" alt="Image 6">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Yangon.html" class="card hidden">
+                <img src="images/14.avif" alt="Image 7">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Taninthayi.html" class="card hidden">
+                <img src="images/15.avif" alt="Image 8">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Shan.html" class="card hidden">
+              <img src="images/16.avif" alt="Image 9">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="Mgaway.html" class="card hidden">
+              <img src="images/17.avif" alt="Image 10">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+
+          <a href="Chinstate.html" class="card hidden">
+            <img src="images/2.avif" alt="Image 11">
+            <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Kayar.html" class="card hidden">
+                <img src="images/29.jpeg" alt="Image 12">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Saging.html" class="card hidden">
+              <img src="images/Saging.jpg" alt="Image 13">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="Chinstate.html" class="card hidden">
+              <img src="images/heartlake.jpg" alt="Image 14">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+                
+          <a href="Kayar.html" class="card hidden">
+            <img src="images/kalaw.jpg" alt="Image 15">
+            <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+        </a>
+  
+        <a href="Yangon.html" class="card hidden">
+          <img src="images/Yangon.jpg" alt="Image 16">
+          <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+      </a>
+      <a href="Rakhine.html" class="card hidden">
+          <img src="images/Rakhine.jpg" alt="Image 17">
+          <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+      </a>
+      <a href="Saging.html" class="card hidden">
+        <img src="images/Saging.jpg" alt="Image 18">
+        <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+    </a>
+    <a href="Kachin.html" class="card hidden">
+        <img src="images/putao.jpg" alt="Image 19">
+        <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+    </a>
+  
+    <a href="Mon.html" class="card hidden">
+      <img src="images/Mon.jpg" alt="Image 20">
+      <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+  </a>
+  <a href="Chinstate.html" class="card hidden">
+    <img src="images/chin.jpg" alt="Image 21">
+    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+  </a>
+  <a href="Mandalay.html" class="card hidden">
+    <img src="images/Madalay.jpg" alt="Image 22">
+    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+  </a>
+  <a href="Taninthayi.html" class="card hidden">
+    <img src="images/Taninthayi.jpg" alt="Image 23">
+    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+  </a>
+  <a href="Saging.html" class="card hidden">
+    <img src="images/Saging.jpg" alt="Image 24">
+    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+  </a>
+            </div>
+     <!-- Arrows for showing more cards -->
+     <div class="arrow left-arrow" id="showMoreLeft">
+        <span class="material-symbols-outlined">arrow_back_ios</span>
+    </div>
+    <div class="arrow right-arrow" id="showMoreRight">
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+    </div>
+</div>
+
+        <!-- Arrows for showing more cards -->
+        <div class="arrow left-arrow" id="showMoreLeft">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </div>
+        <div class="arrow right-arrow" id="showMoreRight">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </div>
+    </div>
+
+    <script>
+        const cardsWrapper = document.getElementById('cardsWrapper');
+        const showMoreLeft = document.getElementById('showMoreLeft');
+        const showMoreRight = document.getElementById('showMoreRight');
+        const totalCards = document.querySelectorAll('.card').length;
+        const visibleCards = 4; // Number of cards to show at once
+        let currentIndex = 0;
+
+        function updateCardPosition() {
+            const offset = currentIndex * (130 + 20); // Card width + margin
+            cardsWrapper.style.transform = `translateX(-${offset}px)`;
+
+            // Show or hide arrows based on the current index
+            showMoreLeft.classList.toggle('visible', currentIndex > 0);
+            showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
+        }
+
+        showMoreRight.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= totalCards - visibleCards + 1) {
+                currentIndex = totalCards - visibleCards; // Stop at the last visible card
+            }
+            updateCardPosition();
+        });
+
+        showMoreLeft.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = 0; // Stay at the start
+            }
+            updateCardPosition();
+        });
+
+        // Initialize visibility on page load
+        updateCardPosition();
+    </script>
+  </place>
+
+
+  <article>
+    <h1 style="margin-left: 8vw;  margin-top: 9vw;">Have you ever been to Cin?<br>Let's Explore Explore breathtaking landscapes and vibrant cultures. </h1>
+
+  </article>
+
+ <!-- card rolling  -->
+ <main>
+    <div class="sectioncard" ><!--here is next part for section(where to go page)-->
+      <a href="content.html"><img src="images/hpa an.jpg" width="370px" height="370px"></a>
+      <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Yangon</p></b></div>
+      <!-- <h1 class="sectionheader">Yangon</h1> -->
+      <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+      <div><a href="content.html"><button class="button4">Learn More</button></div></a>
+    </div>
+      
+  
+      <div class="sectioncard" style="margin-top: 4vw;">
+        <a href="content.html"><img src="images/bagan.jpg" width="370px" height="370px"></a>
+       <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Bagan</p></b></div>
+        <!-- <h1 class="sectionheader">Yangon</h1> -->
+        <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+        <div><a href="content.html"><button class="button4">Learn More</button></div></a>
+      </div>
+  
+      
+      <div class="sectioncard" style="margin-top: 4vw;">
+        <a href="content.html"><img src="images/kalaw.jpg" width="370px" height="370px"></a>
+       <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Kalaw</p></b></div>
+        <!-- <h1 class="sectionheader">Yangon</h1> -->
+        <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+        <div><a href="content.html"><button class="button4">Learn More</button></div></a>
+      </div>
+  
+      
+      <div class="sectioncard" style="margin-top: 4vw;">
+        <a href=""><img src="images/putao.jpg" width="370px" height="370px"></a>
+       <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;">Putao</p></b></div>
+        <!-- <h1 class="sectionheader">Yangon</h1> -->
+        <p>Brazilian Carnival takes place annually, between the months of February and March, 47 days before Easter, culminating in an intense week of celebrations before Ash Wednesday in many Brazilian cities. </p></div> 
+        <div><a href="content.html"><button class="button4">Learn More</button></div></a>
+      </main>
+
+
+<!-- traditional food in chin -->
+<figure>
+<h3>Food is not rational. Food is culture, habit, craving and identity.</h3>
+<h4>Popular in Chin,Myanmar</h4>
+<div class="card">
+<img src="images/29.jpeg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Sabuti</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Sabuti is one of the most famous traditional foods from Chin State Myanmar. It's a daily dish served in Chin State, and it is a kind of corn soup cooked with pure corn. It's served with some slices of delicious fried beef, a slice of lime, spicy chili salad and some salt. People who have once tasted it, want to try more. As Sabuti is made of corn, it gives you energy and strength for your body.</p>
+</div>
+</div>
+ 
+<div class="card">
+<img src="images/29.jpeg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Sabuti</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Sabuti is one of the most famous traditional foods from Chin State Myanmar. It's a daily dish served in Chin State, and it is a kind of corn soup cooked with pure corn. It's served with some slices of delicious fried beef, a slice of lime, spicy chili salad and some salt. People who have once tasted it, want to try more. As Sabuti is made of corn, it gives you energy and strength for your body.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/29.jpeg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Sabuti</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Sabuti is one of the most famous traditional foods from Chin State Myanmar. It's a daily dish served in Chin State, and it is a kind of corn soup cooked with pure corn. It's served with some slices of delicious fried beef, a slice of lime, spicy chili salad and some salt. People who have once tasted it, want to try more. As Sabuti is made of corn, it gives you energy and strength for your body.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/29.jpeg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Sabuti</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Sabuti is one of the most famous traditional foods from Chin State Myanmar. It's a daily dish served in Chin State, and it is a kind of corn soup cooked with pure corn. It's served with some slices of delicious fried beef, a slice of lime, spicy chili salad and some salt. People who have once tasted it, want to try more. As Sabuti is made of corn, it gives you energy and strength for your body.</p>
+</div>
+</div>
+</figure>
+
+<summary>
+  <h1 style="margin-left: 8vw;  margin-top: 9vw;">Choose from luxury hotels to cozy hostels. </h1>
+  <h2 style="margin-left: 8vw; font-family: Roboto Slab, serif;">Book your perfect retreat with ease</h2>
+</summary>
+
+
+
+    <section>
+      <div class="cardwwtg">
+          <img src="images/imagestwo.jpg" alt="no image">
+          <div class="card-content">
+            <h1>Title Two</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
+            <div><a href=""><button class=" button5">Learn More</button></a></div>
+          </div>
+          </div>
+
+          <div class="cardwwtg">
+              <img src="images/imagestwo.jpg" alt="no image">
+              <div class="card-content">
+                <h1>Title Two</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
+                <div><a href=""><button class="button5">Learn More</button></a></div>
+              </div>
+              </div>
+
+              <div class="cardwwtg">
+                  <img src="images/imagestwo.jpg" alt="no image">
+                  <div class="card-content">
+                    <h1>Title Two</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum !</p>
+                    <div><a href=""><button class="button5">Learn More</button></a></div>
+                  </div>
+                  </div>
+
+                  <div class="cardwwtg">
+                      <img src="images/imagestwo.jpg" alt="no image">
+                      <div class="card-content">
+                        <h1>Title Two</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
+                        <div><a href=""><button class=" button5">Learn More</button></a></div>
+                      </div>
+                      </div>
+  </section>
+
+  <aside>
+    <div class="grid-wrapper">
+      <div class="tall"><img src="images/1.avif" alt="Description of image 1" loading="lazy"></div>
+      <div class="short"><img src="images/2.avif" alt="Description of image 2" loading="lazy"></div>
+      <div><img src="images/3.avif" alt="Description of image 3" loading="lazy"></div>
+      <div class="wide"><img src="images/4.avif" alt="Description of image 4" loading="lazy"></div>
+      <div><img src="images/5.avif" alt="Description of image 5" loading="lazy"></div>
+      <div class="tall"><img src="images/6.avif" alt="Description of image 6" loading="lazy"></div>
+      <div><img src="images/7.avif" alt="Description of image 7" loading="lazy"></div>
+      <div><img src="images/8.avif" alt="Description of image 8" loading="lazy"></div>
+      <div class="big"><img src="images/9.avif" alt="Description of image 9" loading="lazy"></div>
+      <div><img src="images/10.avif" alt="Description of image 10" loading="lazy"></div>
+      <div><img src="images/10.avif" alt="Description of image 11" loading="lazy"></div>
+      <div><img src="images/11.avif" alt="Description of image 12" loading="lazy"></div>
+      <div class="tall"><img src="images/12.avif" alt="Description of image 13" loading="lazy"></div>
+      <div><img src="images/13.avif" loading="lazy"></div>
+      <div><img src="images/14.avif" alt="Description of image 15" loading="lazy"></div>
+      <div><img src="images/15.avif" alt="Description of image 14" loading="lazy"></div>
+      <div><img src="images/16.avif" alt="Description of image 15" loading="lazy"></div>
+      <div><img src="images/17.avif" alt="Description of image 15" loading="lazy"></div> 
+  </div>
+  </aside>
+
+
+  <picture>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28751.29986958056!2d94.99800505240906!3d25.740407574480354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3747f84067adb8a3%3A0x98848fa562e7f237!2sSaramati%20Peak!5e0!3m2!1sen!2smm!4v1725718962802!5m2!1sen!2smm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </picture>
+
+
+</body>
+</html>
