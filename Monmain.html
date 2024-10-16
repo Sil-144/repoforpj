@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destino-visit-Burma</title>
-    <meta name="Description" content="Explore the enchanting beauty of Burma (Myanmar) with our comprehensive travel guide. Discover breathtaking landscapes, rich culture, vibrant cities, and hidden gems. Plan your adventure today and experience the warmth of Burmese hospitality.">
-    <meta name="keywords" content="Burma travel, Myanmar tourism, explore Myanmar, Burma attractions, travel guide Myanmar, Burmese culture, adventure in Burma, Mandalay, Bagan, Inle Lake, Yangon, historical sites, local cuisine, travel tips Burma">
+    <meta name="Description" content="Dive into our in-depth articles about Burma (Myanmar) featuring travel tips, must-visit destinations, cultural insights, and local experiences. Plan your journey with expert advice and discover the wonders of this captivating country.">
+    <meta name="keywords" content="Burma travel tips, Myanmar destinations, cultural insights, travel articles, things to do in Burma, local experiences, Myanmar travel guide, adventure travel Burma, hidden gems Myanmar">
     <meta name="author" content="Cheerful Chums">
     <link rel="icon" type="image/x-icon" href="images/Screenshot 2024-09-13 142916.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"> <!-- Material Symbols Outlined -->
@@ -13,16 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Sevillana&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/logoi.png" type="image.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="/C++/Web Application Development/pj-logo.jpg" type="image.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
- 
   <style>
     header {
-      position: relative;
+          position: relative;
       width: 100%;
-      height: 500px;
+      height: 700px;
 
     }
     header::before {
@@ -32,64 +31,43 @@
       left: 0;
       width: 100%;
       height: 100%;
+      background-image: url(images/Mon.jpg);
+      background-attachment: fixed;
       background-size: cover;
       background-position: center;
       filter: blur(3px); /* Apply blur to background */
       z-index: -1; /* Make sure it's behind content */
     }
-    .navbar {
-      position: relative;
-      top:0;
-    }
-
-    header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-}
-    header {
-  position: relative;
-  height: 100vh; /* Full screen height */
-  overflow: hidden; /* Prevents video overflow */
-     
-}
-    
+  
     .logo {
-      width: 100px;
-      height: auto;
-      margin-top:5px ;
-      margin-left: 20px;
       border-radius: 50%;
-      
-}
+      margin-top:5px ;
+      margin-left: 30px;
+    }
    
-    nav ul {
+    ul {
       list-style-type: none;
 
-      margin-left: 300px;}
-    nav li {
+      margin-left: 300px;
+    }
+    li {
       display: inline-block;
       list-style-type: none;
       background-color: #161D6f;
-      color: #fff;
+      color: white;
       padding: 5px 15px 5px 15px;
       border-radius: 50px;
       margin-top: 10px;
       margin-right: 30px;
       font-weight: bold;
       
-}
+    }
     .nav-link {
       color: whitesmoke;
-}
+    }
+    
+   
 
-    
-    
-  
     .search-container {
       position: absolute;
       right: 20px;
@@ -101,7 +79,7 @@ body, html {
       padding: 5px;
       margin: 10px;
       padding: 0;
-}
+    }
 
     .search-input {
       border: none;
@@ -110,7 +88,7 @@ body, html {
       width: 150px;
       font-size: 16px;
       border-radius: 25px;
-}
+    }
 
     .search-btn {
       background-color: transparent;
@@ -118,70 +96,46 @@ body, html {
       cursor: pointer;
       padding: 0 10px;
       margin: 0;
-}
+    }
 
     .search-icon {
       font-size: 20px;
       color: #555;
-}
+    }
 
     .search-btn:hover .search-icon {
       color: #007bff;
-}
+    }
     li:hover {
       background-color: whitesmoke;
       color: black;
-}
+    }
     
-    #bgVideo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: -1; /* Ensures video stays behind the content */
-}
-
-/* Style for the header content */
-.header-content {
-  position: relative;
-  z-index: 1; /* Ensures the content appears above the video */
-  text-align: center;
-  color: white;
-  font-family: Arial, sans-serif;
-  top: 50%;
-  transform: translateY(-50%); /* Center vertically */
-}
-h1 {
-  color: whitesmoke ; /* Custom color for the h1 tag */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Optional: change font */
-  font-size: 50px;
-  font-weight: bold;
-}
-
-p {
-  color:rgb(240, 224, 224); /* Custom color for the p tag */
-  font-family: 'Verdana', sans-serif; /* Optional: change font */
-  font-size: 30px;
-}
-
-.destino {
-  color: yellowgreen;
-}
-.burma{
-  color: rgb(218, 195, 69);
-  font-weight: bold;
-}
     
+    .dropdown-item:hover {
+      color: rgb(36, 15, 226);
+
+    }
+
+pre {
+      color:whitesmoke;
+      font-size: 35px;
+     margin-top: 150px;
+     margin-left: 0;
+     padding-left: 0;
+     font-family: "Jacques Francois Shadow", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+    }
         /* <!--style starter for section card --> */
- place{
+        place{
       width: 100%;
-      height: 700px;
+      height: 580px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #f0f0f0;
+      
       font-family: Arial, sans-serif;
         }
         place h1  {
@@ -261,39 +215,201 @@ p {
 
 
 
-
-figure{
- background-image: url(images/14.avif);
-}
-
 /* background attachment fixed */
 article{
-  background-image: url(images/heartlake.jpg);
+  background-image: url(images/mon28.jpg);
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   z-index: -1; /* Make sure it's behind content */
   overflow: hidden;
+  font-size: 45px;
+  color: white;
+  font-weight: 1000;
   transition: 0.5s;
+  font-family: "Roboto Slab", serif;
+  margin-top: 7vw;
 }
-        /* gallery */
-.gallary {
-  box-sizing: border-box;
-  background: #717379;
+
+
+
+/* <!--second style starter for section card scrolling--> */
+main .sectioncard{
+   width: 65%;
+   height: 300px;
+   background-color:whitesmoke;
+   border-radius: 25px;
+   margin-top: 5vw;
+   margin-left: 17vw;
+  
+}
+
+main .sectioncard img{
+  width: 380px; 
+  height:260px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: 19px;
+  float: left;
+  overflow: hidden;
+  
+}  
+
+main .sectiontext  p{
+  color: black;
+  text-indent: 25px;
+  float: left;
+  width: 55%;
+  text-align: center;
+  margin-top: 1vw;
  
 }
-.gallary p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color:black;
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  align-items: center; 
+  margin-left: 7vw;
+  margin-top: 2vw;
+  border-radius: 8px;
+  padding: 8px;
 }
-.myanmar {
-  color: #d3d3ca;
-  font-weight: bold;
-  font-size: 50px;
+
+.button4:hover {
+  background-color: #555555;
+  color: white;
 }
-.gallary img {
+
+/* food in State */
+figure{
+  width: 100%;
+  height: 750px;
+  margin-top: 3vw;
+}
+figure h3{
+  font-weight: 700px;
+  text-align: center;
+  color: black;
+  margin-top: 4vw;
+  font-family: 'Poppons', sans-serif;
+  font-size: 45px;
+}
+figure h4{
+  font-weight: 700px;
+  text-align: center;
+  color: #D27C2C;
+  font-family: 'Poppons', sans-serif;
+  font-size: 35px;
+}
+figure .card{
+  width: 16rem; 
+  height: auto;
+  margin-top: 5vw;
+  margin-left: 3vw; 
+  border-radius: 25px;
+  width: 20%;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+figure .card img{
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  height: 200px;
+}
+
+/* background attachment */
+summary{
+  background-image: url(images/mon27.webp);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1; /* Make sure it's behind content */
+  overflow: hidden;
+  font-size: 45px;
+  color: rgb(218, 195, 69);
+  font-weight: 1000;
+  transition: 0.5s;
+  font-family: "Roboto Slab", serif;
+  margin-top: 7vw;
+}
+
+/* card hover section hotel section */
+section {
+  margin-top: 5vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+ 
+ 
+  
+}  
+.cardwwtg{
+  width: 325px;
+  height: 380px;
+  border-radius: 10px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0px 2px 4px rgba(0,0,0, 0.3);
+  overflow: hidden;
+  float: left;
+  transition: transform 0.6s ease; 
+  margin-left: 2vw;
+ }
+.cardwwtg:hover{
+  transform: translateY(-20px);
+ } 
+ .cardwwtg img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  overflow: hidden;
+ } 
+ .card-content{
+  padding: 10px;
+ }
+ .card-content h1{
+  font-size: 24px;
+ }
+ .card-content p{
+  font-size: 13px;
+  color: black;
+  margin-bottom: 20px;
+ }
+ .button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  align-items: center; 
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 3vw;
+  overflow: hidden;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+/* gallery */
+aside{
+  margin-top: 3vw;
+  padding: 0;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 10px;
+}
+aside img {
             max-width: 100%;
             height: auto;
             vertical-align: middle;
@@ -329,180 +445,87 @@ article{
         }
         .grid-wrapper .big {
             grid-column: span 2;
-            grid-row: span 2;
-        } 
+            grid-row: span 2; /* Big image taking up more space */
+        }
 
 
-section {
-  background-image: url(images/hp19.jpg);
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  
-  overflow: hidden;
-  font-size: 45px;
-  color: rgb(218, 195, 69);
-  font-weight: 600;
-  transition: 0.5s;
-  font-family: "Roboto Slab", serif;
-  margin-top: 7vw;
- 
-}
-       /* footer */
+        picture{ 
+  height:30vw;
+  width:100% ;
+  text-align: center;  
+  float: left;  
+  margin-top: 6vw;
 
-footer{
-    background-color: #111;
-    padding-top: 5px;
-    margin: 0;
-    box-sizing: border-box;
-}
-.footerContainer{
-    width: 100%;
-    padding: 70px 30px 20px;
-}
-.socialIcons{
-    display: flex;
-    justify-content: center;
-}
-.socialIcons a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialIcons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0.9;
-}
-
-/*hover effect*/
-.socialIcons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-}
-.footerNav{
-    margin: 30px 0;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: nonedisc;
-    text-decoration: none;
-}
-.footerNav ul li a{
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-.footerBottom{
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-.footerBottom p{
-    color: white;
-}
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 2px 5px;
-}
-@media (max-width: 700px){
-    .footerNav ul{
-        flex-direction: column;
     }
 
-    .footerNav ul li{
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
-}
-  </style>
-  <body>
-    <header>
-      <!--Navigation Bar-->
-       <!--Logo-->
-       
-       </ul><nav class="navbar navbar-expand-lg navbar-light">
-         <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-         <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             <li class="nav-item">
-               <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
-             </li>
-             <li class="nav-item">
-                 <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
-               </li>
-         
-   <script>
-         function showMore() {
-           const moreRegions = document.getElementById('moreRegions');
-           const showMoreBtn = document.getElementById('showMoreBtn');
-       
-           // Toggle the visibility of the hidden regions
-           if (moreRegions.style.display === 'none') {
-             moreRegions.style.display = 'block';  // Show the hidden regions
-             showMoreBtn.textContent = 'Show Less...';  // Change button text
-           } else {moreRegions.style.display = 'none';  // Hide the regions again
-         showMoreBtn.textContent = 'Show More...';  // Reset button text
-       }
-     }
-   </script>
      
-       <!--Events & Festival-->
-         <li class="nav-item">
-           <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
-         </li>
-         <!--About Us-->
-         <li class="nav-item">
-           <a class="nav-link" href="aboutus.html">About Us</a>
-         </li>
-   <!--Search box-->
-       <form class="d-flex">
-         <div class="search-container">
-           <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
-           <input 
-             type="text"
-             placeholder="Search..."
-             class="search-input"
-           />
-           <button class="search-btn" type="submit">
-           </button>
-         </div>
-       </form>
-       </div>
-       </div>
-       </nav>
-     <!--Navigation Bar End-->
-     
-       <video autoplay muted loop id="bgVideo">
-         <source src="images/video_2024-10-07_20-54-20.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
-     
-       <div class="header-content">
-         <h1>Welcome to Our <span class="destino">Destino</span> Website</h1>
-         <p>Explore the beauty of <span class="burma">BURMA</span> through our lens</p>
-       </div>
-
+</style>
   </header>
+<body>
+  <header>
+    <!--Navigation Bar-->
+     <!--Logo-->
+     
+     </ul><nav class="navbar navbar-expand-lg navbar-light">
+       <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
+       <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+             <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
+             </li>
+       
+ <script>
+       function showMore() {
+         const moreRegions = document.getElementById('moreRegions');
+         const showMoreBtn = document.getElementById('showMoreBtn');
+     
+         // Toggle the visibility of the hidden regions
+         if (moreRegions.style.display === 'none') {
+           moreRegions.style.display = 'block';  // Show the hidden regions
+           showMoreBtn.textContent = 'Show Less...';  // Change button text
+         } else {moreRegions.style.display = 'none';  // Hide the regions again
+       showMoreBtn.textContent = 'Show More...';  // Reset button text
+     }
+   }
+ </script>
+   
+     <!--Events & Festival-->
+       <li class="nav-item">
+         <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
+       </li>
+       <!--About Us-->
+       <li class="nav-item">
+         <a class="nav-link" href="aboutus.html">About Us</a>
+       </li>
+ <!--Search box-->
+     <form class="d-flex">
+       <div class="search-container">
+         <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+         <input 
+           type="text"
+           placeholder="Search..."
+           class="search-input"
+         />
+         <button class="search-btn" type="submit">
+         </button>
+       </div>
+     </form>
+     </div>
+     </div>
+     </nav>
+   <!--Navigation Bar End-->
+    <pre>
+      WELCOME TO  DESTINO 
+          Let's Explore                                          
+             the Wonders of Mon State         
+     
+            
+    </pre>
+  </header>
+
 
   <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
@@ -671,63 +694,157 @@ footer{
 updateCardPosition();
 </script>
   </place>
-       <!-- <-- gallery -->  
 
-      <figure>
+  <article>
+    <h1 style="margin-left: 8vw;  margin-top: 9vw;">Have you ever been to Mon State?<br>Let's Explore Explore breathtaking landscapes and vibrant cultures. </h1>
 
+  </article>
 
-      </figure>
+ <!-- card rolling  -->
+   <main>
+  <div class="sectioncard" ><!--here is next part for section(where to go page)-->
+    <a href="Montext1.html"><img src="images/mon2.jpg" width="370px" height="370px"></a>
+    <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Kyaiktiyo Pagoda</p></b></div>
+    <!-- <h1 class="sectionheader">Yangon</h1> -->
+    <p>The Kyaiktiyo Pagoda or the Golden Rock Pagoda is the most important and visited by pilgrims all over the world. Other important pagodas include Kyaik Paw Law Pagoda, Shwe Sar Yan Pagoda, Win Sein Taw Ya Pagoda and Kyauktalone Taung Pagoda. </p></div> 
+    <div><a href="Montext1.html"><button class="button4">Read More</button></div></a>
+  </div>
+  
+    <div class="sectioncard" style="margin-top: 4vw;">
+      <a href="Montext2.html"><img src="images/mon13.jpg" width="370px" height="370px"></a>
+     <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Win Sein Tawya Monastery</p></b></div>
+      <!-- <h1 class="sectionheader">Yangon</h1> -->
+      <p>This amazing reclining Buddha is located in Mawlamyine, a small town located about 5 hours 30 minutes away from Yangon. You can take a bus, taxi or train to reach Mawlamyine. The statue is pretty huge and can be spotted from miles away.</p></div> 
+      <div><a href="Montext2.html"><button class="button4">Read More</button></div></a>
+    </div>
+
+    <div class="sectioncard" style="margin-top: 4vw;">
+      <a href="Montext3.html"><img src="images/mon4.jpg" width="370px" height="370px"></a>
+     <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">ShweZaYan Pagoda</p></b></div>
+      <!-- <h1 class="sectionheader">Yangon</h1> -->
+      <p>Shwe Sar Yan is a remarkable temple located in Thaton, Myanmar, known for its stunning architecture and rich cultural heritage.The temple is adorned with intricate carvings and vibrant murals that depict Buddhist teachings, making it a captivating site for those interested in history and spirituality. </p></div> 
+      <div><a href="Montext3.html"><button class="button4">Read More</button></div></a>
+    </div>
+
     
-      <aside>
-        <div class="grid-wrapper">
-          <div class="tall"><img src="images/hp1.jpg" alt="Description of image 1" loading="lazy"></div>
-          <div class="short"><img src="images/hp2.jpg" alt="Description of image 2" loading="lazy"></div>
-          <div><img src="images/hp3.jpg" alt="Description of image 3" loading="lazy"></div>
-          <div class="wide"><img src="images/165433947700.jpg" alt="Description of image 4" loading="lazy"></div>
-          <div><img src="images/hp5.jpg" alt="Description of image 5" loading="lazy"></div>
-          <div class="tall"><img src="images/hpa an.jpg" alt="Description of image 6" loading="lazy"></div>
-          <div><img src="images/hp7.jpg" alt="Description of image 7" loading="lazy"></div>
-          <div><img src="images/Shan.jpg" alt="Description of image 8" loading="lazy"></div>
-          <div class="big"><img src="images/hp19.jpg" alt="Description of image 9" loading="lazy"></div>
-          <div><img src="images/hp10.jpg" alt="Description of image 10" loading="lazy"></div>
-          <div><img src="images/hp11.jpg" alt="Description of image 11" loading="lazy"></div>
-          <div><img src="images/hp12.jpg" alt="Description of image 12" loading="lazy"></div>
-          <div class="tall"><img src="images/hp13.jpg" alt="Description of image 13" loading="lazy"></div>
-          <div><img src="images/hp14.jpg" loading="lazy"></div>
-          <div><img src="images/hp15.jpg" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/hp16.jpg" alt="Description of image 14" loading="lazy"></div>
-          <div><img src="images/hp17.webp" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/hp18.jpg" alt="Description of image 15" loading="lazy"></div> 
-      </div>
-      </aside>
+    <div class="sectioncard" style="margin-top: 4vw;">
+      <a href="Montext4.html"><img src="images/mon5.webp" width="370px" height="370px"></a>
+     <div class="sectiontext"><div><b><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Death Railway and Museum</p></b></div>
+      <!-- <h1 class="sectionheader">Yangon</h1> -->
+      <p>The museum is situated in the town of Thanbyuzayat. It is well known as the Death Railway due to many people died during construction.</p></div> 
+      <div><a href="Montext4.html"><button class="button4">Read More</button></div></a>
+    </main>
 
-      <section>
-        <h1 style="margin-left: 8vw;  margin-top: 9vw;">Haven't decided yet?<br>Let us inspire you even more. </h1>
-      </section>
 
-    <footer>
-        <div class="footerContainer">
-            <div class="socialIcons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-google-plus"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="footerNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="aboutus.html">Our Team</a></li>
-                </ul>
-            </div>
-           
-        </div>
-        <div class="footerBottom">
-             <p>Copyright &copy;2024;Designed by <span class="designer">Cheerful Chums</span></p>
-        </div>
-        </footer>
+<!-- traditional food in chin -->
+<figure>
+<h3>Food is not rational. Food is culture, habit, craving and identity.</h3>
+<h4>Popular in Mon,Myanmar</h4>
+<div class="card">
+<img src="images/mon29.jpg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Mawlamyine mohinga</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Mohinga is the national dish of Myanmar. Mohinga is fish soup made with rice noodles, typically served as a hearty breakfast. It features a rich broth flavored with lemongrass, turmeric, and fish sauce, often garnished with boiled eggs, cilantro, and crispy fritters.Mawlamyine mohinga cooked to a thinner broth consistency with boiled peas, green beans, mint, fish cakes, and jaggery,</p>
+</div>
+</div>
+ 
+<div class="card">
+<img src="images/pic7.jpg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Thingyan Hta-Min</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Thingyan Rice is the traditional Mon dish and the most popular dish of the Mon State. It is a bit tricky to cook. The rice is infused with wax extracted from burning candle and eats together with the fried salted fish and mango salad.Although it is popular as a Thingyan traditional food, the people from Mon State eat not only as a breakfast but also as a snack/light food at any time.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/pic9.jpg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Ohn No Khao Swe</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word;">Ohn No Khao Swe is a traditional dish from the Mon ethnic group in Myanmar (Burma). It is a rich, flavorful noodle soup that features a combination of chicken, coconut milk, and a variety of spices. The dish typically includes egg noodles, which are cooked until tender and then served in a creamy broth made with coconut milk, garlic, ginger, and sometimes turmeric for color and flavor.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/pic8.jpg" class="card-img-top" alt="no image">
+<div class="card-body">
+  <h1 style="color: #D27C2C;">Bamboo Shoot Salad</h1>
+  <p class="card-text" style="text-indent: 25px;text-align: justify;text-justify: inter-word">Bamboo Shoot Salad, known as "Ngapi Thoke" in Mon cuisine, is a refreshing and tangy dish that showcases the unique flavors of bamboo shoots, which are a staple ingredient in many Southeast Asian cuisines. This salad is particularly beloved by the Mon people in Myanmar for its crunchy texture and vibrant taste.</p>
+</div>
+</div>
+</figure>
+
+<summary>
+   <h1 style="margin-left: 8vw;  margin-top: 9vw;">Choose from luxury hotels to cozy hostels. </h1>
+  <h2 style="margin-left: 8vw; font-family: Roboto Slab, serif;">Book your perfect retreat with ease</h2>
+  <p style="text-align: justify;text-justify: inter-word; text-indent: 20px;color: white;margin-left: 8vw;font-size: 20px;margin-right: 55vw;">In Mon State, travelers can enjoy a range of accommodations, from traditional guesthouses to modern lodges. Many options offer stunning mountain views and easy access to trekking trails. Experience the warm hospitality of the Mon people, making your stay truly memorable.</p>
+</summary>
+
+
+
+    <section>
+      <div class="cardwwtg">
+          <img src="images/mon25.JPEG" alt="no image">
+          <div class="card-content">
+            <h1>Thuwunnabumi Hotel</h1>
+            <p>Located around a 10-minute walk from Shwe Sar Yan Pagoda, the 3-star Thuwunnabumi Hotel Thaton includes 46 rooms.</p>
+            <div><a href="https://maps.app.goo.gl/vzASY6d62DQgv2kf6" ><button class=" button5">Learn More</button></a></iframe></div> 
+          </div>
+          </div>
+
+          <div class="cardwwtg">
+              <img src="images/mon21.jpg" alt="no image">
+              <div class="card-content">
+                <h1> Hotel Queen Jamadevi</h1>
+                <p>Hotel Queen Jamadevi offers a truly enjoyable  with its convenient location and comfortable accommodations.</p>
+               <div><a href="https://maps.app.goo.gl/Vb37FxPf2i41Zc9E6"><button class="button5">Learn More</button></a></div> 
+              </div>
+              </div>
+
+              <div class="cardwwtg">
+                  <img src="images/mon22.webp" alt="no image">
+                  <div class="card-content">
+                    <h1>Royal Hinthar Hotel</h1>
+                    <p>Royal Hinthar Hotel promises a seamless and hassle-free arrival experience for its guests with its convenient check-in time .</p>
+                 <div><a href="https://maps.app.goo.gl/YwdEbfduzHRNkCas8"><button class="button5">Learn More</button></a></div> 
+                  </div>
+                  </div>
+
+                  <div class="cardwwtg">
+                      <img src="images/mon24.JPEG" alt="no image">
+                      <div class="card-content">
+                        <h1>Ngwe Moe Hotel</h1>
+                        <p>Ngwe Moe Hotel is the perfect choice with its prime location and excellent amenities, . </p>
+                         <div><a href="https://maps.app.goo.gl/XTX2qVHZJgb4MkpY9"><button class=" button5">Learn More</button></a></div> 
+                      </div>
+                      </div>
+  </section>
+
+  <aside>
+    <div class="grid-wrapper">
+      <div class="tall"><img src="images/pic1.JPG" alt="Description of image 1" loading="lazy"></div>
+      <div class="short"><img src="images/pic2.jpg" alt="Description of image 2" loading="lazy"></div>
+      <div><img src="images/pic3.jpg" alt="Description of image 3" loading="lazy"></div>
+      <div class="wide"><img src="images/pic4.jpg" alt="Description of image 4" loading="lazy"></div>
+      <div><img src="images/pic5.jpg" alt="Description of image 5" loading="lazy"></div>
+      <div class="tall"><img src="images/pic6.jpg" alt="Description of image 6" loading="lazy"></div>
+      <div><img src="images/mon30.jpg" alt="Description of image 7" loading="lazy"></div>
+      <div><img src="images/pic10.jpg" alt="Description of image 8" loading="lazy"></div>
+      <div class="big"><img src="images/pic11.jpg" alt="Description of image 9" loading="lazy"></div>
+      <div><img src="images/pic13.jpg" alt="Description of image 10" loading="lazy"></div>
+      <div><img src="images/pic14.jpg" alt="Description of image 11" loading="lazy"></div>
+      <div><img src="images/pic15.jpg" alt="Description of image 12" loading="lazy"></div>
+      <div class="tall"><img src="images/mon8.jpg" alt="Description of image 13" loading="lazy"></div>
+      <div><img src="images/mon10.webp" loading="lazy"></div>
+      <div><img src="images/mon11.jpeg" alt="Description of image 15" loading="lazy"></div>
+      <div><img src="images/mon7.jpg" alt="Description of image 14" loading="lazy"></div>
+      <div><img src="images/mon26.webp" alt="Description of image 15" loading="lazy"></div>
+      <div><img src="images/mon17.jpg" alt="Description of image 15" loading="lazy"></div> 
+  </div>
+  </aside>
+
+
+  <picture>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28751.29986958056!2d94.99800505240906!3d25.740407574480354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3747f84067adb8a3%3A0x98848fa562e7f237!2sSaramati%20Peak!5e0!3m2!1sen!2smm!4v1725718962802!5m2!1sen!2smm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </picture>
+
+
 </body>
 </html>
-
