@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destino-visit-Burma</title>
+<<<<<<< HEAD
     <meta name="Description" content="Explore the enchanting beauty of Burma (Myanmar) with our comprehensive travel guide. Discover breathtaking landscapes, rich culture, vibrant cities, and hidden gems. Plan your adventure today and experience the warmth of Burmese hospitality.">
     <meta name="keywords" content="Burma travel, Myanmar tourism, explore Myanmar, Burma attractions, travel guide Myanmar, Burmese culture, adventure in Burma, Mandalay, Bagan, Inle Lake, Yangon, historical sites, local cuisine, travel tips Burma">
     <meta name="author" content="Cheerful Chums">
+=======
+>>>>>>> 089017c7b0cdee0fa6de0d0ec40da973e8002be6
     <link rel="icon" type="image/x-icon" href="images/Screenshot 2024-09-13 142916.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"> <!-- Material Symbols Outlined -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -259,12 +262,20 @@ p {
             display: block; /* Show arrows when needed */
         }
 
+<<<<<<< HEAD
 
 
 
 figure{
  background-image: url(images/14.avif);
 }
+=======
+
+
+
+       figure{
+    background-image: url(images/14.avif);}
+>>>>>>> 089017c7b0cdee0fa6de0d0ec40da973e8002be6
 
 /* background attachment fixed */
 article{
@@ -504,6 +515,7 @@ footer{
 
   </header>
 
+<<<<<<< HEAD
   <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
     <h2>In Burma</h2>
@@ -620,6 +632,49 @@ footer{
     </div>
 </div>
 
+=======
+
+  <place><!--here is the stater for section card-->
+    <h1 id="sectionA">Some Attractive Places</h1>
+    <h2>In Burma</h2>
+    <div class="container" id="cardContainer">
+        <div class="cards-wrapper" id="cardsWrapper">
+            <a href="Kachin.html" class="card">
+                <img src="images/1.avif" alt="Image 1">
+                <div class="caption">Kalaw<br>Shan State</div>
+            </a>
+            <a href="Kayar.html" class="card">
+                <img src="images/2.avif" alt="Image 2">
+                <div class="caption">Image 2</div>
+            </a>
+            <a href="Kayin.html" class="card">
+                <img src="images/3.avif" alt="Image 3">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Chinstate.html" class="card">
+                <img src="images/4.avif" alt="Image 4">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            
+            <a href="Mon.html" class="card hidden">
+                <img src="images/6.avif" alt="Image 5">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Yangon.html" class="card hidden">
+                <img src="images/11.avif" alt="Image 6">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Ateyarwady.html" class="card hidden">
+                <img src="images/16.avif" alt="Image 7">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="Rakhine.html" class="card hidden">
+                <img src="images/17.avif" alt="Image 8">
+                <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+            </a>
+            
+        </div>
+>>>>>>> 089017c7b0cdee0fa6de0d0ec40da973e8002be6
         <!-- Arrows for showing more cards -->
         <div class="arrow left-arrow" id="showMoreLeft">
             <span class="material-symbols-outlined">arrow_back_ios</span>
@@ -630,6 +685,7 @@ footer{
     </div>
 
     <script>
+<<<<<<< HEAD
       const cardsWrapper = document.getElementById('cardsWrapper');
       const showMoreLeft = document.getElementById('showMoreLeft');
       const showMoreRight = document.getElementById('showMoreRight');
@@ -671,6 +727,45 @@ footer{
 updateCardPosition();
 </script>
   </place>
+=======
+        const cardsWrapper = document.getElementById('cardsWrapper');
+        const showMoreLeft = document.getElementById('showMoreLeft');
+        const showMoreRight = document.getElementById('showMoreRight');
+        const totalCards = document.querySelectorAll('.card').length;
+        const visibleCards = 4; // Number of cards to show at once
+        let currentIndex = 0;
+
+        function updateCardPosition() {
+            const offset = currentIndex * (145 + 20); // Card width + margin
+            cardsWrapper.style.transform = `translateX(-${offset}px)`;
+
+            // Show or hide arrows based on the current index
+            showMoreLeft.classList.toggle('visible', currentIndex > 0);
+            showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
+        }
+
+        showMoreRight.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= totalCards - visibleCards + 1) {
+                currentIndex = totalCards - visibleCards; // Stop at the last visible card
+            }
+            updateCardPosition();
+        });
+
+        showMoreLeft.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = 0; // Stay at the start
+            }
+            updateCardPosition();
+        });
+
+        // Initialize visibility on page load
+        updateCardPosition();
+    </script>
+  </place><!--here is the end for section card//i used i tag for arrow-->
+
+>>>>>>> 089017c7b0cdee0fa6de0d0ec40da973e8002be6
        <!-- <-- gallery -->  
 
       <figure>
@@ -680,6 +775,7 @@ updateCardPosition();
     
       <aside>
         <div class="grid-wrapper">
+<<<<<<< HEAD
           <div class="tall"><img src="images/hp1.jpg" alt="Description of image 1" loading="lazy"></div>
           <div class="short"><img src="images/hp2.jpg" alt="Description of image 2" loading="lazy"></div>
           <div><img src="images/hp3.jpg" alt="Description of image 3" loading="lazy"></div>
@@ -698,6 +794,26 @@ updateCardPosition();
           <div><img src="images/hp16.jpg" alt="Description of image 14" loading="lazy"></div>
           <div><img src="images/hp17.webp" alt="Description of image 15" loading="lazy"></div>
           <div><img src="images/hp18.jpg" alt="Description of image 15" loading="lazy"></div> 
+=======
+          <div class="tall"><img src="images/1.avif" alt="Description of image 1" loading="lazy"></div>
+          <div class="short"><img src="images/2.avif" alt="Description of image 2" loading="lazy"></div>
+          <div><img src="images/3.avif" alt="Description of image 3" loading="lazy"></div>
+          <div class="wide"><img src="images/4.avif" alt="Description of image 4" loading="lazy"></div>
+          <div><img src="images/5.avif" alt="Description of image 5" loading="lazy"></div>
+          <div class="tall"><img src="images/6.avif" alt="Description of image 6" loading="lazy"></div>
+          <div><img src="images/7.avif" alt="Description of image 7" loading="lazy"></div>
+          <div><img src="images/8.avif" alt="Description of image 8" loading="lazy"></div>
+          <div class="big"><img src="images/9.avif" alt="Description of image 9" loading="lazy"></div>
+          <div><img src="images/10.avif" alt="Description of image 10" loading="lazy"></div>
+          <div><img src="images/10.avif" alt="Description of image 11" loading="lazy"></div>
+          <div><img src="images/11.avif" alt="Description of image 12" loading="lazy"></div>
+          <div class="tall"><img src="images/12.avif" alt="Description of image 13" loading="lazy"></div>
+          <div><img src="images/13.avif" loading="lazy"></div>
+          <div><img src="images/14.avif" alt="Description of image 15" loading="lazy"></div>
+          <div><img src="images/3.avif" alt="Description of image 14" loading="lazy"></div>
+          <div><img src="images/16.avif" alt="Description of image 15" loading="lazy"></div>
+          <div><img src="images/17.avif" alt="Description of image 15" loading="lazy"></div> 
+>>>>>>> 089017c7b0cdee0fa6de0d0ec40da973e8002be6
       </div>
       </aside>
 
