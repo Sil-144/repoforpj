@@ -239,67 +239,66 @@ article{
 
 /* <!--second style starter for section card scrolling-->*/
 main {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center all cards */
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all cards */
+    }
 
-        .sectioncard {
-            width: 65%;
-            background-color: whitesmoke;
-            border-radius: 25px;
-            margin: 5vw auto; /* Center cards */
-            display: flex; /* Use flexbox for card layout */
-            align-items: center; /* Align items vertically centered */
-            padding: 10px; /* Add padding for spacing */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-        }
+.sectioncard {
+    width: 65%;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    margin: 5vw auto; /* Center cards */
+    display: flex; /* Use flexbox for card layout */
+    align-items: center; /* Align items vertically centered */
+    padding: 10px; /* Add padding for spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
 
-        .sectioncard img {
-            width: 350px; /* Set image width to 50% */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 25px;
-            height: 250px;
-        }
+.sectioncard img {
+    width: 350px; /* Set image width to 50% */
+    
+    border-radius: 25px;
+    height: 250px;
+    }
 
-        .sectiontext {
-            width: 60%; /* Text area takes remaining 50% */
-            display: flex;
-            flex-direction: column; /* Stack text vertically */
-            justify-content: center; /* Center text vertically */
-            padding-left: 5vw;
-        }
+.sectiontext {
+    width: 60%; /* Text area takes remaining 50% */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center text vertically */
+    padding-left: 5vw;
+    }
 
-        .sectiontext h3 {
-            font-size: 30px; /* Set heading size */
+.sectiontext h3 {
+    font-size: 30px; /* Set heading size */
             
-        }
+    }
+.sectiontext p {
+    color: black;
+    text-align: justify; /* Justify text */
+    }
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 8px;
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 10px; /* Add margin to separate from text */
+    align-self: flex-start; /* Align button to the left */
+    }
 
-        .sectiontext p {
-            color: black; 
-            text-align: justify; /* Justify text */
-        }
+.button4:hover {
+    background-color: #555555;
+    color: white;
+    }
 
-        main .button4 {
-            background-color: white;
-            color: black;
-            border: 2px solid #555555;
-            border-radius: 8px;
-            cursor: pointer; /* Change cursor on hover */
-            margin-top: 10px; /* Add margin to separate from text */
-            align-self: flex-start; /* Align button to the left */
-        }
-
-        .button4:hover {
-            background-color: #555555;
-            color: white;
-        }
 /* Media Query for Laptop Screens */
 @media (min-width: 1024px) and (max-width: 1440px) {
-            .sectioncard {
-                width: 80%; /* Increase width for better visibility */
-            }
-        }
+.sectioncard {
+    width: 80%; /* Increase width for better visibility */
+    }
+    }
 
 /* food in State */
 figure{
@@ -802,39 +801,42 @@ updateCardPosition();
   
  <!-- card rolling  -->
    <main>
-  <div class="sectioncard" ><!--here is next part for section(where to go page)-->
-    <a href="kayintext1.html"><img src="/images/Mount_Zwegabin_card.jpg" width="370px" height="370px"></a>
-    <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mount Zwegabin</p></div>
-    <!-- <h1 class="sectionheader">Yangon</h1> -->
-    <p>Mount Zwegabin  makes for a beautiful and short day-hike near the Southeast Burmese city Hpa An. </p></div> 
-    <a href="kayintext1.html"><button class="button4">Read More</button></a>
+<div class="sectioncard">
+      <a href="kayintext1.html"><img src="images/Mount_Zwegabin_card.jpg" alt="Mythical Heart-Shaped Lake"></a>
+      <div class="sectiontext">
+          <h3>Mount Zwegabin</h3>
+          <p>Mount Zwegabin  makes for a beautiful and short day-hike near the Southeast Burmese city Hpa An.</p>
+          <a href="kayintext1.html"><button class="button4">Read More</button></a>
+      </div>
   </div>
-    
+  
 
-    <div class="sectioncard" style="margin-top: 4vw;">
-      <a href="kayintext2.html"><img src="/images/Sadancave.jpg" width="370px" height="370px"></a>
-     <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mahar Sadan Cave</p></div>
-      <!-- <h1 class="sectionheader">Yangon</h1> -->
-      <p>Saddan Cave is a major Buddhist cave temple with hundreds of small Buddha statues.</p></div> 
-      <a href="kayintext2.html"><button class="button4">Read More</button></a>
-    </div>
+<div class="sectioncard">
+      <a href="kayintext2.html"><img src="images/Sadancave.jpg" alt="Mythical Heart-Shaped Lake"></a>
+      <div class="sectiontext">
+          <h3>Mahar Sadan Cave</h3>
+          <p>Saddan Cave is a major Buddhist cave temple with hundreds of small Buddha statues.</p>
+          <a href="kayintext2.html"><button class="button4">Read More</button></a>
+      </div>
+  </div>
 
-    
-    <div class="sectioncard" style="margin-top: 4vw;">
-      <a href="kayintext3.html"><img src="/images/bayin_nyi_cave.jpg" width="370px" height="370px"></a>
-     <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Bayin Nyi Cave</p></div>
-      <!-- <h1 class="sectionheader">Yangon</h1> -->
-      <p>Bayin Nyi Cave is home to an elaborate and sprawling temple, with plenty of almost Disney-esque coloured buildings laid out at the foot of sheer limestone cliffs.</p></div> 
-      <a href="kayintext3.html"><button class="button4">Read More</button></a>
-    </div>
-
-    
-    <div class="sectioncard" style="margin-top: 4vw;">
-      <a href="kayintext4.html"><img src="/images/mount_mulayit.jpg" width="370px" height="370px"></a>
-     <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mount Mulayit</p></div>
-      <!-- <h1 class="sectionheader">Yangon</h1> -->
-      <p>Mount Mulayit, also known as Muleh Yit, is a mountain of the Dawna Range.</p></div> 
-     <a href="kayintext4.html"><button class="button4">Read More</button></a></div>
+     
+    <div class="sectioncard">
+      <a href="kayintext3.html"><img src="images/bayin_nyi_cave.jpg" alt="Mythical Heart-Shaped Lake"></a>
+      <div class="sectiontext">
+          <h3>Bayin Nyi Cave</h3>
+          <p>Bayin Nyi Cave is home to an elaborate and sprawling temple, with plenty of almost Disney-esque coloured buildings laid out at the foot of sheer limestone cliffs.</p>
+          <a href="kayintext3.html"><button class="button4">Read More</button></a>
+      </div>
+  </div>
+  <div class="sectioncard">
+      <a href="kayintext4.html"><img src="images/mount_mulayit.jpg" alt="Mythical Heart-Shaped Lake"></a>
+      <div class="sectiontext">
+          <h3>Mount Mulayit</h3>
+          <p>Mount Mulayit, also known as Muleh Yit, is a mountain of the Dawna Range.</p>
+          <a href="kayintext4.html"><button class="button4">Read More</button></a>
+      </div>
+  </div>
     </main>
 
 
