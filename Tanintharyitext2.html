@@ -698,23 +698,78 @@ summary img {
     </script>
       </place>
 
-    <section>
-        <h1 style=" margin-left: 15vw; color: black;font-size: 35px;font-family: Jacques Francois Shadow,
-         serif;margin-top: 5vw;">Myeik Archipelago</h1>
-        <p style="text-align: justify;text-justify: inter-word;">The Myeik Archipelago, located off the coast of the Tanintharyi Region in southern Myanmar, is a vast group of over 800 islands, stretching across the Andaman Sea. Known for its stunning, remote beauty, the archipelago offers diverse landscapes, from lush forests and limestone cliffs to pristine beaches and rich coral reefs.The archipelago’s waters are teeming with marine life, including rare species of fish, turtles, and coral, making it a paradise for snorkeling, diving, and marine conservation efforts.The Myeik Archipelago remains one of Southeast Asia’s last untouched paradises, attracting travelers with its natural beauty, tranquil beaches, and unique culture.</p>
+   <section>
+       <!-- Language Switcher -->
+    <label for="language-switcher">Choose Language:</label>
+    <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="my">Myanmar</option>
+    </select>
+        <h1 id="welcome-text" style=" margin-left: 15vw; color: black;font-size: 35px;">Myeik Archipelago</h1>
+        <p id="intro-text" style="text-align: justify;text-justify: inter-word;">The Myeik Archipelago, located off the coast of the Tanintharyi Region in southern Myanmar, is a vast group of over 800 islands, stretching across the Andaman Sea. Known for its stunning, remote beauty, the archipelago offers diverse landscapes, from lush forests and limestone cliffs to pristine beaches and rich coral reefs.The archipelago’s waters are teeming with marine life, including rare species of fish, turtles, and coral, making it a paradise for snorkeling, diving, and marine conservation efforts.The Myeik Archipelago remains one of Southeast Asia’s last untouched paradises, attracting travelers with its natural beauty, tranquil beaches, and unique culture.</p>
         <!-- <img src="images/rih.jpg" alt="no image" width="60%" height="480px"style>  -->
         <!-- <h2>Where Rih lake is situated</h2> -->
-        <p style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
+        <p id="section-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
          black;font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
          inter-word;">Nyaung Oo Phee Island</p>
-        <div><p>
+        <div><p id="section-description">
             Nyaung Oo Phee Island is located in the southern part of Myanmar, specifically in the Myeik Archipelago of the Tanintharyi Region. It's situated close to the border with Thailand and is known for its stunning natural beauty, crystal-clear waters, and vibrant marine life.This hidden gem in the Myeik Archipelago is a tropical paradise, renowned for its lush coral reefs, pristine white-sand beaches, and vibrant marine life. Whether you’re snorkeling through colorful reefs, lounging by the shore, or exploring the nearby islets, Nyaung Oo Phee offers an unforgettable escape into nature’s serenity. With its secluded location, the island is the perfect retreat for those seeking peace, adventure, and natural splendor. Discover the captivating allure of Nyaung Oo Phee Island and create memories that will last a lifetime!".</p>
-        <p style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
+        <p id="where-title" style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
          black;font-size: 35px;font-family: Jacques Francois Shadow, serif;">Activities on Nyaung Oo Phee Island</p>
-        <p style="text-align: justify;text-justify: inter-word;">
-            Nyaung Oo Phee Island offers a range of activities for visitors to enjoy. You can explore vibrant coral reefs through snorkeling and diving, relax on pristine beaches, and paddle around the coastline in a kayak. Hiking scenic trails provides stunning views, while camping allows you to experience the island's natural beauty at night. Photography enthusiasts can capture breathtaking landscapes and sunsets, and wildlife watchers can spot various bird species and marine life. Engaging with local communities and savoring traditional food adds a cultural touch to your visit. Overall, the island is a perfect blend of relaxation and adventure in a stunning natural setting</p>
+        <p id="where-description" style="text-align: justify;text-justify: inter-word;">
+            Nyaung Oo Phee Island offers a range of activities for visitors to enjoy. You can explore vibrant coral reefs through snorkeling and diving, relax on pristine beaches, and paddle around the coastline in a kayak. Hiking scenic trails provides stunning views, while camping allows you to experience the island's natural beauty at night. Photography enthusiasts can capture breathtaking landscapes and sunsets, and wildlife watchers can spot various bird species and marine life. Engaging with local communities and savoring traditional food adds a cultural touch to your visit. Overall, the island is a perfect blend of relaxation and adventure in a stunning natural setting.</p>
         </section>
-      <!-- <figure></figure>   -->
+        <!--js for language switcher-->
+        <script>
+          const translations = {
+              en:{
+                welcome: "Myeik Archipelago " ,
+                intro: "The Myeik Archipelago, located off the coast of the Tanintharyi Region in southern Myanmar, is a vast group of over 800 islands, stretching across the Andaman Sea. Known for its stunning, remote beauty, the archipelago offers diverse landscapes, from lush forests and limestone cliffs to pristine beaches and rich coral reefs.The archipelago’s waters are teeming with marine life, including rare species of fish, turtles, and coral, making it a paradise for snorkeling, diving, and marine conservation efforts.The Myeik Archipelago remains one of Southeast Asia’s last untouched paradises, attracting travelers with its natural beauty, tranquil beaches, and unique culture.",
+                sectionTitle: "Nyaung Oo Phee Island",
+                sectionDescription: " Nyaung Oo Phee Island is located in the southern part of Myanmar, specifically in the Myeik Archipelago of the Tanintharyi Region. It's situated close to the border with Thailand and is known for its stunning natural beauty, crystal-clear waters, and vibrant marine life.This hidden gem in the Myeik Archipelago is a tropical paradise, renowned for its lush coral reefs, pristine white-sand beaches, and vibrant marine life. Whether you’re snorkeling through colorful reefs, lounging by the shore, or exploring the nearby islets, Nyaung Oo Phee offers an unforgettable escape into nature’s serenity. With its secluded location, the island is the perfect retreat for those seeking peace, adventure, and natural splendor. Discover the captivating allure of Nyaung Oo Phee Island and create memories that will last a lifetime!",
+                whereTitle: "Activities on Nyaung Oo Phee Island",
+                 whereDescription: "Nyaung Oo Phee Island offers a range of activities for visitors to enjoy. You can explore vibrant coral reefs through snorkeling and diving, relax on pristine beaches, and paddle around the coastline in a kayak. Hiking scenic trails provides stunning views, while camping allows you to experience the island's natural beauty at night. Photography enthusiasts can capture breathtaking landscapes and sunsets, and wildlife watchers can spot various bird species and marine life. Engaging with local communities and savoring traditional food adds a cultural touch to your visit. Overall, the island is a perfect blend of relaxation and adventure in a stunning natural setting."
+              },
+
+              my: {
+                welcome: "မြိတ်ကျွန်းစု ",
+                intro: "မြိတ်ကျွန်းစုသည် မြန်မာနိုင်ငံ တောင်ပိုင်း တနင်္သာရီတိုင်း ဒေသကြီး ကမ်းလွန်တွင် တည်ရှိပြီး ကျွန်းပေါင်း ၈၀၀ ကျော် ကျယ်ဝန်းသော ကပ္ပလီပင်လယ်ပြင်ကို ဖြတ်၍ ဖြန့်ကျက် တည်ရှိနေသည်။ ၎င်း၏ ရင်သပ်ရှုမောဖွယ် ဝေးလံခေါင်သီသော အလှတရားကြောင့် လူသိများသော ကျွန်းစုသည် စိမ်းလန်းစိုပြေသော သစ်တောများနှင့် ထုံးကျောက်ကမ်းပါးများမှ လှပသော ကမ်းခြေများနှင့် ကြွယ်ဝသော သန္တာကျောက်တန်းများအထိ ကွဲပြားသော ရှုခင်းများကို ပေးစွမ်းပါသည်။ ကျွန်းစု၏ ရေပြင်တွင် ရှားပါးငါး၊ လိပ်များနှင့် သန္တာမျိုးစိတ်များ အပါအဝင် ရေနေသတ္တဝါများ ပြည့်နှက်နေပါသည်။ snorkeling၊ ရေငုပ်ခြင်းနှင့် အဏ္ဏဝါထိန်းသိမ်းရေး ကြိုးပမ်းအားထုတ်မှုများအတွက် ပရဒိသုဖြစ်သည်။မြိတ်ကျွန်းစုသည် အရှေ့တောင်အာရှ၏ နောက်ဆုံးမထိမခိုက်နိုင်သော ပရဒိသုများထဲမှ တစ်ခုဖြစ်ပြီး ခရီးသွားများကို ၎င်း၏သဘာဝအလှ၊ အေးချမ်းသောကမ်းခြေများနှင့် ထူးခြားသောယဉ်ကျေးမှုများဖြင့် ခရီးသွားများကို ဆွဲဆောင်ထားသည်။",
+                sectionTitle: "ညောင်ဦးဖီကျွန်း",
+                sectionDescription: "ညောင်ဦးဖီကျွန်းသည် မြန်မာနိုင်ငံတောင်ဘက်ပိုင်းတွင် တည်ရှိပြီး အထူးသဖြင့် တနင်္သာရီတိုင်းဒေသကြီး မြိတ်ကျွန်းစုတွင် တည်ရှိသည်။ ထိုင်းနယ်စပ်နှင့် နီးကပ်စွာတည်ရှိပြီး ရင်သပ်ရှုမောဖွယ် သဘာဝအလှများ၊ ကြည်လင်သောရေများနှင့် တက်ကြွသော အဏ္ဏဝါသက်ရှိများကြောင့် လူသိများသည်။ မြိတ်ကျွန်းစုရှိ ဤလျှို့ဝှက်ကျောက်မျက်သည် စိမ်းလန်းစိုပြေသော သန္တာကျောက်တန်းများ၊ သန့်ရှင်းလတ်ဆတ်သော သဲဖြူဖြူများဖြင့် ကျော်ကြားသော အပူပိုင်းဒေသတစ်ခုဖြစ်သည်။ ကမ်းခြေများနှင့် တက်ကြွသော ပင်လယ်ပြင်များ။ ရောင်စုံသန္တာကျောက်တန်းများမှတဆင့် snorkeling လုပ်ခြင်း၊ ကမ်းနားတွင် အပန်းဖြေခြင်း သို့မဟုတ် အနီးနားရှိ ကျွန်းငယ်များကို စူးစမ်းခြင်းပဲဖြစ်ဖြစ်၊ညောင်ဦးဖီသည် သဘာဝတရား၏ ငြိမ်သက်အေးချမ်းမှုထဲသို့ မမေ့နိုင်သော လွတ်မြောက်မှုကို ပေးစွမ်းပါသည်။ ၎င်း၏ဆိတ်ငြိမ်သောတည်နေရာနှင့်အတူ၊ ကျွန်းသည်ငြိမ်းချမ်းမှု၊ စွန့်စားမှုနှင့်သဘာဝဂုဏ်ကျက်သရေကိုရှာဖွေနေသူများအတွက်အကောင်းဆုံးအပန်းဖြေရာနေရာဖြစ်သည်။ ညောင်ဦးဖီကျွန်း၏ ဆွဲဆောင်မှုရှိသော အရာများကို ရှာဖွေပြီး တစ်သက်လုံး တည်တံ့မည့် အမှတ်တရများကို ဖန်တီးပါ။",
+                whereTitle: "ညောင်ဦးဖီကျွန်းပေါ်တွင်ပြုလုပ်နိုင်သော လှုပ်ရှားမှုများ",
+                whereDescription: "ညောင်ဦးဖီကျွန်းသည် ခရီးသွားများ အပန်းဖြေရန် လှုပ်ရှားမှုမျိုးစုံကို ပေးသည်။ Snorkeling နှင့် ရေငုပ်ခြင်းများမှတဆင့် တက်ကြွသောသန္တာကျောက်တန်းများကို စူးစမ်းလေ့လာနိုင်ပြီး သန့်ရှင်းသောကမ်းခြေများတွင် အပန်းဖြေနိုင်ပြီး ကမ်းရိုးတန်းတစ်လျှောက် ကယပ်လှေဖြင့် လှော်နိုင်သည်။ တောင်တက်လမ်းများသည် ရင်သပ်ရှုမောဖွယ်ကောင်းသော မြင်ကွင်းများကို ပေးစွမ်းနိုင်ပြီး စခန်းချခြင်းသည် ညအချိန်တွင် ကျွန်း၏သဘာဝအလှကို ခံစားနိုင်စေပါသည်။ ဓါတ်ပုံဝါသနာရှင်များသည် ရင်သပ်ရှုမောဖွယ်ရှုခင်းများနှင့် နေဝင်ချိန်များကို ဖမ်းယူနိုင်ပြီး တောရိုင်းတိရစ္ဆာန်ကြည့်ရှုသူများသည် ငှက်မျိုးစိတ်အမျိုးမျိုးနှင့် အဏ္ဏဝါသက်ရှိများကို ကြည့်ရှုနိုင်သည်။ ဒေသခံအသိုင်းအဝိုင်းများနှင့် ထိတွေ့ဆက်ဆံခြင်းနှင့် ရိုးရာအစားအစာများကို မြည်းစမ်းခြင်းက သင့်လည်ပတ်မှုအတွက် ယဉ်ကျေးမှုကို ထိတွေ့စေပါသည်။ ခြုံငုံပြောရလျှင် ကျွန်းသည် ရင်သပ်ရှုမောဖွယ် သဘာဝနေရာများတွင် အပန်းဖြေအနားယူမှုနှင့် စွန့်စားမှုတို့ ပြီးပြည့်စုံသော ပေါင်းစပ်မှုတစ်ခုဖြစ်သည်။"
+              }
+            };
+    
+          function loadLanguage(lang) {
+            document.getElementById("welcome-text").innerText =
+              translations[lang].welcome;
+            document.getElementById("intro-text").innerText =
+              translations[lang].intro;
+            document.getElementById("section-title").innerText =
+              translations[lang].sectionTitle;
+            document.getElementById("section-description").innerText =
+              translations[lang].sectionDescription;
+            document.getElementById("where-title").innerText =
+              translations[lang].whereTitle;
+            document.getElementById("where-description").innerText =
+              translations[lang].whereDescription;
+            document.getElementById("activities-title").innerText =
+              translations[lang].activitiesTitle;
+            document.getElementById("activities-description").innerText =
+              translations[lang].activitiesDescription;
+          }
+    
+          document
+            .getElementById("language-switcher")
+            .addEventListener("change", function () {
+              loadLanguage(this.value);
+            });
+    
+          // Set default language on page load
+          loadLanguage("en");
+        </script>
+        
         
 <!-- <figure>
   <h1 style="margin-left: 8vw;  margin-top: 19vw;">Choose from luxury hotels to cozy hostels. </h1>
