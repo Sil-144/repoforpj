@@ -38,7 +38,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url(images/maliwun\ waterfall.webp);
+      background-image: url(images/maliwan-update.webp);
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -227,7 +227,7 @@ section{
     height: 1400px;
     /* margin-bottom: 5vw; */
     font-family: Arial, sans-serif;
-    background-image: url(images/text.3-bg-2.jpg);
+    background-image: url(/images/text.3-bg-2.jpg);
     /* background-image: url("/images/image 1.jpg");
     background-size: auto; */
     background-size: cover;
@@ -629,20 +629,82 @@ summary img {
     </script>
       </place>
 
-    <section>
-        <h1 style=" margin-left: 15vw; color:  rgb(238, 15, 126);font-size: 35px;font-family: Jacques Francois Shadow,
+ <section>
+       <!-- Language Switcher -->
+    <label for="language-switcher">Choose Language:</label>
+    <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="my">Myanmar</option>
+    </select>
+        <h1 id="welcome-text" style=" margin-left: 15vw; color:  rgb(238, 15, 126);font-size: 35px;font-family: Jacques Francois Shadow,
          serif;margin-top: 5vw;">Maliwan Waterfall</h1>
-        <p style="text-align: justify;text-justify: inter-word;color: black;">Maliwan Waterfall is located in the Tanintharyi Region of Myanmar, near the town of Dawei. This stunning waterfall is surrounded by lush tropical forests, making it a beautiful spot for nature lovers.The waterfall can be reached by road from Dawei, and the journey typically involves a scenic drive through the countryside. Visitors may need to trek a short distance from the nearest road to reach the waterfall itself.Maliwan Waterfall is known for its multi-tiered cascades, which create several natural pools at different levels. The water flows over smooth rocks, surrounded by dense greenery, making it a picturesque and tranquil spot. The sound of the cascading water adds to the serene atmosphere.</p>
+        <p id="intro-text" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+        font-weight: 700; font-style: normal;font-size: 25px;">Maliwan Waterfall is located in the Tanintharyi Region of Myanmar, near the town of Dawei. This stunning waterfall is surrounded by lush tropical forests, making it a beautiful spot for nature lovers.The waterfall can be reached by road from Dawei, and the journey typically involves a scenic drive through the countryside. Visitors may need to trek a short distance from the nearest road to reach the waterfall itself.Maliwan Waterfall is known for its multi-tiered cascades, which create several natural pools at different levels. The water flows over smooth rocks, surrounded by dense greenery, making it a picturesque and tranquil spot. The sound of the cascading water adds to the serene atmosphere.</p>
         <!-- <img src="images/rih.jpg" alt="no image" width="60%" height="480px"style>  -->
         <!-- <h2>Where Rih lake is situated</h2> -->
-        <p style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
+        <p id="section-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
           rgb(238, 15, 126);font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
          inter-word;">Best Time to Visit</p>
-        <div><p  style="text-align: justify;text-justify: inter-word;color: black;">The best time to visit Maliwan Waterfall is during the dry season, from November to April, when the weather is more stable and the waterfall flows steadily.</p>
-        <p style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
+        <div><p id="section-description" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+        font-weight: 700; font-style: normal;font-size: 25px;">The best time to visit Maliwan Waterfall is during the dry season, from November to April, when the weather is more stable and the waterfall flows steadily.</p>
+        <p id="where-title" style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
           rgb(238, 15, 126);font-size: 35px;font-family: Jacques Francois Shadow, serif;">Activities on  Maliwan Waterfall </p>
-        <p  style="text-align: justify;text-justify: inter-word;color: black;">At Maliwan Waterfall, visitors can enjoy a variety of activities that enhance their experience in this beautiful natural setting. Swimming in the clear, refreshing natural pools is a popular option, while picnicking in the scenic surroundings allows for a relaxing meal amid nature. Hiking on nearby trails offers opportunities for birdwatching and observing local wildlife, making it a great choice for nature enthusiasts. Photography enthusiasts will find countless picturesque scenes to capture, from the cascading water to the lush greenery. Additionally, engaging with local communities provides insights into their culture and traditions, enriching the visit further. Overall, Maliwan Waterfall offers a perfect blend of relaxation and adventure for all who visit.</p>
+        <p id="where-description" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+        font-weight: 700; font-style: normal;font-size: 25px;">At Maliwan Waterfall, visitors can enjoy a variety of activities that enhance their experience in this beautiful natural setting. Swimming in the clear, refreshing natural pools is a popular option, while picnicking in the scenic surroundings allows for a relaxing meal amid nature. Hiking on nearby trails offers opportunities for birdwatching and observing local wildlife, making it a great choice for nature enthusiasts. Photography enthusiasts will find countless picturesque scenes to capture, from the cascading water to the lush greenery. Additionally, engaging with local communities provides insights into their culture and traditions, enriching the visit further. Overall, Maliwan Waterfall offers a perfect blend of relaxation and adventure for all who visit.</p>
         </section>
+
+         <!--js for language switcher-->
+         <script>
+          const translations = {
+              en:{
+                welcome: "Maliwan Waterfall" ,
+                intro: "Maliwan Waterfall is located in the Tanintharyi Region of Myanmar, near the town of Dawei. This stunning waterfall is surrounded by lush tropical forests, making it a beautiful spot for nature lovers.The waterfall can be reached by road from Dawei, and the journey typically involves a scenic drive through the countryside. Visitors may need to trek a short distance from the nearest road to reach the waterfall itself.Maliwan Waterfall is known for its multi-tiered cascades, which create several natural pools at different levels. The water flows over smooth rocks, surrounded by dense greenery, making it a picturesque and tranquil spot. The sound of the cascading water adds to the serene atmosphere.",
+                sectionTitle: "Best Time to Visit",
+                sectionDescription: " The best time to visit Maliwan Waterfall is during the dry season, from November to April, when the weather is more stable and the waterfall flows steadily.",
+                whereTitle: "Activities on  Maliwan Waterfall ",
+                 whereDescription: "At Maliwan Waterfall, visitors can enjoy a variety of activities that enhance their experience in this beautiful natural setting. Swimming in the clear, refreshing natural pools is a popular option, while picnicking in the scenic surroundings allows for a relaxing meal amid nature. Hiking on nearby trails offers opportunities for birdwatching and observing local wildlife, making it a great choice for nature enthusiasts. Photography enthusiasts will find countless picturesque scenes to capture, from the cascading water to the lush greenery. Additionally, engaging with local communities provides insights into their culture and traditions, enriching the visit further. Overall, Maliwan Waterfall offers a perfect blend of relaxation and adventure for all who visit."
+              },
+
+              my: {
+                welcome: "မလိဝမ်ရေတံခွန် ",
+                intro: "မလိဝမ်ရေတံခွန်သည် ထားဝယ်မြို့အနီး မြန်မာနိုင်ငံ တနင်္သာရီတိုင်းဒေသကြီးတွင် တည်ရှိသည်။ ဤရင်သပ်ရှုမောဖွယ်ရေတံခွန်သည် စိမ်းလန်းစိုပြေသော အပူပိုင်းသစ်တောများဖြင့် ဝန်းရံထားသောကြောင့် သဘာဝကို ချစ်မြတ်နိုးသူများအတွက် လှပသောနေရာတစ်ခုဖြစ်သည်။ အဆိုပါရေတံခွန်သည် ထားဝယ်မြို့မှ ကားလမ်းဖြင့်ရောက်ရှိနိုင်ပြီး ခရီးလမ်းမှာ အများအားဖြင့် ကျေးလက်တောရွာများကို ဖြတ်၍ ရှုခင်းသာမောင်းနှင်လေ့ရှိသည်။ ဧည့်သည်များသည် ရေတံခွန်ကိုရောက်ရန် အနီးဆုံးလမ်းမှ အကွာအဝေးသို့ ခြေလျင်ခရီးထွက်ရန် လိုအပ်ပါသည်။ Maliwan Waterfall သည် အဆင့်အမျိုးမျိုးရှိ သဘာဝရေကန်များစွာကို ဖန်တီးပေးသည့် အလွှာပေါင်းစုံဖြင့် လူသိများသည်။ စိမ်းလန်းစိုပြေသော စိမ်းလန်းသောသစ်ပင်များဖြင့် ဝန်းရံထားသည့် ချောမွေ့သော ကျောက်တုံးများပေါ်တွင် ရေစီးဆင်းလာကာ သာယာလှပသော နေရာတစ်ခု ဖြစ်လာသည်။ တကျိကျိကျနေသော ရေသံများက သာယာသော လေထုကို တိုးစေသည်။",
+                sectionTitle: "လည်ပတ်ရန်အကောင်းဆုံးအချိန်",
+                sectionDescription: "မလိဝမ်ရေတံခွန်သို့ သွားရောက်လည်ပတ်ရန် အကောင်းဆုံးအချိန်သည် ခြောက်သွေ့ရာသီဖြစ်သည့် နိုဝင်ဘာလမှ ဧပြီလအထိဖြစ်ပြီး ရာသီဥတုတည်ငြိမ်ကာ ရေတံခွန်သည် တည်ငြိမ်စွာစီးဆင်းနေချိန်ဖြစ်သည်။",
+                whereTitle: "Maliwan Waterfall တွင် လှုပ်ရှားမှုများ",
+                whereDescription: "Maliwan Waterfall တွင် လာရောက်လည်ပတ်သူများသည် ဤလှပသော သဘာဝရှုခင်းတွင် ၎င်းတို့၏အတွေ့အကြုံကို မြှင့်တင်ပေးသည့် လှုပ်ရှားမှုမျိုးစုံကို ခံစားနိုင်သည်။ ကြည်လင်လန်းဆန်းသော သဘာဝရေကန်များတွင် ရေကူးခြင်းသည် လူကြိုက်များသောရွေးချယ်မှုတစ်ခုဖြစ်ပြီး သာယာလှပသောပတ်ဝန်းကျင်တွင် ပျော်ပွဲရွှင်ပွဲကစားခြင်းက သဘာဝအလယ်တွင် အပန်းဖြေအနားယူနိုင်စေပါသည်။ အနီးနားရှိ လမ်းများပေါ်တွင် ခြေလျင်တက်ခြင်းသည် ငှက်ကြည့်ခြင်းနှင့် ဒေသခံ တောရိုင်းတိရစ္ဆာန်များကို လေ့လာကြည့်ရှုခြင်းအတွက် အခွင့်အလမ်းများ ပေးစွမ်းပြီး ၎င်းသည် သဘာဝကို နှစ်သက်သူများအတွက် အကောင်းဆုံး ရွေးချယ်မှုတစ်ခု ဖြစ်လာစေသည်။ ဓါတ်ပုံဝါသနာရှင်များသည် မရေမတွက်နိုင်သော လှပသော မြင်ကွင်းများ ၊ ရေကျဲကျဲကျနေသော ရေမှသည် စိမ်းလန်းစိုပြေသော စိမ်းလန်းစိုပြေသော သစ်ပင်များအထိ ရိုက်ကူးရန် မရေမတွက်နိုင်သော မြင်ကွင်းများကို တွေ့နိုင်မည်ဖြစ်သည်။ ထို့အပြင် ဒေသခံအသိုင်းအဝိုင်းများနှင့် ထိတွေ့ဆက်ဆံခြင်းသည် ၎င်းတို့၏ ယဉ်ကျေးမှုနှင့် ဓလေ့ထုံးတမ်းများကို ထိုးထွင်းသိမြင်စေကာ လည်ပတ်မှုကို ပိုမိုတိုးတက်စေပါသည်။ ယေဘုယျအားဖြင့်၊ Maliwan Waterfall သည် လာရောက်လည်ပတ်သူတိုင်းအတွက် ပြီးပြည့်စုံသော အပန်းဖြေအနားယူမှုနှင့် စွန့်စားမှုတို့ကို ပေါင်းစပ်ပေးထားသည်။"
+              }
+            };
+    
+          function loadLanguage(lang) {
+            document.getElementById("welcome-text").innerText =
+              translations[lang].welcome;
+            document.getElementById("intro-text").innerText =
+              translations[lang].intro;
+            document.getElementById("section-title").innerText =
+              translations[lang].sectionTitle;
+            document.getElementById("section-description").innerText =
+              translations[lang].sectionDescription;
+            document.getElementById("where-title").innerText =
+              translations[lang].whereTitle;
+            document.getElementById("where-description").innerText =
+              translations[lang].whereDescription;
+            document.getElementById("activities-title").innerText =
+              translations[lang].activitiesTitle;
+            document.getElementById("activities-description").innerText =
+              translations[lang].activitiesDescription;
+          }
+    
+          document
+            .getElementById("language-switcher")
+            .addEventListener("change", function () {
+              loadLanguage(this.value);
+            });
+    
+          // Set default language on page load
+          loadLanguage("en");
+        </script>
+        
+
       <!-- <figure></figure>   -->
         
 <!-- <figure>
