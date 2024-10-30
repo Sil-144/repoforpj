@@ -825,6 +825,12 @@ updateCardPosition();
 
 <!-- traditional food in chin -->
 <figure>
+   <!-- Language Switcher Dropdown -->
+    <label for="language-switcher">Choose Language:</label>
+    <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="my">Myanmar</option>
+    </select>
 <h3>Food is not rational. Food is culture, habit, craving and identity.</h3>
 <h4>Popular in Tanintharyi,Myanmar</h4>
 <div class="card">
@@ -868,6 +874,60 @@ Tanap Mote Ti
 </div>
 </div>
 </figure>
+  <!--js for language switcher-->
+ <script>
+  const translations = {
+      en:{
+        welcome: "Mote Latt Thouk" ,
+        intro: "Mote Latt Thouk is Known as a traditional dish of Dawei, Mote Latt Thouk is a refreshing rice noodle salad often mixed with tamarind, peanuts, herbs, and a spicy chili dressing. It’s popular in the local markets and reflects the fresh and tangy flavors of Tanintharyi.The locals may add elements like sugar, watercress, or pork to suit their preferences. It’s often enjoyed as a breakfast or evening snack, especially with fermented clams.​",
+        sectionTitle: "Nipa plum juice",
+        sectionDescription: " Nipa Palm Juice is a popular drink in Myanmar's coastal Tanintharyi Region.This refreshing beverage is made from the sap of the nipa palm tree, which grows in coastal and mangrove areas.The process involves tapping the flower stalks of the nipa palm to collect its sap. This sap is then typically consumed fresh or slightly fermented, depending on preference.The juice is sometimes served with a touch of lime or combined with sticky rice as a snack.",
+        whereTitle: "Mont Khwet (Mont lin ma yar) ",
+         whereDescription: "Mote Kwet (also known as Mote Lin Ma Yar) is a traditional Burmese snack enjoyed for its crispy and fluffy texture. The name 'Mote Lin Ma Yar' translates to 'husband and wife snack' as it's made by pouring batter into two adjacent circular molds that fuse together when cooked symbolizing unity. It is a popular street food especially enjoyed in the evenings.",
+         activitiesTitle: "Tanap Mote Ti ",
+        activitiesDescription: "Mote Ti Tanap is a traditional Myanmar dish made with thin rice noodles and a variety of fresh and flavorful toppings.Mote Ti Tanap has a mix of flavors—tangy from tamarind, spicy from chili and aromatic from fresh herbs.It's typically served cold or at room temperature making it a popular choice for a light meal or snack especially in warmer climates."
+        },
+
+      my: {
+        welcome: "မုန်လက်သုပ် ",
+        intro: "ထားဝယ်၏ ရိုးရာဟင်းအဖြစ် လူသိများသော မုန့်လက်သုပ်သည်  ပအုန်းရည်၊ ငါး၊ ပဲတီ၊ မုန့်ခွေကြော်၊စပ်သော ငရုတ်သီးအနှစ်တို့ဖြင့် ရောစပ်လေ့ရှိသည်။ ၎င်းသည် ဒေသတွင်း စျေးကွက်များတွင် ရေပန်းစားပြီး တနင်္သာရီ၏ လတ်ဆတ်ပြီးအရသာရှိသော အရသာများကို ထင်ဟပ်စေပါသည်။ ဒေသခံများသည် ၎င်းတို့၏ နှစ်သက်ရာအလိုက် သကြား၊ အချိုမှုန့်၊ငံပြာရည် သို့မဟုတ် ဝက်သားကဲ့သိုပါဝင်ပစ္စည်းများကို ပေါင်းထည့်နိုင်ပါသည်။ အထူးသဖြင့် ဂုံးချဉ်နဲ့ မနက်စာ ဒါမှမဟုတ် ညနေစာအဖြစ် စားသုံးလေ့ရှိပါသည်။",
+        sectionTitle: "ဓနိသီးဖျော်ရည်",
+        sectionDescription: " ဓနိရည်သည် တနင်္သာရီတိုင်းရှိ မြန်မာ့ကမ်းရိုးတန်းဒေသများတွင် လူကြိုက်များသော သောက်စရာတစ်မျိုးဖြစ်ပါသည်။ဤအဖျော်ယမကာကို ကမ်းရိုးတန်းနှင့် ဒီရေတောများတွင်ပေါက်ရောက်သော ဓနိထန်းပင်၏အရည်ဖြင့် ပြုလုပ်ထားသည်။လုပ်ငန်းစဉ်တွင် ဓနိရည်ကို အချဉ်အရသာထွက်ရန် ရက်သတ္တပတ်ခန့် ဖုံးအုပ်၍ထားရပါသည်။ ဖျော်ရည်ကို သံပုရာသီး၊ ကောက်ညှင်း သို့မဟုတ် ကြိုက်နှစ်သက်ရာ သရေစာများနှင့် တွဲဖက်စားသုံးနိုင်ပါသည်။",
+        whereTitle: "မုန့်ခွက် (မုန့်လင်မယား)",
+        whereDescription: "မုန့်ခွက် (မုန့်လင်မယား)သည် နူးညံ့သော အရသာကြောင့် လူအများနှစ်သက်သော မြန်မာ့ရိုးရာ်သရေစာတစ်မျိုးဖြစ်သည်။(မုန့်လင်မယား) ဟူသော အမည်သည် မုန့်သား နှင့် ကပ်လျက် စက်ဝိုင်းပုံ ခွက်နှစ်ခု ထဲသို့ ပေါင်းထည့် ကာ မုန့်ဖတ်နှစ်ခုကို တစ်ခုတည်းဖြစ်အောင်ပေါင်းစည်ထားခြင်းကို ကိုယ်စားပြုသည်။ အထူးသဖြင့် ညနေခင်းတွေများတွင် လူအများစားသုံးကြသော အရသာရှိသည့်မုန့်တစ်မျိုးဖြစ်သည်။",
+        activitiesTitle: "သနပ်မုန့်တီ",
+        activitiesDescription: " သနပ်မုန့်တီသည် ဆန်မုန့်တီနှင့် လတ်ဆတ်ပြီး အရသာရှိသော ဟင်းအမယ်မျိုးစုံဖြင့် ပြုလုပ်ထာ သောမြန်မာရိုးရာ ဟင်းလျာတစ်မျိုးဖြစ်ပါသည်။ သနပ်မုန့်တီတွင် မန်ကျည်းရည်၊ ငရုတ်သီးမှ အစပ်နှင့် လတ်ဆတ်သော ဟင်းသီးဟင်းရွက်များမှ အနံ့များရောနှောထားသည်။ ၎င်းအစားစာသည်  ပူနွေးသောရာသီဥတုတွင် အပေါ့စား သို့မဟုတ် သရေစာအတွက် လူအများ ရွေးချယ်စားသုံးကြသောအစားအစာတစ်မျိုးလဲဖြစ်သည်။"
+      }
+    };
+
+  function loadLanguage(lang) {
+    document.getElementById("welcome-text").innerText =
+      translations[lang].welcome;
+    document.getElementById("intro-text").innerText =
+      translations[lang].intro;
+    document.getElementById("section-title").innerText =
+      translations[lang].sectionTitle;
+    document.getElementById("section-description").innerText =
+      translations[lang].sectionDescription;
+    document.getElementById("where-title").innerText =
+      translations[lang].whereTitle;
+    document.getElementById("where-description").innerText =
+      translations[lang].whereDescription;
+    document.getElementById("activities-title").innerText =
+      translations[lang].activitiesTitle;
+    document.getElementById("activities-description").innerText =
+      translations[lang].activitiesDescription;
+  }
+
+  document
+    .getElementById("language-switcher")
+    .addEventListener("change", function () {
+      loadLanguage(this.value);
+    });
+
+  // Set default language on page load
+  loadLanguage("en");
+</script>
 
 <summary>
    <h1 style="margin-left: 8vw;  margin-top: 9vw;">Choose from luxury Hotels & Resorts to cozy hostels. </h1>
