@@ -629,24 +629,94 @@ summary img {
     </script>
       </place>
 
-    <section>
-        <h1 style=" margin-left: 15vw;color: whitesmoke;font-size: 35px;font-family: Jacques Francois Shadow,
+  <section>
+        <!-- Language Switcher -->
+    <label for="language-switcher">Choose Language:</label>
+    <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="my">Myanmar</option>
+    </select>
+        <h1 id="welcome-text" style=" margin-left: 15vw;color: whitesmoke;font-size: 35px;font-family: Jacques Francois Shadow,
          serif;margin-top: 5vw;">Lampi Marine National Park</h1>
-        <p style="text-align: justify;text-justify: inter-word;color: white;">Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.</p>
+        <p id="intro-text" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+        font-weight: 700;
+        font-style: normal;font-size: 25px;">Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.</p>
         <!-- <img src="images/rih.jpg" alt="no image" width="60%" height="480px"style>  -->
         <!-- <h2>Where Rih lake is situated</h2> -->
-        <p style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
+        <p id="section-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
          white;font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
          inter-word;">Best Time to Visit</p>
-        <div><p style="text-align: justify;text-justify: inter-word;color: white;">The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.</p>
-        <p style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
+        <div><p id="section-description" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+            font-weight: 700;
+            font-style: normal;font-size: 25px;">The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.</p>
+        <p id="where-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
          white;font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
             inter-word;">Indigenous Communities</p>
-         <div><p> <div><p style="text-align: justify;text-justify: inter-word;color: white;">The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marine environment.</p>
-        <p style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
+        <div><p id="where-description" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+            font-weight: 700;
+            font-style: normal;font-size: 25px;">The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marine environment.</p>
+        <p id="activities-title" style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
          white;font-size: 35px;font-family: Jacques Francois Shadow, serif;">Activities on Lampi Marine National Park </p>
-        <p style="text-align: justify;text-justify: inter-word;color: white;">At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight.</p>
+        <p id="activities-description" style="text-align: justify;text-justify: inter-word;color: black;font-family: Charm, cursive;
+        font-weight: 700; font-style: normal;font-size: 25px;">At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight.</p>
         </section>
+     
+         <!--js for language switcher-->
+         <script>
+          const translations = {
+              en:{
+                welcome: "Lampi Marine National Park" ,
+                intro: "Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.",
+                sectionTitle: "Best Time to Visit",
+                sectionDescription: " The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.",
+                whereTitle: "Indigenous Communities ",
+                 whereDescription: "The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marineenvironment.",
+                 activitiesTitle: "Activities on Lampi Marine National Park ",
+                 activitiesDescription: "At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight."
+                },
+
+              my: {
+                welcome: "Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ် ",
+                intro: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်သည် မြန်မာနိုင်ငံတောင်ပိုင်း တနင်္သာရီတိုင်းဒေသကြီး မြိတ်ကျွန်းစုတွင် တည်ရှိသည်။ မြန်မာနိုင်ငံ၏ ပထမဆုံးသော အဏ္ဏဝါအမျိုးသားဥယျာဉ်ဖြစ်ပြီး ကုန်းမြေနှင့် အဏ္ဏဝါနေထိုင်ရာ နှစ်ခုလုံးကို လွှမ်းခြုံထားပြီး စတုရန်းကီလိုမီတာ 2,000 တွင် ကျွန်းပေါင်း 200 ကျော် ဖြန့်ကျက်ထားသည်။ ၎င်းပန်းခြံသည် ၎င်း၏ ကြွယ်ဝသော ဇီဝမျိုးစုံမျိုးကွဲများအတွက် ကျော်ကြားပြီး ဒီရေတောများ၊ သန္တာကျောက်တန်းများ၊ ပင်လယ်မြက်ခင်းများနှင့် အပူပိုင်းဒေသများ အပါအဝင် ဂေဟစနစ်အမျိုးမျိုး၏ ကြွယ်ဝသော ပန်းခြံဖြစ်သည်။ ",
+                sectionTitle: "လည်ပတ်ရန်အကောင်းဆုံးအချိန်",
+                sectionDescription: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်သို့သွားရောက်လည်ပတ်ရန် အကောင်းဆုံးအချိန်သည် နိုဝင်ဘာလမှ ဧပြီလကြားတွင်ဖြစ်ပြီး ရာသီဥတုခြောက်သွေ့ကာ ရေထဲတွင်မြင်နိုင်စွမ်းအကောင်းဆုံးဖြစ်သဖြင့် snorkeling နှင့် ရေငုပ်ခြင်းကဲ့သို့သော ပင်လယ်ရေကြောင်းလှုပ်ရှားမှုများအတွက် အကောင်းဆုံးအချိန်ဖြစ်သည်။",
+                whereTitle: "ဌာနေတိုင်းရင်းသားအသိုင်းအဝိုင်းများ",
+                whereDescription: "အဆိုပါပန်းခြံသည် “ပင်လယ်ဂျစ်ပစီ” ဟုလည်းသိကြသည့် ဌာနေတိုင်းရင်းသားလူမျိုးစုဖြစ်သည့် Moken လူမျိုးများနေထိုင်ရာ နေရာဖြစ်ပြီး ရိုးရာခြေသလုံးတစ်ပိုင်းလူနေမှုပုံစံဖြင့် ၎င်းတို့၏အသက်မွေးဝမ်းကျောင်းအတွက် ပင်လယ်ကိုအမှီပြုနေထိုင်ကြသည်။ လာရောက်လည်ပတ်သူများသည် Moken ၏ထူးခြားသောယဉ်ကျေးမှု၊ ၎င်းတို့၏ရေရှည်တည်တံ့သောအလေ့အကျင့်များနှင့် အဏ္ဏဝါပတ်ဝန်းကျင်နှင့် နက်ရှိုင်းသောဆက်စပ်မှုကို  လေ့လာနိုင်သည်။",
+                activitiesTitle: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်တွင် လှုပ်ရှားမှုများ",
+                activitiesDescription: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်တွင် ဧည့်သည်များသည် ၎င်း၏ သဘာဝနှင့် ယဉ်ကျေးမှုဆိုင်ရာ အံ့ဖွယ်များကို မီးမောင်းထိုးပြသည့် eco-friendly လှုပ်ရှားမှုများကို ခံစားနိုင်သည်။ Snorkeling နှင့် ရေငုပ်ခြင်းသည် တက်ကြွသော သန္တာကျောက်တန်းများနှင့် မတူကွဲပြားသော အဏ္ဏဝါသက်ရှိများကို ဖော်ထုတ်ပြသနိုင်ပြီး၊ သင်္ဘောစီးခြင်းနှင့် လှေစီးခြင်းများသည် ဒီရေတောများမှတဆင့် ကမ်းရိုးတန်းကို နစ်မြုပ်စူးစမ်းလေ့လာနိုင်စေပါသည်။ တောရိုင်းတိရိစ္ဆာန်ဝါသနာအိုးများသည် ရှားပါးမျိုးစိတ်များဖြစ်သည့် ရှားပါးမျိုးစိတ်များကို ရှာဖွေတွေ့ရှိနိုင်ပြီး တောင်တက်လမ်းများသည် ဒေသတွင်းရှိ သစ်ပင်ပန်းမန်များနှင့် တိရစ္ဆာန်များနှင့် တွေ့ကြုံရသည့် ရှုခင်းများကို ပေးစွမ်းနိုင်သည်။ မွန်ကင်ကျေးရွာများသို့ ယဉ်ကျေးမှုလည်ပတ်မှုများသည် ဌာနေတိုင်းရင်းသားလူမျိုးများ၏ ထူးခြားသောလူနေမှုပုံစံနှင့် ဓလေ့ထုံးတမ်းများကို ထိုးထွင်းသိမြင်စေကာ ဂေဟစနစ်သဟဇာတဖြစ်သော စခန်းချနေထိုင်သူများသည် ပန်းခြံ၏သာယာသောပတ်ဝန်းကျင်ကို ညတွင်းချင်း တွေ့ကြုံခံစားနိုင်စေပါသည်။"
+              }
+            };
+    
+          function loadLanguage(lang) {
+            document.getElementById("welcome-text").innerText =
+              translations[lang].welcome;
+            document.getElementById("intro-text").innerText =
+              translations[lang].intro;
+            document.getElementById("section-title").innerText =
+              translations[lang].sectionTitle;
+            document.getElementById("section-description").innerText =
+              translations[lang].sectionDescription;
+            document.getElementById("where-title").innerText =
+              translations[lang].whereTitle;
+            document.getElementById("where-description").innerText =
+              translations[lang].whereDescription;
+            document.getElementById("activities-title").innerText =
+              translations[lang].activitiesTitle;
+            document.getElementById("activities-description").innerText =
+              translations[lang].activitiesDescription;
+          }
+    
+          document
+            .getElementById("language-switcher")
+            .addEventListener("change", function () {
+              loadLanguage(this.value);
+            });
+    
+          // Set default language on page load
+          loadLanguage("en");
+        </script>
+        
+
       <!-- <figure></figure>   -->
         
 <!-- <figure>
