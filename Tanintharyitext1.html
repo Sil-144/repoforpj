@@ -618,25 +618,78 @@ summary img {
       </place>
 
     <section>
-        <h1 style=" margin-left: 15vw; color: #D27C2C;font-size: 35px;font-family: Jacques Francois Shadow, 
+        <!-- Language Switcher -->
+    <label for="language-switcher">Choose Language:</label>
+    <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="my">Myanmar</option>
+    </select>
+        <h1 id="welcome-text" style=" margin-left: 15vw; color: #D27C2C;font-size: 35px;font-family: Jacques Francois Shadow, 
         serif;margin-top: 5vw;"> Thein Daw Gyi Pagoda </h1>
-        <p style="text-align: justify;text-justify: inter-word;">The Tanintharyi Region is located in the southernmost part of Myanmar, stretching along the western coast of the Malay Peninsula. It is bordered by the Andaman Sea to the west and shares a land border with Thailand to the east. The region includes major cities such as Dawei, Myeik, and Kawthaung, with Myeik and Kawthaung serving as gateways to the renowned Mergui Archipelago, a collection of over 800 islands.</p>
+        <p id="intro-text" style="text-align: justify;text-justify: inter-word;">The Tanintharyi Region is located in the southernmost part of Myanmar, stretching along the western coast of the Malay Peninsula. It is bordered by the Andaman Sea to the west and shares a land border with Thailand to the east. The region includes major cities such as Dawei, Myeik, and Kawthaung, with Myeik and Kawthaung serving as gateways to the renowned Mergui Archipelago, a collection of over 800 islands.</p>
         <!-- <img src="images/rih.jpg" alt="no image" width="60%" height="480px"style>  -->
         <!-- <h2>Where Rih lake is situated</h2> -->
-        <p style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color: #D27C2C;font-size:
+        <p id="section-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color: #D27C2C;font-size:
          35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: inter-word;">Where Thein Daw Gyi Pagoda is situated</p>
-        <div><p>The Thein Daw Gyi Pagoda is located in Myeik, a coastal city in the Tanintharyi Region of southern Myanmar. Perched on a hill, it overlooks Myeik city, providing panoramic views of the surrounding area, including the Myeik Archipelago and the Andaman Sea. The pagoda is easily accessible from the center of Myeik and is a popular site for both locals and tourists, especially around sunset. Its elevated position and scenic surroundings make it a significant cultural and spiritual landmark in Myeik</p>
-        <p style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
+        <div><p id="section-description">The Thein Daw Gyi Pagoda is located in Myeik, a coastal city in the Tanintharyi Region of southern Myanmar. Perched on a hill, it overlooks Myeik city, providing panoramic views of the surrounding area, including the Myeik Archipelago and the Andaman Sea. The pagoda is easily accessible from the center of Myeik and is a popular site for both locals and tourists, especially around sunset. Its elevated position and scenic surroundings make it a significant cultural and spiritual landmark in Myeik.</p>
+        <p id="where-title" style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
          #D27C2C;font-size: 35px;font-family: Jacques Francois Shadow, serif;">What can we do in Thein Daw Gyi Pagoda</p>
-          <p style="text-align: justify;text-justify: inter-word;">We can enjoy Panoramic Views of Myeik city and the Myeik Archipelago, ideal for photography.
-            Meditate and Reflect in a peaceful, spiritual atmosphere.
+          <p id="where-description" style="text-align: justify;text-justify: inter-word;">We can enjoy Panoramic Views of Myeik city and the Myeik Archipelago, ideal for photography. Meditate and Reflect in a peaceful, spiritual atmosphere.
             Explore Mon-Style Architecture with intricate carvings and golden stupas.
             Watch the Spectacular Sunset over the city and coastline.
-            Engage with Local Culture by visiting nearby markets and interacting with locals.
-            Observe Buddhist Practices and witness traditional rituals.</p>
+            Engage with Local Culture by visiting nearby markets and interacting with locals Observe Buddhist Practices and witness traditional rituals.</p>
 
         
         </section>
+        <script>
+          const translations = {
+              en:{
+                welcome: "Tanintharyi Region " ,
+                intro: "The Tanintharyi Region is located in the southernmost part of Myanmar, stretching along the western coast of the Malay Peninsula. It is bordered by the Andaman Sea to the west and shares a land border with Thailand to the east. The region includes major cities such as Dawei, Myeik, and Kawthaung, with Myeik and Kawthaung serving as gateways to the renowned Mergui Archipelago, a collection of over 800 islands.",
+                sectionTitle: "Where Thein Daw Gyi Pagoda is situated",
+                sectionDescription: "The Thein Daw Gyi Pagoda is located in Myeik, a coastal city in the Tanintharyi Region of southern Myanmar. Perched on a hill, it overlooks Myeik city, providing panoramic views of the surrounding area, including the Myeik Archipelago and the Andaman Sea. The pagoda is easily accessible from the center of Myeik and is a popular site for both locals and tourists, especially around sunset. Its elevated position and scenic surroundings make it a significant cultural and spiritual landmark in Myeik",
+                whereTitle: "What can we do in Thein Daw Gyi Pagoda",
+                 whereDescription: "We can enjoy Panoramic Views of Myeik city and the Myeik Archipelago, ideal for photography. Meditate and Reflect in a peaceful, spiritual atmosphere.Explore Mon-Style Architecture with intricate carvings and golden stupas. Watch the Spectacular Sunset over the city and coastline.Engage with Local Culture by visiting nearby markets and interacting with locals Observe Buddhist Practices and witness traditional rituals."
+              },
+
+              my: {
+                welcome: "တနင်္သာရီတိုင်းဒေသကြီး ",
+                intro: "တနင်္သာရီတိုင်းဒေသကြီးသည် မြန်မာနိုင်ငံတောင်ဘက်စွန်းတွင် တည်ရှိပြီး မလေးကျွန်းဆွယ်အနောက်ဘက်ကမ်းရိုးတန်းတစ်လျှောက်တွင် တည်ရှိသည်။ အနောက်ဘက်တွင် ကပ္ပလီပင်လယ်နှင့် နယ်နိမိတ်ချင်း ထိစပ်နေပြီး အရှေ့ဘက်တွင် ထိုင်းနိုင်ငံနှင့် နယ်နိမိတ်ချင်း ထိစပ်နေသည်။ ထားဝယ်၊ မြိတ်နှင့် ကော့သောင်း စသည့်မြို့ကြီးများ ပါဝင်ပြီး မြိတ်နှင့် ကော့သောင်းသည် ကျွန်းပေါင်း ၈၀၀ ကျော်ဖြင့် စုစည်းထားသည်။ မြိတ်ကျွန်းစုများသည် သဘာဝအလှတရား၏ တံခါးပေါက်များအဖြစ်ဆောင်ရွက်လျက် ရှိသည်။",
+                sectionTitle: "သိမ်တော်ကြီးဘုရား တည်ရှိရာနေရာ",
+                sectionDescription: "သိမ်တော်ကြီး စေတီသည် မြန်မာနိုင်ငံ တောင်ပိုင်း တနင်္သာရီတိုင်း ကမ်းရိုးတန်းမြို့ မြိတ်တွင် တည်ရှိသည်။ တောင်ကုန်းပေါ်တွင် တည်ရှိပြီး မြိတ်ကျွန်းစုနှင့် ကပ္ပလီပင်လယ် အပါအဝင် အနီးပတ်ဝန်းကျင် မြင်ကွင်းကျယ် မြင်ကွင်းများကို ပေးစွမ်းနိုင်သော မြိတ်မြို့ကို ရှုမြင်နိုင်သည်။ စေတီတော်သည် မြိတ်မြို့လယ်မှ အလွယ်တကူ သွားလာနိုင်ပြီး အထူးသဖြင့် နေဝင်ချိန်ဝန်းကျင်တွင် ဒေသခံများနှင့် ခရီးသွားများအတွက် ရေပန်းစားသော နေရာတစ်ခုဖြစ်သည်။ မြင့်မားသော အနေအထားနှင့် ရှုခင်းသာပတ်ဝန်းကျင်သည် မြိတ်မြို့၏ ထင်ရှားသော ယဉ်ကျေးမှုနှင့် အေးချမ်းသော အထင်ကရ နေရာတစ်ခုဖြစ်စေသည်။",
+                whereTitle: "သိမ်တော်ကြီးဘုရားမှာ ဘာလုပ်နိုင်မလဲ",
+                whereDescription: "မြိတ်မြို့နှင့် မြိတ်ကျွန်းစုတို့၏ မြင်ကွင်းကျယ် ရှုခင်းများကို ကျွန်ုပ်တို့ ခံစားနိုင်ပါသည်။ ဓာတ်ပုံရိုက်ရန်အတွက် အထူးသင့်လျော်ပါသည်။ အနုစိတ်လက်ရာများနှင့် ရွှေစေတီပုထိုးများဖြင့် မွန်စတိုင်ဗိသုကာကို စူးစမ်းလေ့လာနိုင်ပါသည်။ မြို့နှင့်ကမ်းရိုးတန်းအပေါ်မှ အံ့မခန်းနေဝင်ချိန်ကို ကြည့်ရှုနိုင်ပြီး အနီးနားရှိ ဈေးများသို့ သွားရောက်ကာ ဒေသခံများနှင့် အပြန်အလှန် ဆက်ဆံခြင်းဖြင့် ဒေသယဉ်ကျေးမှုနှင့် ထိတွေ့ဆက်ဆံပြီး ဗုဒ္ဓဘာသာ ဓလေ့ထုံးတမ်းများကို ကြည့်ရှုကာ ရိုးရာဓလေ့များကို ရှုမြင်နိုင်ပါသည်။"
+              }
+            };
+    
+          function loadLanguage(lang) {
+            document.getElementById("welcome-text").innerText =
+              translations[lang].welcome;
+            document.getElementById("intro-text").innerText =
+              translations[lang].intro;
+            document.getElementById("section-title").innerText =
+              translations[lang].sectionTitle;
+            document.getElementById("section-description").innerText =
+              translations[lang].sectionDescription;
+            document.getElementById("where-title").innerText =
+              translations[lang].whereTitle;
+            document.getElementById("where-description").innerText =
+              translations[lang].whereDescription;
+            document.getElementById("activities-title").innerText =
+              translations[lang].activitiesTitle;
+            document.getElementById("activities-description").innerText =
+              translations[lang].activitiesDescription;
+          }
+    
+          document
+            .getElementById("language-switcher")
+            .addEventListener("change", function () {
+              loadLanguage(this.value);
+            });
+    
+          // Set default language on page load
+          loadLanguage("en");
+        </script>
       <!-- <figure></figure>   -->
         
 <!-- <figure>
