@@ -256,7 +256,7 @@ main {
         }
 
         .sectioncard img {
-            width: 100%; /* Set image width to 50% */
+            width: 350px; /* Set image width to 50% */
             height: auto; /* Maintain aspect ratio */
             border-radius: 25px;
             height: 250px;
@@ -485,6 +485,78 @@ aside img {
         margin-top: 6vw;
 
     }
+
+        .custom-footer {
+    background:#161D6f;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 15px;
+   
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+}
+
+.footer-section a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 70%;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.newsletter button:hover {
+    background-color: #e67e22;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
 
      
 </style>
@@ -735,7 +807,7 @@ updateCardPosition();
     <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mount Zwegabin</p></div>
     <!-- <h1 class="sectionheader">Yangon</h1> -->
     <p>Mount Zwegabin  makes for a beautiful and short day-hike near the Southeast Burmese city Hpa An. </p></div> 
-    <!--<div><a href="/index.html/kayintext1.html"><button class="button4">Read More</button></a></div>-->
+    <a href="kayintext1.html"><button class="button4">Read More</button></a>
   </div>
     
 
@@ -744,7 +816,7 @@ updateCardPosition();
      <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mahar Sadan Cave</p></div>
       <!-- <h1 class="sectionheader">Yangon</h1> -->
       <p>Saddan Cave is a major Buddhist cave temple with hundreds of small Buddha statues.</p></div> 
-      <!--<div><a href="/index.html/kayintext2.html"><button class="button4">Read More</button></a></div>-->
+      <a href="kayintext2.html"><button class="button4">Read More</button></a>
     </div>
 
     
@@ -753,7 +825,7 @@ updateCardPosition();
      <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Bayin Nyi Cave</p></div>
       <!-- <h1 class="sectionheader">Yangon</h1> -->
       <p>Bayin Nyi Cave is home to an elaborate and sprawling temple, with plenty of almost Disney-esque coloured buildings laid out at the foot of sheer limestone cliffs.</p></div> 
-      <!--<div><a href="Chintext3.html"><button class="button4">Read More</button></a></div>-->
+      <a href="kayintext3.html"><button class="button4">Read More</button></a>
     </div>
 
     
@@ -762,7 +834,7 @@ updateCardPosition();
      <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Mount Mulayit</p></div>
       <!-- <h1 class="sectionheader">Yangon</h1> -->
       <p>Mount Mulayit, also known as Muleh Yit, is a mountain of the Dawna Range.</p></div> 
-      <!--<div><a href="Chintext4.html"><button class="button4">Read More</button></a></div></div>-->
+     <a href="kayintext4.html"><button class="button4">Read More</button></a></div>
     </main>
 
 
@@ -877,9 +949,59 @@ updateCardPosition();
   </aside>
 
 
-  <picture>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899373.9870189964!2d97.6617069!3d17.36457945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c2afd4874dca85%3A0x51bc19501b4f219c!2sKayin%20State!5e0!3m2!1sen!2smm!4v1729435524922!5m2!1sen!2smm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </picture>
+  <footer class="custom-footer">
+          <div class="footer-container">
+              <div class="footer-section">
+                  <h3>Site Map</h3>
+                  <table style="width: 100%; color: #f39c12; border-collapse: collapse;">
+                      <tr>
+                          <td style="padding: 10px;"><a href="index.html" target="_blank">Home</a></td>
+                          <td style="padding: 10px;"><a href="kachinmain.html" target="_blank">Kachin State</a></td>
+                          <td style="padding: 10px;"><a href="Rakinemain.html" target="_blank">Rakhine State</a></td>
+                          <td style="padding: 10px;"><a href="Ayeyarwadymain.html" target="_blank">Ayeyarwady Region</a></td>
+                      </tr>
+                      <tr>
+                          <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
+                          <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
+                          <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
+                          <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
+                      </tr>
+                      <tr>
+                          <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
+                          <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
+                          <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
+                          <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
+                      </tr>
+                      <tr>
+                          <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
+                          <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
+                          <td style="padding: 10px;"><a href="" target="_blank">Yangon Region</a></td>
+                          <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
+                      </tr>
+                      <tr>
+                          <td style="padding: 10px;"><a href="" target="_blank"></a></td>
+                          <td style="padding: 10px;"><a href="Monmain.html" target="_blank">Mon State</a></td>
+                          <td style="padding: 10px;"><a href="bagomain.html" target="_blank">Bago Region</a></td>
+                      </tr>
+                  </table>
+              </div>
+              
+          </div>
+          <div class="footer-container">
+              <div class="footer-section">
+                  <h3>Start Your Adventure</h3>
+                  <p>Join us in exploring around Myanmar. Your journey starts here!</p>
+              </div>
+              <div class="footer-section">
+                  <h3>Contact Us</h3>
+                  <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
+                  <p>Phone: <a href="tel:+18001234567">+959255747074</a></p>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
+          </div>
+      </footer>
 
 
 </body>
