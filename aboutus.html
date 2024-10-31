@@ -19,6 +19,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script defer src="script.js"></script> <!-- Link to your JavaScript file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
         header {
           position: relative;
@@ -600,63 +605,54 @@ p {
     </style>
 </head>
 <body>
-  <header>
-    <!--Navigation Bar-->
-     <!--Logo-->
-     
-     </ul><nav class="navbar navbar-expand-lg navbar-light">
-       <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-         <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false">
-        <!-- Add your toggler icon here -->
-        ☰
-    </button>
-       <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
-           </li>
-           <li class="nav-item">
-               <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
-             </li>
-   
-     <!--Events & Festival-->
-       <li class="nav-item">
-         <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
-       </li>
-       <!--About Us-->
-       <li class="nav-item">
-         <a class="nav-link" href="aboutus.html">About Us</a>
-       </li>
- <!--Search box-->
+ <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sectionA">Where to go</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+            </ul>
+
+            <!-- Search box -->
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+                <input type="text" placeholder="Search...">
+                <button class="search-btn"><span class="search-icon">🔍</span></button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar End -->
     
-       <div class="search-container">
-         <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
-         <input 
-           type="text"
-           placeholder="Search...">
-         <button class="search-btn"><span class="search-icon">🔍</span></button>
-         </button>
-       </div>
-              <script>
-      const toggler = document.querySelector('.navbar-toggler');
-const navbarNav = document.querySelector('.navbar-nav');
-
-toggler.addEventListener('click', () => {
-    navbarNav.classList.toggle('collapsed');
-});
-
- </script>
-     
-     </div>
-     </div>
-     </nav>
-   <!--Navigation Bar End-->
     <pre>
-        
-     
-            
+        <!-- Additional content can go here -->
     </pre>
-  </header>
+
+    <script>
+        // JavaScript for toggling the navbar on mobile
+        const toggler = document.querySelector('.navbar-toggler');
+        const navbarNav = document.querySelector('.navbar-nav');
+
+        toggler.addEventListener('click', () => {
+            navbarNav.classList.toggle('show'); // Use 'show' class for Bootstrap 5
+        });
+    </script>
+</header>
+
     
   <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
