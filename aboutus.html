@@ -605,6 +605,10 @@ p {
      
      </ul><nav class="navbar navbar-expand-lg navbar-light">
        <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
+         <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false">
+        <!-- Add your toggler icon here -->
+        ☰
+    </button>
        <div class="collapse navbar-collapse" id="navbarNav">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item">
@@ -615,18 +619,13 @@ p {
              </li>
        
  <script>
-       function showMore() {
-         const moreRegions = document.getElementById('moreRegions');
-         const showMoreBtn = document.getElementById('showMoreBtn');
-     
-         // Toggle the visibility of the hidden regions
-         if (moreRegions.style.display === 'none') {
-           moreRegions.style.display = 'block';  // Show the hidden regions
-           showMoreBtn.textContent = 'Show Less...';  // Change button text
-         } else {moreRegions.style.display = 'none';  // Hide the regions again
-       showMoreBtn.textContent = 'Show More...';  // Reset button text
-     }
-   }
+      const toggler = document.querySelector('.navbar-toggler');
+const navbarNav = document.querySelector('.navbar-nav');
+
+toggler.addEventListener('click', () => {
+    navbarNav.classList.toggle('collapsed');
+});
+
  </script>
    
      <!--Events & Festival-->
@@ -646,7 +645,7 @@ p {
            placeholder="Search..."
            class="search-input"
          />
-         <button class="search-btn" type="submit">
+         <button class="search-btn"><span class="search-icon">🔍</span></button>
          </button>
        </div>
      </form>
