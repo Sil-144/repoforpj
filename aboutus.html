@@ -510,93 +510,68 @@ p {
 }
 
 
-
-
-    .custom-footer {
-    background:#161D6f;
-    color: white;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
+.custom-footer {
+    background-color: #333; /* Example background color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Add some padding */
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
+    flex-direction: column; /* Stack sections vertically */
+    padding: 10px;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
+    margin-bottom: 20px; /* Space between sections */
 }
 
 .footer-section h3 {
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
+    color: #f39c12; /* Example color for headings */
 }
 
-.footer-section p {
-    margin: 10px 0;
+.footer-section table {
+    width: 100%; /* Full width */
 }
 
-.footer-section a {
-    color: #f39c12;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.newsletter input {
+.footer-section table td {
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-    width: 70%;
-}
-
-.newsletter button {
-    padding: 10px 15px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-}
-
-.newsletter button:hover {
-    background-color: #e67e22;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space above the footer bottom */
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Stack sections vertically on small screens */
-        align-items: center; /* Center align the items */
+        flex-direction: row; /* Change to row direction on larger screens */
+        justify-content: space-between; /* Space between items */
     }
 
     .footer-section {
-        width: 100%; /* Full width for sections */
-        text-align: center; /* Center text in sections */
+        flex: 1; /* Allow sections to grow equally */
+        padding: 0 10px; /* Horizontal padding */
     }
-  }
-    </style>
+
+    .footer-section table {
+        table-layout: auto; /* Let table cells size automatically */
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-section table {
+        display: block; /* Stack table for smaller screens */
+    }
+
+    .footer-section table td {
+        display: block; /* Block display for cells */
+        padding: 10px 0; /* Vertical padding */
+    }
+}
+
+
+   </style>
 </head>
 <body>
   <header>
