@@ -46,56 +46,6 @@
       margin-top:5px ;
       margin-left: 30px;
     }
-
-        .menu-icon {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-icon div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 4px 0;
-}
-
-nav {
-    display: none;
-}
-
-#mobile-menu {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: white;
-    width: 150px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#mobile-menu ul {
-    list-style-type: none;
-    padding: 10px;
-}
-
-#mobile-menu ul li {
-    padding: 10px;
-    text-align: center;
-}
-
-#mobile-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-}
-
-/* Show the nav when in mobile mode */
-@media (max-width: 768px) {
-    nav {
-        display: block;
-    }
-}
    
     ul {
       list-style-type: none;
@@ -655,13 +605,6 @@ p {
      
      </ul><nav class="navbar navbar-expand-lg navbar-light">
        <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-         <div class="menu-icon" onclick="toggleMenu()">
-            <div>Home</div>
-            <div>Where to go</div>
-            <div>Events & Festival</div>
-             <div>About Us</div>
-        </div>
-        <nav id="mobile-menu">
        <div class="collapse navbar-collapse" id="navbarNav">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item">
@@ -685,11 +628,6 @@ p {
      }
    }
  </script>
-             <script>function toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-</script>
    
      <!--Events & Festival-->
        <li class="nav-item">
