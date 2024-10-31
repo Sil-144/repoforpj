@@ -18,6 +18,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <style>
         header {
@@ -47,77 +50,37 @@
       margin-left: 30px;
     }
    
-    ul {
-      list-style-type: none;
+   .navbar {
+    background-color: #fff; /* Change as needed */
+}
 
-      margin-left: 300px;
-    }
-    li {
-      display: inline-block;
-      list-style-type: none;
-      background-color: #161D6f;
-      color: white;
-      padding: 5px 15px 5px 15px;
-      border-radius: 50px;
-      margin-top: 10px;
-      margin-right: 30px;
-      font-weight: bold;
-      
-    }
-    .nav-link {
-      color: whitesmoke;
-    }
-    
-   
+.nav-link {
+    color: #333; /* Text color */
+}
 
-    .search-container {
-      position: absolute;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      border: 2px solid #ddd;
-      border-radius: 50px;
-      padding: 5px;
-      margin: 10px;
-      padding: 0;
-    }
+.nav-link:hover {
+    color: #f39c12; /* Hover color */
+}
 
-    .search-input {
-      border: none;
-      outline: none;
-      padding: 5px;
-      width: 150px;
-      font-size: 16px;
-      border-radius: 25px;
-    }
+.search-container {
+    position: relative;
+}
 
-    .search-btn {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0 10px;
-      margin: 0;
-    }
+.search-input {
+    border: 1px solid #ccc; /* Customize as needed */
+    border-radius: 4px;
+    padding: 5px;
+}
 
-    .search-icon {
-      font-size: 20px;
-      color: #555;
-    }
-
-    .search-btn:hover .search-icon {
-      color: #007bff;
-    }
-    li:hover {
-      background-color: whitesmoke;
-      color: black;
-    }
-    
-    
-    .dropdown-item:hover {
-      color: rgb(36, 15, 226);
-
-    }
+.search-btn {
+    background-color: transparent; /* Adjust as needed */
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 pre {
       color:whitesmoke;
@@ -574,67 +537,44 @@ p {
    </style>
 </head>
 <body>
-  <header>
-    <!--Navigation Bar-->
-     <!--Logo-->
-     
-     </ul><nav class="navbar navbar-expand-lg navbar-light">
-       <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-       <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
-           </li>
-           <li class="nav-item">
-               <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
-             </li>
-       
- <script>
-       function showMore() {
-         const moreRegions = document.getElementById('moreRegions');
-         const showMoreBtn = document.getElementById('showMoreBtn');
-     
-         // Toggle the visibility of the hidden regions
-         if (moreRegions.style.display === 'none') {
-           moreRegions.style.display = 'block';  // Show the hidden regions
-           showMoreBtn.textContent = 'Show Less...';  // Change button text
-         } else {moreRegions.style.display = 'none';  // Hide the regions again
-       showMoreBtn.textContent = 'Show More...';  // Reset button text
-     }
-   }
- </script>
-   
-     <!--Events & Festival-->
-       <li class="nav-item">
-         <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
-       </li>
-       <!--About Us-->
-       <li class="nav-item">
-         <a class="nav-link" href="aboutus.html">About Us</a>
-       </li>
- <!--Search box-->
-     <form class="d-flex">
-       <div class="search-container">
-         <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
-         <input 
-           type="text"
-           placeholder="Search..."
-           class="search-input"
-         />
-         <button class="search-btn" type="submit">
-         </button>
-       </div>
-     </form>
-     </div>
-     </div>
-     </nav>
-   <!--Navigation Bar End-->
-    <pre>
-        
-     
-            
-    </pre>
-  </header>
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionA" style="padding-right: 1px;">Where to go</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
+                        <input 
+                            type="text"
+                            placeholder="Search..."
+                            class="search-input"
+                        />
+                        <button class="search-btn" type="submit"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
     
   <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
