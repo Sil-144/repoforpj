@@ -302,37 +302,39 @@ article{
 
 /* food in State */
 figure {
-  width: 100%;
-  height: auto; /* Set to auto for responsive height */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
   margin-top: 3vw;
 }
 
 figure h3 {
-  font-weight: 700; /* Remove px unit, as font-weight does not use px */
+  font-weight: 700;
   text-align: center;
   color: black;
   margin-top: 4vw;
-  font-family: 'Poppins', sans-serif; /* Corrected font name */
-  font-size: 4vw; /* Adjust font size to be responsive */
+  font-family: 'Poppins', sans-serif;
+  font-size: 4vw;
 }
 
 figure h4 {
   font-weight: 700;
   text-align: center;
   color: #D27C2C;
-  font-family: 'Poppins', sans-serif; /* Corrected font name */
-  font-size: 3.5vw; /* Adjust font size to be responsive */
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5vw;
 }
 
 figure .card {
   width: 20%;
   height: auto;
-  margin-top: 5vw;
-  margin-left: 3vw;
+  margin: 0;
   border-radius: 25px;
   overflow: hidden;
-  position: relative;
-  float: left;
+  flex: 1 1 20%;
+  text-align: center;
 }
 
 figure .card img {
@@ -341,70 +343,18 @@ figure .card img {
   height: 200px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) { /* Large desktops */
+@media (max-width: 1200px) {
   figure .card {
-    width: 30%;
-    margin-left: 2vw;
-  }
-
-  figure h3 {
-    font-size: 3vw;
-  }
-
-  figure h4 {
-    font-size: 2.5vw;
+    flex: 1 1 45%;
   }
 }
 
-@media (max-width: 992px) { /* Tablets and small laptops */
+@media (max-width: 768px) {
   figure .card {
-    width: 45%;
-    margin-left: 2vw;
-  }
-
-  figure h3 {
-    font-size: 4vw;
-  }
-
-  figure h4 {
-    font-size: 3vw;
+    flex: 1 1 100%;
   }
 }
 
-@media (max-width: 768px) { /* Tablets */
-  figure {
-    margin-top: 5vw;
-  }
-
-  figure .card {
-    width: 90%;
-    margin: 2vw auto;
-    float: none; /* Center the card on smaller screens */
-  }
-
-  figure h3 {
-    font-size: 5vw;
-  }
-
-  figure h4 {
-    font-size: 4vw;
-  }
-}
-
-@media (max-width: 480px) { /* Mobile phones */
-  figure {
-    margin-top: 6vw;
-  }
-
-  figure h3 {
-    font-size: 6vw;
-  }
-
-  figure h4 {
-    font-size: 5vw;
-  }
-}
 
 
 /* background attachment */
