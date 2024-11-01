@@ -22,19 +22,21 @@
  
   <style>
      
-     .navbar {
+       /* Glassy Navbar Style */
+       .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
             border-radius: 12px;
             padding: 1rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-          
         }
 
         /* Center Navbar Links */
         .navbar-nav {
             margin: 0 auto;
         }
+
+        /* Circular Logo */
         .navbar-brand img {
             width: 70px; /* Increased size */
             height: 70px; /* Increased size */
@@ -76,7 +78,7 @@
         /* Hero Section */
         .hero-section {
             position: relative;
-             /* Replace with your background image path */
+            background-image: url(images/nav.webp); /* Replace with your background image path */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -111,15 +113,6 @@
 
         .hero-subtitle {
             font-size: 1.5rem;
-        }
-        #bgVideo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-            z-index: -1; /* Ensures video stays behind the content */
         }
         /* <!--style starter for section card --> */
      place{
@@ -444,10 +437,7 @@ section {
                 </div>
             </div>
         </nav>
-        <video autoplay muted loop id="bgVideo">
-            <source src="images/video_2024-10-07_20-54-20.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        
         
         <!-- Hero Section -->
         <header class="hero-section">
@@ -709,4 +699,5 @@ updateCardPosition();
         
 </body>
 </html>
+
 
