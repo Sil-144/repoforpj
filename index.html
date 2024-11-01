@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="xe6Vb__eloiU8ZbXVdn7x_d23KGrEE6oU_UZmZ4lOUU">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destino-visit-Burma</title>
@@ -21,160 +20,101 @@
   </head>
  
   <style>
-    header {
-      position: relative;
-      width: 100%;
-      height: 500px;
+     #bgVideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Ensures video stays behind the content */
+        }
 
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      filter: blur(3px); /* Apply blur to background */
-      z-index: -1; /* Make sure it's behind content */
-    }
-    .navbar {
-      position: relative;
-      top:0;
-    }
+        header {
+            position: relative;
+            height: 100vh; /* Full screen height */
+        }
 
-    header {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center vertically and horizontally */
+            text-align: center;
+            color: white;
+            z-index: 1; /* Ensures the content appears above the video */
+        }
 
-body, html {
-  height: 100%;
-}
-    header {
-  position: relative;
-  height: 100vh; /* Full screen height */
-  overflow: hidden; /* Prevents video overflow */
-     
-}
-    
-    .logo {
-      width: 100px;
-      height: auto;
-      margin-top:5px ;
-      margin-left: 20px;
-      border-radius: 50%;
-      
-}
-   
-    nav ul {
-      list-style-type: none;
+        .header-content h1 {
+            color: whitesmoke;
+            font-size: 50px;
+            font-weight: bold;
+        }
 
-      margin-left: 300px;}
-    nav li {
-      display: inline-block;
-      list-style-type: none;
-      background-color: #161D6f;
-      color: #fff;
-      padding: 5px 15px 5px 15px;
-      border-radius: 50px;
-      margin-top: 10px;
-      margin-right: 30px;
-      font-weight: bold;
-      
-}
-    .nav-link {
-      color: whitesmoke;
-}
+        .header-content p {
+            color: rgb(240, 224, 224);
+            font-size: 30px;
+        }
 
-    
-    
-  
-    .search-container {
-      position: absolute;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      border: 2px solid #ddd;
-      border-radius: 50px;
-      padding: 5px;
-      margin: 10px;
-      padding: 0;
-}
+        .destino {
+            color: yellowgreen;
+        }
 
-    .search-input {
-      border: none;
-      outline: none;
-      padding: 5px;
-      width: 150px;
-      font-size: 16px;
-      border-radius: 25px;
-}
+        .burma {
+            color: rgb(218, 195, 69);
+            font-weight: bold;
+        }
 
-    .search-btn {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0 10px;
-      margin: 0;
-}
+        nav {
+            background-color: #161D6f;
+            padding: 10px;
+        }
 
-    .search-icon {
-      font-size: 20px;
-      color: #555;
-}
+        .navbar-brand {
+            font-size: 30px;
+            color: white;
+        }
 
-    .search-btn:hover .search-icon {
-      color: #007bff;
-}
-nav li:hover {
-      background-color: whitesmoke;
-      color: black;
-}
-    
-    #bgVideo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: -1; /* Ensures video stays behind the content */
-}
+        .nav-link {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px; /* Space between links */
+        }
 
-/* Style for the header content */
-.header-content {
-  position: relative;
-  z-index: 1; /* Ensures the content appears above the video */
-  text-align: center;
-  color: white;
-  font-family: Arial, sans-serif;
-  top: 50%;
-  transform: translateY(-50%); /* Center vertically */
-}
-.header-content h1 {
-  color: whitesmoke ; /* Custom color for the h1 tag */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Optional: change font */
-  font-size: 50px;
-  font-weight: bold;
-}
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Space between input and button */
+            background-color: #161D6f;
+        }
 
-.header-content p {
-  color:rgb(240, 224, 224); /* Custom color for the p tag */
-  font-family: 'Verdana', sans-serif; /* Optional: change font */
-  font-size: 30px;
-}
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 36px; /* Smaller font size for mobile */
+            }
 
-.destino {
-  color: yellowgreen;
-}
-.burma{
-  color: rgb(218, 195, 69);
-  font-weight: bold;
-}
+            .header-content p {
+                font-size: 20px; /* Smaller font size for mobile */
+            }
+
+            .nav-link {
+                font-size: 18px; /* Smaller font size for mobile */
+                margin-left: 10px; /* Adjust spacing for mobile */
+            }
+
+            .navbar-brand {
+                font-size: 24px; /* Smaller brand size for mobile */
+            }
+
+            .search-container {
+                flex-direction: column; /* Stack search input and button on mobile */
+                width: 100%;
+            }
+
+            .search-container input {
+                width: calc(100% - 20px); /* Full width minus padding */
+            }
+        }
     
         /* <!--style starter for section card --> */
  place{
@@ -260,7 +200,7 @@ nav li:hover {
         .arrow.visible {
             display: block; /* Show arrows when needed */
         }
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 992px) and (max-width: 1440px) {
     .place {
         height: auto;
     }
@@ -289,17 +229,11 @@ nav li:hover {
     }
 }
 
-
-
-figure{
-  background-image: url(images/14.avif);}
-
-
 /* background attachment fixed */
-article{
-  background-image: url(images/heartlake.jpg);
+figure{
+  background-image: url(images/c13.jpg);
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -307,205 +241,215 @@ article{
   overflow: hidden;
   transition: 0.5s;
 }
-        /* gallery */
-.gallary {
-  box-sizing: border-box;
-  background: #717379;
- 
+aside {
+margin: 0;
+padding: 0;
+background-color: #f0f0f0; /* Light background for better contrast */
 }
-.gallary p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color:black;
+.gallery {
+box-sizing: border-box;
+background: white;
+padding: 20px;
+}
+.gallery p {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: black;
 }
 .myanmar {
-  color: #d3d3ca;
-  font-weight: bold;
-  font-size: 50px;
+color: #D27C2C ;
+font-weight: bold;
+font-size: 50px;
+text-align: center; /* Center text */
+margin-bottom: 20px; /* Space below the heading */
 }
-.gallary img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            display: inline-block;
-        }
-        .grid-wrapper {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-auto-rows: 150px; /* Default row height */
-            grid-auto-flow: dense;
-        }
-        .grid-wrapper > div {
+.grid-wrapper {
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-auto-rows: 150px; /* Default row height */
+grid-auto-flow: dense;
+}
+.grid-wrapper > div {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.grid-wrapper > div > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5px;
+}
+/* Different heights for specific classes */
+.grid-wrapper .tall {
+grid-row: span 2; /* Makes the image twice the height */
+}
+.grid-wrapper .short {
+grid-row: span 1; /* Default height */
+}
+.grid-wrapper .wide {
+grid-column: span 2; /* Makes the image twice the width */
+}
+.grid-wrapper .big {
+grid-column: span 2;
+grid-row: span 2;
+}
+        /* Responsive Styles */
+@media (max-width: 768px) {
+.myanmar {
+font-size: 36px; /* Adjust font size for mobile */
+}
+}
+section {
+            background-image: url(images/b23.jpeg);
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            overflow: hidden;
+            font-size: 45px;
+            color: rgb(218, 195, 69);
+            font-weight: 600;
+            transition: 0.5s;
+            font-family: "Roboto Slab", serif;
+            margin-top: 4vw;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center; /* Center the text */
+            padding: 0 20px; /* Add padding for small screens */
         }
-        .grid-wrapper > div > img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
+
+        @media (max-width: 768px) {
+            section {
+                height: 300px; /* Adjust height for mobile */
+                font-size: 30px; /* Smaller font size for mobile */
+                margin-top: 4vw; /* Adjust margin for mobile */
+            }
+
+            h1 {
+                margin-left: 0; /* Remove left margin on mobile */
+                margin-top: 0; /* Remove top margin on mobile */
+            }
         }
-        /* Different heights for specific classes */
-        .grid-wrapper .tall {
-            grid-row: span 2; /* Makes the image twice the height */
+        .custom-footer {
+            background: #161D6f;
+            color: white;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
         }
-        .grid-wrapper .short {
-            grid-row: span 1; /* Default height */
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
         }
-        .grid-wrapper .wide {
-            grid-column: span 2; /* Makes the image twice the width */
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
         }
-        .grid-wrapper .big {
-            grid-column: span 2;
-            grid-row: span 2;
-        } 
 
+        .footer-section h3 {
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
 
-section {
-  background-image: url(images/hp19.jpg);
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  
-  overflow: hidden;
-  font-size: 45px;
-  color: rgb(218, 195, 69);
-  font-weight: 600;
-  transition: 0.5s;
-  font-family: "Roboto Slab", serif;
-  margin-top: 7vw;
- 
-}
-.custom-footer {
-    background:#161D6f;
-    color: white;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
-}
+        .footer-section p {
+            margin: 10px 0;
+        }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-}
+        .footer-section a {
+            color: #f39c12;
+            text-decoration: none;
+        }
 
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
-}
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
 
-.footer-section h3 {
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
-}
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
 
-.footer-section p {
-    margin: 10px 0;
-}
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            width: 70%;
+        }
 
-.footer-section a {
-    color: #f39c12;
-    text-decoration: none;
-}
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
 
-.footer-section a:hover {
-    text-decoration: underline;
-}
+        .newsletter button:hover {
+            background-color: #e67e22;
+        }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
 
-.newsletter input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-    width: 70%;
-}
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-.newsletter button {
-    padding: 10px 15px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-}
+            .footer-section {
+                text-align: center; /* Center text on small screens */
+                margin: 10px 0; /* Adjust margins for mobile */
+            }
 
-.newsletter button:hover {
-    background-color: #e67e22;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-}
-
-  </style>
+            .footer-bottom {
+                font-size: 0.8em; /* Smaller font size for mobile */
+            }
+        }</style>
   <body>
     <header>
-      <!--Navigation Bar-->
-       <!--Logo-->
-       
-       </ul><nav class="navbar navbar-expand-lg navbar-light">
-         <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-         <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             <li class="nav-item">
-               <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
-             </li>
-             <li class="nav-item">
-                 <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
-               </li>
-         
-   <script>
-         function showMore() {
-           const moreRegions = document.getElementById('moreRegions');
-           const showMoreBtn = document.getElementById('showMoreBtn');
-       
-           // Toggle the visibility of the hidden regions
-           if (moreRegions.style.display === 'none') {
-             moreRegions.style.display = 'block';  // Show the hidden regions
-             showMoreBtn.textContent = 'Show Less...';  // Change button text
-           } else {moreRegions.style.display = 'none';  // Hide the regions again
-         showMoreBtn.textContent = 'Show More...';  // Reset button text
-       }
-     }
-   </script>
-     
-       <!--Events & Festival-->
-         <li class="nav-item">
-           <a class="nav-link" href="moon festival.html">Events & Festival</a>
-         </li>
-         <!--About Us-->
-         <li class="nav-item">
-           <a class="nav-link" href="aboutus.html">About Us</a>
-         </li>
-   <!--Search box-->
-       <form class="d-flex">
-         <div class="search-container">
-           <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
-           <input 
-             type="text"
-             placeholder="Search..."
-             class="search-input"
-           />
-           <button class="search-btn" type="submit">
-           </button>
-         </div>
-       </form>
-       </div>
-       </div>
-       </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid" style="background-color:#161D6f ;height: 4vw;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="font-size: 30px;color: white;">Destino</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" style="margin-left: 25vw;font-size: 20px;">
+                  <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item" style="margin-left: 45px;font-size: 20px;">
+                  <a class="nav-link active" aria-current="page" href="#sectionA" style="color: white;">Destinations</a>
+                </li>
+                <li class="nav-item" style="margin-left: 45px;font-size: 20px;">
+                  <a class="nav-link active" aria-current="page" href="moon festival.html" style="color: white;">Events</a>
+                </li>
+                <li class="nav-item" style="margin-left: 45px;font-size: 20px;">
+                  <a class="nav-link active" aria-current="page" href="aboutus.html" style="color: white;">About us</a>
+                </li>
+               
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" style="border: 2px solid #D27C2C;color: #D27C2C;">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
      <!--Navigation Bar End-->
      
        <video autoplay muted loop id="bgVideo">
@@ -567,7 +511,7 @@ section {
               <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
           </a>
 
-          <a href="kachinmain.html" class="card hidden">
+          <a href="" class="card hidden">
             <img src="images/pla1.jpg" alt="Image 11">
             <div class="caption">Kachin State <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan State to the south, and Sagaing Region and India to the west.</div>
             </a>
@@ -575,7 +519,7 @@ section {
                 <img src="images/pla2.jpg" alt="Image 12">
                 <div class="caption">Kayah state<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded on the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
             </a>
-            <a href="Kayin.html" class="card hidden">
+            <a href="" class="card hidden">
               <img src="images/pla3.jpg" alt="Image 13">
               <div class="caption">Kayin State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An, also spelled Pa-An.</div>
           </a>
@@ -610,19 +554,19 @@ section {
       <img src="images/pla7.jpg" alt="Image 20">
       <div class="caption">Yangon Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and gilded Buddhist pagodas define its skyline.</div>
   </a>
-  <a href="sagaingmain.html" class="card hidden">
+  <a href="" class="card hidden">
     <img src="images/pla9.png" alt="Image 21">
     <div class="caption">Sagaing Region <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy River, 20 km to the south-west of Mandalay on the opposite bank of the river. </div>
   </a>
-  <a href="TanintharyiMain.html" class="card hidden">
+  <a href="" class="card hidden">
     <img src="images/pla11.jpg" alt="Image 22">
     <div class="caption">Tanintharyi Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi Region is a region of Myanmar, covering the long narrow southern part of the country on the northern Malay Peninsula, reaching to the Kra Isthmus.</div>
   </a>
-  <a href="Ayeyarwadymain.html" class="card hidden">
+  <a href="" class="card hidden">
     <img src="images/pla13.jpg" alt="Image 23">
-    <div class="caption">Ayeyarwady Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
+    <div class="caption">Ayeyawady Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
   </a>
-  <a href="bagomain.html" class="card hidden">
+  <a href="" class="card hidden">
     <img src="images/pla12.jpg" alt="Image 24">
     <div class="caption">Bago Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago Region is an administrative region of Myanmar, located in the southern central part of the country.</div>
   </a>
@@ -687,89 +631,87 @@ updateCardPosition();
       </figure>
     
       <aside>
+        <div class="gallery">
+            <h1 class="myanmar">Explore Myanmar</h1>
         <div class="grid-wrapper">
-          <div class="tall"><img src="images/hp1.jpg" alt="Description of image 1" loading="lazy"></div>
-          <div class="short"><img src="images/hp2.jpg" alt="Description of image 2" loading="lazy"></div>
-          <div><img src="images/hp3.jpg" alt="Description of image 3" loading="lazy"></div>
-          <div class="wide"><img src="images/165433947700.jpg" alt="Description of image 4" loading="lazy"></div>
-          <div><img src="images/hp5.jpg" alt="Description of image 5" loading="lazy"></div>
-          <div class="tall"><img src="images/hpa an.jpg" alt="Description of image 6" loading="lazy"></div>
-          <div><img src="images/hp7.jpg" alt="Description of image 7" loading="lazy"></div>
-          <div><img src="images/Shan.jpg" alt="Description of image 8" loading="lazy"></div>
-          <div class="big"><img src="images/hp19.jpg" alt="Description of image 9" loading="lazy"></div>
-          <div><img src="images/hp10.jpg" alt="Description of image 10" loading="lazy"></div>
-          <div><img src="images/hp11.jpg" alt="Description of image 11" loading="lazy"></div>
-          <div><img src="images/hp12.jpg" alt="Description of image 12" loading="lazy"></div>
-          <div class="tall"><img src="images/hp13.jpg" alt="Description of image 13" loading="lazy"></div>
-          <div><img src="images/hp14.jpg" loading="lazy"></div>
-          <div><img src="images/hp15.jpg" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/hp16.jpg" alt="Description of image 14" loading="lazy"></div>
-          <div><img src="images/hp17.webp" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/hp18.jpg" alt="Description of image 15" loading="lazy"></div> 
-
-      </div>
-      </aside>
+            <div class="tall"><img src="images/hp1.jpg" alt="Description of image 1" loading="lazy"></div>
+            <div class="short"><img src="images/hp2.jpg" alt="Description of image 2" loading="lazy"></div>
+            <div><img src="images/hp3.jpg" alt="Description of image 3" loading="lazy"></div>
+            <div class="wide"><img src="images/165433947700.jpg" alt="Description of image 4" loading="lazy"></div>
+            <div><img src="images/hp5.jpg" alt="Description of image 5" loading="lazy"></div>
+            <div class="tall"><img src="images/hpa an.jpg" alt="Description of image 6" loading="lazy"></div>
+            <div><img src="images/hp7.jpg" alt="Description of image 7" loading="lazy"></div>
+            <div><img src="images/Shan.jpg" alt="Description of image 8" loading="lazy"></div>
+            <div class="big"><img src="images/hp19.jpg" alt="Description of image 9" loading="lazy"></div>
+            <div><img src="images/hp10.jpg" alt="Description of image 10" loading="lazy"></div>
+            <div><img src="images/hp11.jpg" alt="Description of image 11" loading="lazy"></div>
+            <div><img src="images/hp12.jpg" alt="Description of image 12" loading="lazy"></div>
+            <div class="tall"><img src="images/hp13.jpg" alt="Description of image 13" loading="lazy"></div>
+            <div><img src="images/hp14.jpg" loading="lazy"></div>
+            <div><img src="images/hp15.jpg" alt="Description of image 15" loading="lazy"></div>
+            <div><img src="images/hp16.jpg" alt="Description of image 14" loading="lazy"></div>
+            <div><img src="images/hp17.webp" alt="Description of image 15" loading="lazy"></div>
+            <div><img src="images/hp18.jpg" alt="Description of image 15" loading="lazy"></div> 
+        </div>
+    </aside>
 
       <section>
-        <h1 style="margin-left: 8vw;  margin-top: 9vw;">Haven't decided yet?<br>Let us inspire you even more. </h1>
+        <h1>Haven't decided yet?<br>Let us inspire you even more. </h1>
       </section>
 
-   
-     <footer class="custom-footer">
-          <div class="footer-container">
-              <div class="footer-section">
-                  <h3>Site Map</h3>
-                  <table style="width: 100%; color: #f39c12; border-collapse: collapse;">
-                      <tr>
-                          <td style="padding: 10px;"><a href="index.html" target="_blank">Home</a></td>
-                          <td style="padding: 10px;"><a href="kachinmain.html" target="_blank">Kachin State</a></td>
-                          <td style="padding: 10px;"><a href="Rakinemain.html" target="_blank">Rakhine State</a></td>
-                          <td style="padding: 10px;"><a href="Ayeyarwadymain.html" target="_blank">Ayeyarwady Region</a></td>
-                      </tr>
-                      <tr>
-                          <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
-                          <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
-                          <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
-                          <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
-                      </tr>
-                      <tr>
-                          <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
-                          <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
-                          <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
-                          <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
-                      </tr>
-                      <tr>
-                          <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
-                          <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
-                          <td style="padding: 10px;"><a href="" target="_blank">Yangon Region</a></td>
-                          <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
-                      </tr>
-                      <tr>
-                          <td style="padding: 10px;"><a href="" target="_blank"></a></td>
-                          <td style="padding: 10px;"><a href="Monmain.html" target="_blank">Mon State</a></td>
-                          <td style="padding: 10px;"><a href="bagomain.html" target="_blank">Bago Region</a></td>
-                      </tr>
-                  </table>
-              </div>
-              
-          </div>
-          <div class="footer-container">
-              <div class="footer-section">
-                  <h3>Start Your Adventure</h3>
-                  <p>Join us in exploring around Myanmar. Your journey starts here!</p>
-              </div>
-              <div class="footer-section">
-                  <h3>Contact Us</h3>
-                  <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
-                  <p>Phone: <a href="tel:+18001234567">+959255747074</a></p>
-              </div>
-          </div>
-          <div class="footer-bottom">
-              <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
-          </div>
-      </footer>
-      
-      
+      <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Site Map</h3>
+                <table style="width: 100%; color: #f39c12; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px;"><a href="index.html" target="_blank">Home</a></td>
+                        <td style="padding: 10px;"><a href="kachinmain.html" target="_blank">Kachin State</a></td>
+                        <td style="padding: 10px;"><a href="Rakinemain.html" target="_blank">Rakhine State</a></td>
+                        <td style="padding: 10px;"><a href="Ayeyarwadymain.html" target="_blank">Ayeyarwady Region</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
+                        <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
+                        <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
+                        <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
+                        <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
+                        <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
+                        <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
+                        <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
+                        <td style="padding: 10px;"><a href="" target="_blank">Yangon Region</a></td>
+                        <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><a href="" target="_blank"></a></td>
+                        <td style="padding: 10px;"><a href="Monmain.html" target="_blank">Mon State</a></td>
+                        <td style="padding: 10px;"><a href="bagomain.html" target="_blank">Bago Region</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Start Your Adventure</h3>
+                <p>Join us in exploring around Myanmar. Your journey starts here!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
+                <p>Phone: <a href="tel:+18001234567">+959255747074</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
+        </div>
+    </footer>
         
 </body>
 </html>
+
