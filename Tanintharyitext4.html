@@ -16,123 +16,116 @@
     <link rel="icon" href="/C++/Web Application Development/pj-logo.jpg" type="image.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <!--Title font-style-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Text:ital@0;1&family=Nosifer&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Charm:wght@400;700&family=DM+Serif+Text:ital@0;1&family=Nosifer&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+    <!--Title font-style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Text:ital@0;1&family=Nosifer&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <style>
-    header {
-     position: relative;
-      width: 100%;
-      height: 700px;
+     .navbar {
+            background: rgba(5, 86, 236, 0.1); /* Transparent background */
+            backdrop-filter: blur(10px); /* Glass effect */
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
 
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url(images/lampi.jpg);
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      z-index: -1; /* Make sure it's behind content */
-    }  
-    .logo {
-      border-radius: 50%;
-      margin-top:5px ;
-      margin-left: 30px;
-    }  
-    ul {
-      list-style-type: none;
+        /* Center Navbar Links */
+        .navbar-nav {
+            margin: 0 auto;
+        }
 
-      margin-left: 300px;
-    }
-    li {
-      display: inline-block;
-      list-style-type: none;
-      background-color: #161D6f;
-    color: #fff;
-      padding: 5px 15px 5px 15px;
-      border-radius: 50px;
-      margin-top: 10px;
-      margin-right: 30px;
-      font-weight: bold;
-      
-    }
-    .nav-link {
-      color: whitesmoke;
-    }
-    .search-container {
-      position: absolute;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      border: 2px solid #ddd;
-      border-radius: 50px;
-      padding: 5px;
-      margin: 10px;
-      padding: 0;
-    }
+        /* Circular Logo */
+        .navbar-brand img {
+            width: 70px; /* Increased size */
+            height: 70px; /* Increased size */
+            border-radius: 50%; /* Circular shape */
+            border: 2px solid #fff; /* Optional: white border around the logo */
+            object-fit: cover;
+        }
 
-    .search-input {
-      border: none;
-      outline: none;
-      padding: 5px;
-      width: 150px;
-      font-size: 16px;
-      border-radius: 25px;
-    }
+        /* Nav Links */
+        .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+            padding: 5px 10px; /* Add padding for hover effect */
+            border-radius: 5px; /* Rounded corners for hover */
+        }
 
-    .search-btn {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0 10px;
-      margin: 0;
-    }
+        .nav-link:hover {
+            color: #ffffff; /* Keep text color white */
+            background-color: #08118a; /* Change background color on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+        }
 
-    .search-icon {
-      font-size: 20px;
-      color: #555;
-    }
+        /* Login Button */
+        .btn-login {
+            background-color: #08118a;
+            color: white;
+            font-weight: bold;
+            border-radius: 13px;
+            padding: 8px 16px;
+        }
 
-    .search-btn:hover .search-icon {
-      color: #007bff;
-    }
-    li:hover {
-      background-color: whitesmoke;
-      color: black;
-    } 
-    .dropdown-item:hover {
-      color: rgb(36, 15, 226);
+        .btn-login:hover {
+            background-color: #7a9e25;
+            color: white;
+        }
+          /* Contact Button */
+  .btn-contact {
+            background-color: #08118a;
+            color: white;
+            font-weight: bold;
+            border-radius: 9px;
+            padding: 8px 16px;
+        }
 
-    }
-pre {
-      color:whitesmoke;
-      font-size: 35px;
-     margin-top: 10vw;
-     margin-left: 0;
-     padding-left: 0;
-     font-family: "Jacques Francois Shadow", serif;
-  font-weight: 400;
-  font-style: normal;
-  display: inline-block;
-    }
+        .btn-contact:hover {
+            background-color: #7a9e25;
+            color: white;
+        }
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background-image: url(images/lampi.jpg); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
 
-    span.lampi {
-    color: rgb(137, 204, 13);
-    font-family: "DM Serif Text", serif;
-  font-weight: 700;
-  font-style: normal;
-   }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+        }
   
 
 
@@ -222,593 +215,494 @@ pre {
         }
 
 
-section{
-    width: 100%;
-    height: 1500px;
-    /* margin-bottom: 5vw; */
-    font-family: Arial, sans-serif;
-    background-image: url(images/text.4-bg-2.jpg);
-    /* background-image: url("/images/image 1.jpg");
-    background-size: auto; */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-   z-index: -1; 
-   overflow: hidden;
-   transition: 0.5s;
-   color: #D27C2C;
-   font-weight: 1000;
-}
-section h1{
-    margin-left: 15vw;
-    color: #D27C2C;
-    font-size: 35px;
-    margin-top: 5vw;
-}
-/* section h2{
-    margin-left: 15vw;
-    color:#D27C2C ;
-    font-size: 25px;
-    font-family: "Jacques Francois Shadow", serif;
-    margin-top: 5vw;
-    font-family: Arial, sans-serif;
-   
-} */
-section p{
-    margin-top: 5vw;
-    margin-left: 25vw;
-    text-align: justify;
-    text-justify: inter-word;
-    text-indent: 25px;
-    color: white;
-    margin-right: 25vw;
-    font-size: 17px;
-    margin-bottom: 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-
-}
-section img{
-    margin-left: 20vw;
-    margin-top: 3vw;
-}
- 
-
-
-summary{
-  margin-top: 3vw;
-  padding: 0;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 10px;
-}
-summary img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            display: inline-block;
-        }
-        .grid-wrapper {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-auto-rows: 150px; /* Default row height */
-            grid-auto-flow: dense;
-        }
-        .grid-wrapper > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .grid-wrapper > div > img {
+        section {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
+            height: auto; /* Changed to auto for flexibility */
+            font-family: Arial, sans-serif;
+            background-image: url(images/text.4-bg-2.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: -1; 
+            overflow: hidden;
+            transition: 0.5s;
+            color: #D27C2C;
+            font-weight: 1000;
+            padding: 5vw; /* Added padding for better spacing */
         }
-        /* Different heights for specific classes */
-        .grid-wrapper .tall {
-            grid-row: span 2; /* Makes the image twice the height */
+        section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
         }
-        .grid-wrapper .short {
-            grid-row: span 1; /* Default height */
+        section p {
+            margin-top: 2vw;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            text-align: justify;
+            text-justify: inter-word;
+            text-indent: 25px;
+            color: white;
+            font-size: 1rem; /* Use rem for responsiveness */
+            margin-bottom: 0;
+            font-family: Arial, sans-serif;
         }
-        .grid-wrapper .wide {
-            grid-column: span 2; /* Makes the image twice the width */
+        section img {
+            width: 60%; /* Set image width to 60% for responsiveness */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 3vw auto; /* Center the image */
         }
-        .grid-wrapper .big {
-            grid-column: span 2;
-            grid-row: span 2; /* Big image taking up more space */
+        @media (max-width: 768px) {
+            section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section p {
+                font-size: 0.9rem; /* Smaller font size for mobile */
+            }
+            section img {
+                width: 80%; /* Adjust image size for mobile */
+            }
         }
 
-        .custom-footer {
-    background:#161D6f;
-    color: white;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
+/* gallery */
+aside {
+    height: auto;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0; /* Light background for better contrast */
 }
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
+.gallery {
+box-sizing: border-box;
+background: white;
+padding: 20px;
 }
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
+.gallery p {
+    margin-top: 0;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: black;
 }
+.myanmar {
+    margin-top: 0;
+color: #D27C2C ;
+font-weight: bold;
+font-size: 50px;
+text-align: center; /* Center text */
 
-.footer-section h3 {
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
 }
-
-.footer-section p {
-    margin: 10px 0;
+.grid-wrapper {
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-auto-rows: 150px; /* Default row height */
+grid-auto-flow: dense;
 }
-
-.footer-section a {
-    color: #f39c12;
-    text-decoration: none;
+.grid-wrapper > div {
+display: flex;
+justify-content: center;
+align-items: center;
 }
-
-.footer-section a:hover {
-    text-decoration: underline;
+.grid-wrapper > div > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5px;
 }
-
-.social-icons {
-    display: flex;
-    gap: 10px;
+/* Different heights for specific classes */
+.grid-wrapper .tall {
+grid-row: span 2; /* Makes the image twice the height */
 }
-
-.newsletter input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-    width: 70%;
+.grid-wrapper .short {
+grid-row: span 1; /* Default height */
 }
-
-.newsletter button {
-    padding: 10px 15px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
+.grid-wrapper .wide {
+grid-column: span 2; /* Makes the image twice the width */
 }
-
-.newsletter button:hover {
-    background-color: #e67e22;
+.grid-wrapper .big {
+grid-column: span 2;
+grid-row: span 2;
 }
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
+        /* Responsive Styles */
+@media (max-width: 768px) {
+.myanmar {
+font-size: 36px; /* Adjust font size for mobile */
 }
+}
+.custom-footer {
+            background: #161D6f;
+            color: white;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+        }
 
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
 
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+
+        .footer-section h3 {
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+
+        .footer-section p {
+            margin: 10px 0;
+        }
+
+        .footer-section a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            width: 70%;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .newsletter button:hover {
+            background-color: #e67e22;
+        }
+
+        .footer-bottom {
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            margin-left: 16vw;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center; /* Center text on small screens */
+                margin: 10px 0; /* Adjust margins for mobile */
+            }
+
+            .footer-bottom {
+                font-size: 0.8em; /* Smaller font size for mobile */
+               
+            }
+        }
 </style>
 <body>
   <header>
-    <!--Navigation Bar-->
-     <!--Logo-->
-     
-     </ul><nav class="navbar navbar-expand-lg navbar-light">
-       <img src="images/Screenshot 2024-09-13 142916.png" class="logo" alt="Destino" width="100px" height="100px">
-       <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link" href="index.html"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a>
-           </li>
-           <li class="nav-item">
-               <a class="nav-link" href="#sectionA" style="padding-right: 1px;"></i>Where to go</a>
-             </li>
-       
- <script>
-       function showMore() {
-         const moreRegions = document.getElementById('moreRegions');
-         const showMoreBtn = document.getElementById('showMoreBtn');
-     
-         // Toggle the visibility of the hidden regions
-         if (moreRegions.style.display === 'none') {
-           moreRegions.style.display = 'block';  // Show the hidden regions
-           showMoreBtn.textContent = 'Show Less...';  // Change button text
-         } else {moreRegions.style.display = 'none';  // Hide the regions again
-       showMoreBtn.textContent = 'Show More...';  // Reset button text
-     }
-   }
- </script>
-   
-     <!--Events & Festival-->
-       <li class="nav-item">
-         <a class="nav-link" href="eventandfestival.html">Events & Festival</a>
-       </li>
-       <!--About Us-->
-       <li class="nav-item">
-         <a class="nav-link" href="aboutus.html">About Us</a>
-       </li>
- <!--Search box-->
-     <form class="d-flex">
-       <div class="search-container">
-         <i class="fa-solid fa-magnifying-glass" style="padding-left: 5px;"></i>
-         <input 
-           type="text"
-           placeholder="Search..."
-           class="search-input"
-         />
-         <button class="search-btn" type="submit">
-         </button>
-       </div>
-     </form>
-     </div>
-     </div>
-     </nav>
-   <!--Navigation Bar End-->
-       
-        <!--Home page texts-->
-        <pre>
-          WELCOME TO  DESTINO 
-            Embark on an adventure to uncover the pristine beauty and
-                vibrant biodiversity of <span class="lampi">"Lampi Marine National Park"</span>
-                
-        </pre>
-      </header>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+    <a class="navbar-brand" href="#">
+        <img src="images/Screenshot 2024-09-13 142916.png" alt="Logo"> <!-- Add your logo path here -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"></a></li>
+        </ul>
+        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
+    </div>
+</div>
+</nav>
 
-
-      <place><!--here is the stater for section card-->
-        <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
-        <h2>In Burma</h2>
-        <div class="container" id="cardContainer">
-            <div class="cards-wrapper" id="cardsWrapper">
-                <a href="" class="card">
-                    <img src="" alt="Image 1">
-                    <div class="caption">Kalaw<br>Shan State</div>
-                </a>
-                <a href="" class="card">
-                    <img src="" alt="Image 2">
-                    <div class="caption">Image 2</div>
-                </a>
-                <a href="" class="card">
-                    <img src="" alt="Image 3">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                <a href="" class="card">
-                    <img src="" alt="Image 4">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                
-                <a href="" class="card hidden">
-                    <img src="" alt="Image 5">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                <a href="" class="card hidden">
-                    <img src="" alt="Image 6">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                <a href="" class="card hidden">
-                    <img src="" alt="Image 7">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                <a href="" class="card hidden">
-                    <img src="" alt="Image 8">
-                    <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-                </a>
-                <a href="" class="card hidden">
-                  <img src="" alt="Image 9">
-                  <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-              </a>
-              <a href="" class="card hidden">
-                  <img src="" alt="Image 10">
-                  <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
-              </a>
+<!-- Hero Section -->
+<header class="hero-section">
+<div class="hero-content">
+    <h1 class="hero-title">Welcome to Lampi Marine National Park</h1>
     
-              <a href="kachinmain.html" class="card hidden">
-                <img src="images/pla1.jpg" alt="Image 11">
-                <div class="caption">Kachin State <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan State to the south, and Sagaing Region and India to the west.</div>
-                </a>
-                <a href="Kayarmain.html" class="card hidden">
-                    <img src="images/pla2.jpg" alt="Image 12">
-                    <div class="caption">Kayah state<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded on the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
-                </a>
-                <a href="Kayin.html" class="card hidden">
-                  <img src="images/pla3.jpg" alt="Image 13">
-                  <div class="caption">Kayin State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An, also spelled Pa-An.</div>
-              </a>
-              <a href="Chinmain.html" class="card hidden">
-                  <img src="images/165433947700.jpg" alt="Image 14">
-                  <div class="caption">Chin State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;;">Located at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands tall at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
-              </a>
-                    
-              <a href="Monmain.html" class="card hidden">
-                <img src="images/Mon.jpg" alt="Image 15">
-                <div class="caption">Mon State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mon State is an administrative division of Myanmar. It lies between Kayin State to the east, the Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
-            </a>
-      
-            <a href="Rakinemain.html" class="card hidden">
-              <img src="images/pla5.jpg" alt="Image 16">
-              <div class="caption">Rakhine State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine State, formerly known as Arakan State, is a state in Myanmar. Situated on the western coast, it is bordered by Chin State to the north, Magway Region, Bago Region.</div>
+</div>
+</header>
+
+<place><!--here is the stater for section card-->
+  <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
+  <h2>In Burma</h2>
+  <div class="container" id="cardContainer">
+      <div class="cards-wrapper" id="cardsWrapper">
+          <a href="" class="card">
+              <img src="" alt="Image 1">
+              <div class="caption">Kalaw<br>Shan State</div>
           </a>
-          <a href="Shanmain.html" class="card hidden">
-              <img src="images/pla6.jpg" alt="Image 17">
-              <div class="caption">Shan State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
+          <a href="" class="card">
+              <img src="" alt="Image 2">
+              <div class="caption">Image 2</div>
+          </a>
+          <a href="" class="card">
+              <img src="" alt="Image 3">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="" class="card">
+              <img src="" alt="Image 4">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          
+          <a href="" class="card hidden">
+              <img src="" alt="Image 5">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
           </a>
           <a href="" class="card hidden">
-            <img src="images/pla10.jpg" alt="Image 18">
-            <div class="caption">Magway Region <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway Region is an administrative division in central Myanmar. It is the second largest of Myanmar's seven divisions, with an area of 44,820 km².</div>
+              <img src="" alt="Image 6">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="" class="card hidden">
+              <img src="" alt="Image 7">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="" class="card hidden">
+              <img src="" alt="Image 8">
+              <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+          </a>
+          <a href="" class="card hidden">
+            <img src="" alt="Image 9">
+            <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
         </a>
-        <a href="Mandalaymain.html" class="card hidden">
-            <img src="images/pla8.jpg" alt="Image 19">
-            <div class="caption">Mandalay Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy River.</div>
-        </a>
-      
         <a href="" class="card hidden">
-          <img src="images/pla7.jpg" alt="Image 20">
-          <div class="caption">Yangon Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and gilded Buddhist pagodas define its skyline.</div>
-      </a>
-      <a href="" class="card hidden">
-        <img src="images/pla9.png" alt="Image 21">
-        <div class="caption">Sagaing Region <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy River, 20 km to the south-west of Mandalay on the opposite bank of the river. </div>
-      </a>
-      <a href="" class="card hidden">
-        <img src="images/pla11.jpg" alt="Image 22">
-        <div class="caption">Tanintharyi Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi Region is a region of Myanmar, covering the long narrow southern part of the country on the northern Malay Peninsula, reaching to the Kra Isthmus.</div>
-      </a>
-      <a href="" class="card hidden">
-        <img src="images/pla13.jpg" alt="Image 23">
-        <div class="caption">Ayeyarwady Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
-      </a>
-      <a href="bagomain.html" class="card hidden">
-        <img src="images/pla12.jpg" alt="Image 24">
-        <div class="caption">Bago Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago Region is an administrative region of Myanmar, located in the southern central part of the country.</div>
-      </a>
-                </div>
-         <!-- Arrows for showing more cards -->
-         <div class="arrow left-arrow" id="showMoreLeft">
-            <span class="material-symbols-outlined">arrow_back_ios</span>
-        </div>
-        <div class="arrow right-arrow" id="showMoreRight">
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-        </div>
-    </div>
-    
-            <!-- Arrows for showing more cards -->
-            <div class="arrow left-arrow" id="showMoreLeft">
-                <span class="material-symbols-outlined">arrow_back_ios</span>
-            </div>
-            <div class="arrow right-arrow" id="showMoreRight">
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
-            </div>
-        </div>
-    
-        <script>
-          const cardsWrapper = document.getElementById('cardsWrapper');
-          const showMoreLeft = document.getElementById('showMoreLeft');
-          const showMoreRight = document.getElementById('showMoreRight');
-          const totalCards = document.querySelectorAll('.card').length;
-          const visibleCards = 4; // Number of cards to show at once
-          const moveCount = 3; // Number of cards to move per click
-          const cardWidth = 130; // Card width
-          const cardMargin = 20; // Margin between cards
-          let currentIndex = 0; // Starting index (first card)
-    
-           /**
-          * Update the card position based on the currentIndex
-          */
-          function updateCardPosition() {
-          const offset = currentIndex * (cardWidth + cardMargin); // Total width moved
-          cardsWrapper.style.transform = `translateX(-${offset}px)`;
-    
-          // Show or hide arrows based on the current index
-          showMoreLeft.classList.toggle('visible', currentIndex > 0);
-          showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
-          }
-    
-          
-          showMoreRight.addEventListener('click', () => {
-          currentIndex += moveCount; // Move by 3 cards
-          if (currentIndex > totalCards - visibleCards) {
-          currentIndex = totalCards - visibleCards; // Prevent overshooting
-      }
-      updateCardPosition();
-      });
-      showMoreLeft.addEventListener('click', () => {
-      currentIndex -= moveCount; // Move by 3 cards
-      if (currentIndex < 0) {
-      currentIndex = 0; // Stay at the start
-      }
-      updateCardPosition();
-      });
-    // Initialize visibility and position on page load
-    updateCardPosition();
-    </script>
-      </place>
+            <img src="" alt="Image 10">
+            <div class="caption">Hpa-An<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae quam nihil est numquam natus labore.</div>
+        </a>
 
-  <section>
-        <!-- Language Switcher -->
-    <label for="language-switcher">Choose Language:</label>
-    <select id="language-switcher">
-        <option value="en">English</option>
-        <option value="my">Myanmar</option>
-    </select>
-        <h1 id="welcome-text" style=" margin-left: 15vw;color: whitesmoke;font-size: 35px;font-family: Jacques Francois Shadow,
-         serif;margin-top: 5vw;">Lampi Marine National Park</h1>
-        <p id="intro-text" style="text-align: justify;text-justify: inter-word;color: white;">Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.</p>
-        <!-- <img src="images/rih.jpg" alt="no image" width="60%" height="480px"style>  -->
-        <!-- <h2>Where Rih lake is situated</h2> -->
-        <p id="section-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
-         white;font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
-         inter-word;">Best Time to Visit</p>
-        <div><p id="section-description" style="text-align: justify;text-justify: inter-word;color:white;">The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.</p>
-        <p id="where-title" style=" text-align: justify;text-justify: inter-word;;margin-top: 5vw; margin-left: 15vw; color:
-         white;font-size: 35px;font-family: Jacques Francois Shadow, serif;text-align: justify;text-justify: 
-            inter-word;">Indigenous Communities</p>
-        <div><p id="where-description" style="text-align: justify;text-justify: inter-word;color: white;">The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marine environment.</p>
-        <p id="activities-title" style="text-align: justify;text-justify: inter-word;; margin-top: 5vw; margin-left: 15vw; color:
-         white;font-size: 35px;font-family: Jacques Francois Shadow, serif;">Activities on Lampi Marine National Park </p>
-        <p id="activities-description" style="text-align: justify;text-justify: inter-word;color: white;">At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight.</p>
-        </section>
+        <a href="kachinmain.html" class="card hidden">
+          <img src="images/pla1.jpg" alt="Image 11">
+          <div class="caption">Kachin State <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan State to the south, and Sagaing Region and India to the west.</div>
+          </a>
+          <a href="Kayarmain.html" class="card hidden">
+              <img src="images/pla2.jpg" alt="Image 12">
+              <div class="caption">Kayah state<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded on the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
+          </a>
+          <a href="Kayin.html" class="card hidden">
+            <img src="images/pla3.jpg" alt="Image 13">
+            <div class="caption">Kayin State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An, also spelled Pa-An.</div>
+        </a>
+        <a href="Chinmain.html" class="card hidden">
+            <img src="images/165433947700.jpg" alt="Image 14">
+            <div class="caption">Chin State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;;">Located at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands tall at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
+        </a>
+              
+        <a href="Monmain.html" class="card hidden">
+          <img src="images/Mon.jpg" alt="Image 15">
+          <div class="caption">Mon State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mon State is an administrative division of Myanmar. It lies between Kayin State to the east, the Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
+      </a>
+
+      <a href="Rakinemain.html" class="card hidden">
+        <img src="images/pla5.jpg" alt="Image 16">
+        <div class="caption">Rakhine State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine State, formerly known as Arakan State, is a state in Myanmar. Situated on the western coast, it is bordered by Chin State to the north, Magway Region, Bago Region.</div>
+    </a>
+    <a href="Shanmain.html" class="card hidden">
+        <img src="images/pla6.jpg" alt="Image 17">
+        <div class="caption">Shan State<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
+    </a>
+    <a href="Magwaymain.html" class="card hidden">
+      <img src="images/pla10.jpg" alt="Image 18">
+      <div class="caption">Magway Region <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway Region is an administrative division in central Myanmar. It is the second largest of Myanmar's seven divisions, with an area of 44,820 km².</div>
+  </a>
+  <a href="Mandalaymain.html" class="card hidden">
+      <img src="images/pla8.jpg" alt="Image 19">
+      <div class="caption">Mandalay Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy River.</div>
+  </a>
+
+  <a href="Yangon.html" class="card hidden">
+    <img src="images/pla7.jpg" alt="Image 20">
+    <div class="caption">Yangon Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and gilded Buddhist pagodas define its skyline.</div>
+</a>
+<a href="sagaingmain.html" class="card hidden">
+  <img src="images/pla9.png" alt="Image 21">
+  <div class="caption">Sagaing Region <br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy River, 20 km to the south-west of Mandalay on the opposite bank of the river. </div>
+</a>
+<a href="TanintharyiMain.html" class="card hidden">
+  <img src="images/pla11.jpg" alt="Image 22">
+  <div class="caption">Tanintharyi Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi Region is a region of Myanmar, covering the long narrow southern part of the country on the northern Malay Peninsula, reaching to the Kra Isthmus.</div>
+</a>
+<a href="Ayeyarwadymain.html" class="card hidden">
+  <img src="images/pla13.jpg" alt="Image 23">
+  <div class="caption">Ayeyawady Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
+</a>
+<a href="bagomain.html" class="card hidden">
+  <img src="images/pla12.jpg" alt="Image 24">
+  <div class="caption">Bago Region<br style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago Region is an administrative region of Myanmar, located in the southern central part of the country.</div>
+</a>
+          </div>
+   <!-- Arrows for showing more cards -->
+   <div class="arrow left-arrow" id="showMoreLeft">
+      <span class="material-symbols-outlined">arrow_back_ios</span>
+  </div>
+  <div class="arrow right-arrow" id="showMoreRight">
+      <span class="material-symbols-outlined">arrow_forward_ios</span>
+  </div>
+</div>
+
+      <!-- Arrows for showing more cards -->
+      <div class="arrow left-arrow" id="showMoreLeft">
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+      </div>
+      <div class="arrow right-arrow" id="showMoreRight">
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </div>
+  </div>
+
+  <script>
+    const cardsWrapper = document.getElementById('cardsWrapper');
+    const showMoreLeft = document.getElementById('showMoreLeft');
+    const showMoreRight = document.getElementById('showMoreRight');
+    const totalCards = document.querySelectorAll('.card').length;
+    const visibleCards = 4; // Number of cards to show at once
+    const moveCount = 3; // Number of cards to move per click
+    const cardWidth = 130; // Card width
+    const cardMargin = 20; // Margin between cards
+    let currentIndex = 0; // Starting index (first card)
+
+     /**
+    * Update the card position based on the currentIndex
+    */
+    function updateCardPosition() {
+    const offset = currentIndex * (cardWidth + cardMargin); // Total width moved
+    cardsWrapper.style.transform = `translateX(-${offset}px)`;
+
+    // Show or hide arrows based on the current index
+    showMoreLeft.classList.toggle('visible', currentIndex > 0);
+    showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
+    }
+
+    
+    showMoreRight.addEventListener('click', () => {
+    currentIndex += moveCount; // Move by 3 cards
+    if (currentIndex > totalCards - visibleCards) {
+    currentIndex = totalCards - visibleCards; // Prevent overshooting
+}
+updateCardPosition();
+});
+showMoreLeft.addEventListener('click', () => {
+currentIndex -= moveCount; // Move by 3 cards
+if (currentIndex < 0) {
+currentIndex = 0; // Stay at the start
+}
+updateCardPosition();
+});
+// Initialize visibility and position on page load
+updateCardPosition();
+</script>
+</place>
      
-         <!--js for language switcher-->
-         <script>
-          const translations = {
-              en:{
-                welcome: "Lampi Marine National Park" ,
-                intro: "Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.",
-                sectionTitle: "Best Time to Visit",
-                sectionDescription: " The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.",
-                whereTitle: "Indigenous Communities ",
-                 whereDescription: "The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marineenvironment.",
-                 activitiesTitle: "Activities on Lampi Marine National Park ",
-                 activitiesDescription: "At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight."
-                },
-
-              my: {
-                welcome: "Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ် ",
-                intro: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်သည် မြန်မာနိုင်ငံတောင်ပိုင်း တနင်္သာရီတိုင်းဒေသကြီး မြိတ်ကျွန်းစုတွင် တည်ရှိသည်။ မြန်မာနိုင်ငံ၏ ပထမဆုံးသော အဏ္ဏဝါအမျိုးသားဥယျာဉ်ဖြစ်ပြီး ကုန်းမြေနှင့် အဏ္ဏဝါနေထိုင်ရာ နှစ်ခုလုံးကို လွှမ်းခြုံထားပြီး စတုရန်းကီလိုမီတာ 2,000 တွင် ကျွန်းပေါင်း 200 ကျော် ဖြန့်ကျက်ထားသည်။ ၎င်းပန်းခြံသည် ၎င်း၏ ကြွယ်ဝသော ဇီဝမျိုးစုံမျိုးကွဲများအတွက် ကျော်ကြားပြီး ဒီရေတောများ၊ သန္တာကျောက်တန်းများ၊ ပင်လယ်မြက်ခင်းများနှင့် အပူပိုင်းဒေသများ အပါအဝင် ဂေဟစနစ်အမျိုးမျိုး၏ ကြွယ်ဝသော ပန်းခြံဖြစ်သည်။ ",
-                sectionTitle: "လည်ပတ်ရန်အကောင်းဆုံးအချိန်",
-                sectionDescription: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်သို့သွားရောက်လည်ပတ်ရန် အကောင်းဆုံးအချိန်သည် နိုဝင်ဘာလမှ ဧပြီလကြားတွင်ဖြစ်ပြီး ရာသီဥတုခြောက်သွေ့ကာ ရေထဲတွင်မြင်နိုင်စွမ်းအကောင်းဆုံးဖြစ်သဖြင့် snorkeling နှင့် ရေငုပ်ခြင်းကဲ့သို့သော ပင်လယ်ရေကြောင်းလှုပ်ရှားမှုများအတွက် အကောင်းဆုံးအချိန်ဖြစ်သည်။",
-                whereTitle: "ဌာနေတိုင်းရင်းသားအသိုင်းအဝိုင်းများ",
-                whereDescription: "အဆိုပါပန်းခြံသည် “ပင်လယ်ဂျစ်ပစီ” ဟုလည်းသိကြသည့် ဌာနေတိုင်းရင်းသားလူမျိုးစုဖြစ်သည့် Moken လူမျိုးများနေထိုင်ရာ နေရာဖြစ်ပြီး ရိုးရာခြေသလုံးတစ်ပိုင်းလူနေမှုပုံစံဖြင့် ၎င်းတို့၏အသက်မွေးဝမ်းကျောင်းအတွက် ပင်လယ်ကိုအမှီပြုနေထိုင်ကြသည်။ လာရောက်လည်ပတ်သူများသည် Moken ၏ထူးခြားသောယဉ်ကျေးမှု၊ ၎င်းတို့၏ရေရှည်တည်တံ့သောအလေ့အကျင့်များနှင့် အဏ္ဏဝါပတ်ဝန်းကျင်နှင့် နက်ရှိုင်းသောဆက်စပ်မှုကို  လေ့လာနိုင်သည်။",
-                activitiesTitle: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်တွင် လှုပ်ရှားမှုများ",
-                activitiesDescription: " Lampi အဏ္ဏဝါအမျိုးသားဥယျာဉ်တွင် ဧည့်သည်များသည် ၎င်း၏ သဘာဝနှင့် ယဉ်ကျေးမှုဆိုင်ရာ အံ့ဖွယ်များကို မီးမောင်းထိုးပြသည့် eco-friendly လှုပ်ရှားမှုများကို ခံစားနိုင်သည်။ Snorkeling နှင့် ရေငုပ်ခြင်းသည် တက်ကြွသော သန္တာကျောက်တန်းများနှင့် မတူကွဲပြားသော အဏ္ဏဝါသက်ရှိများကို ဖော်ထုတ်ပြသနိုင်ပြီး၊ သင်္ဘောစီးခြင်းနှင့် လှေစီးခြင်းများသည် ဒီရေတောများမှတဆင့် ကမ်းရိုးတန်းကို နစ်မြုပ်စူးစမ်းလေ့လာနိုင်စေပါသည်။ တောရိုင်းတိရိစ္ဆာန်ဝါသနာအိုးများသည် ရှားပါးမျိုးစိတ်များဖြစ်သည့် ရှားပါးမျိုးစိတ်များကို ရှာဖွေတွေ့ရှိနိုင်ပြီး တောင်တက်လမ်းများသည် ဒေသတွင်းရှိ သစ်ပင်ပန်းမန်များနှင့် တိရစ္ဆာန်များနှင့် တွေ့ကြုံရသည့် ရှုခင်းများကို ပေးစွမ်းနိုင်သည်။ မွန်ကင်ကျေးရွာများသို့ ယဉ်ကျေးမှုလည်ပတ်မှုများသည် ဌာနေတိုင်းရင်းသားလူမျိုးများ၏ ထူးခြားသောလူနေမှုပုံစံနှင့် ဓလေ့ထုံးတမ်းများကို ထိုးထွင်းသိမြင်စေကာ ဂေဟစနစ်သဟဇာတဖြစ်သော စခန်းချနေထိုင်သူများသည် ပန်းခြံ၏သာယာသောပတ်ဝန်းကျင်ကို ညတွင်းချင်း တွေ့ကြုံခံစားနိုင်စေပါသည်။"
-              }
-            };
-    
-          function loadLanguage(lang) {
-            document.getElementById("welcome-text").innerText =
-              translations[lang].welcome;
-            document.getElementById("intro-text").innerText =
-              translations[lang].intro;
-            document.getElementById("section-title").innerText =
-              translations[lang].sectionTitle;
-            document.getElementById("section-description").innerText =
-              translations[lang].sectionDescription;
-            document.getElementById("where-title").innerText =
-              translations[lang].whereTitle;
-            document.getElementById("where-description").innerText =
-              translations[lang].whereDescription;
-            document.getElementById("activities-title").innerText =
-              translations[lang].activitiesTitle;
-            document.getElementById("activities-description").innerText =
-              translations[lang].activitiesDescription;
-          }
-    
-          document
-            .getElementById("language-switcher")
-            .addEventListener("change", function () {
-              loadLanguage(this.value);
-            });
-    
-          // Set default language on page load
-          loadLanguage("en");
-        </script>
-        
-
-      <!-- <figure></figure>   -->
-        
-<!-- <figure>
-  <h1 style="margin-left: 8vw;  margin-top: 19vw;">Choose from luxury hotels to cozy hostels. </h1>
-  <h2 style="margin-left: 8vw; font-family: Roboto Slab, serif;">Book your perfect retreat with ease</h2>
-</figure>
-
-        <aside>
-            <div class="cardwwtg">
-                <img src="images/imagestwo.jpg" alt="no image">
-                <div class="card-content">
-                  <h1>Title Two</h1>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
-                  <div><a href=""><button class=" button5">Learn More</button></a></div>
-                </div>
-                </div>
-    
-                <div class="cardwwtg">
-                    <img src="images/imagestwo.jpg" alt="no image">
-                    <div class="card-content">
-                      <h1>Title Two</h1>
-                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
-                      <div><a href=""><button class="button5">Learn More</button></a></div>
-                    </div>
-                    </div>
-    
-                    <div class="cardwwtg">
-                        <img src="images/image three.jpg" alt="no image">
-                        <div class="card-content">
-                          <h1>Title Two</h1>
-                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum !</p>
-                          <div><a href=""><button class="button5">Learn More</button></a></div>
-                        </div>
-                        </div>
-    
-                        <div class="cardwwtg">
-                            <img src="images/imagesone.jpg" alt="no image">
-                            <div class="card-content">
-                              <h1>Title Two</h1>
-                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consectetur, amet totam dolorem beatae illum!</p>
-                              <div><a href=""><button class=" button5">Learn More</button></a></div>
-                            </div>
-                            </div>
-        </aside>  -->
-
-
-        <summary>
-            <div class="grid-wrapper">
-                  <div class="tall"><img src="images/img-13.jpg" alt="Description of image 1" loading="lazy"></div>
-                  <div class="short"><img src="images/img-1.jpg" alt="Description of image 2" loading="lazy"></div>
-                  <div><img src="images/img-5.jpg" alt="Description of image 3" loading="lazy"></div>
-                  <div class="wide"><img src="images/img-14.jpg" alt="Description of image 4" loading="lazy"></div>
-                  <div><img src="images/img-15.jpg" alt="Description of image 5" loading="lazy"></div>
-                  <div class="tall"><img src="images/img-2.jpg" alt="Description of image 6" loading="lazy"></div>
-                  <div><img src="images/myaw yit.jpg" alt="Description of image 7" loading="lazy"></div>
-                  <div><img src="images/img-6.jpg" alt="Description of image 8" loading="lazy"></div>
-                  <div class="big"><img src="images/img-8.jpg" alt="Description of image 9" loading="lazy"></div>
-                  <div><img src="images/img-11.jpg" alt="Description of image 10" loading="lazy"></div>
-                  <div><img src="images/img-7.jpg" alt="Description of image 11" loading="lazy"></div>
-                  <div><img src="images/img-10.jpg" alt="Description of image 12" loading="lazy"></div>
-                  <div class="tall"><img src="images/img-14.jpg" alt="Description of image 13" loading="lazy"></div>
-                  <div><img src="images/img-4.jpg" loading="lazy"></div>
-                  <div><img src="images/img-3.jpg" alt="Description of image 15" loading="lazy"></div>
-                  <div><img src="images/img-12.jpg" alt="Description of image 14" loading="lazy"></div>
-                  <div><img src="images/shin koe shin.jpg" alt="Description of image 15" loading="lazy"></div>
-                  <div><img src="images/head-1.jpg" alt="Description of image 15" loading="lazy"></div> 
-              </div>
-        </summary>
-                
-        <footer class="custom-footer">
-          <div class="footer-container">
-              <div class="footer-section">
-                  <h3>Start Your Adventure</h3>
-                  <p>Join us in exploring around Myanmar. Your journey starts here!</p>
-              </div>
-              <div class="footer-section">
-                  <h3>Contact Us</h3>
-                  <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
-                  <p>Phone: <a href="tel:+18001234567">+1 (800) 123-4567</a></p>
-              </div>
-              <div class="footer-section">
-                  <h3>Follow Us</h3>
-                  <div class="social-icons">
-                      <a href="index.html" target="_blank">Home</a> |
-                      <a href="eventandfestival.html" target="_blank">Events</a> |
-                      <a href="aboutus.html" target="_blank">About</a> |
-                      <a href="form.html" target="_blank">Contact</a> |
-                  </div>
-              </div>
-              <div class="footer-section newsletter">
-                  <h3>Stay Updated</h3>
-                  <p>Subscribe for exclusive offers and travel tips!</p>
-                  <input type="email" placeholder="Your email" />
-                  <button type="button">Subscribe</button>
-              </div>
-          </div>
-          <div class="footer-bottom">
-              <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
-          </div>
-      </footer>
+      <section>
+        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Tanintharyi Region</h1>
+        <p>The Tanintharyi Region is located in the southernmost part of Myanmar, stretching along the western coast of the Malay Peninsula. It is bordered by the Andaman Sea to the west and shares a land border with Thailand to the east. The region includes major cities such as Dawei, Myeik, and Kawthaung, with Myeik and Kawthaung serving as gateways to the renowned Mergui Archipelago, a collection of over 800 islands.</p>
+        <p style="color: #D27C2C; font-size: 1.5rem;">Lampi Marine National Park </p>
+        <p>Lampi Marine National Park is located in the Myeik Archipelago, in the Tanintharyi Region of southern Myanmar. It is Myanmar's first marine national park and covers both land and marine habitats, with over 200 islands spread across 2,000 square kilometers.The park is renowned for its rich biodiversity, home to various ecosystems including mangrove forests, coral reefs, seagrass beds, and tropical evergreen forests.</p>
+        <p>The ideal time to visit Lampi Marine National Park is between November and April, when the weather is dry and visibility in the water is at its best, making it optimal for marine activities like snorkeling and diving.The park is home to the Moken people, an indigenous group also known as “sea gypsies,” who traditionally live a semi-nomadic lifestyle and rely on the sea for their livelihood. Visitors can learn about the Moken’s unique culture, their sustainable practices, and their deep connection to the marineenvironment.</p>
+        <p> At Lampi Marine National Park, visitors can enjoy a range of eco-friendly activities that highlight its natural and cultural wonders. Snorkeling and diving reveal vibrant coral reefs and diverse marine life, while kayaking and boat tours through mangrove forests allow for an immersive exploration of the coastline. Wildlife enthusiasts can spot rare species like dugongs, sea turtles, and hornbills, and hiking trails offer scenic views and encounters with local flora and fauna. Cultural visits to Moken villages provide insights into the unique lifestyle and traditions of the indigenous people, and eco-friendly camping lets visitors experience the park’s serene environment overnight.</p>
+    </section>
+    <aside>
+      <div class="gallery">
+        <h1 class="myanmar">Explore Myanmar</h1>
+        <div class="grid-wrapper">
+            <div class="tall"><img src="images/img-13.jpg" alt="Description of image 1" loading="lazy"></div>
+            <div class="short"><img src="images/img-1.jpg" alt="Description of image 2" loading="lazy"></div>
+            <div><img src="images/img-5.jpg" alt="Description of image 3" loading="lazy"></div>
+            <div class="wide"><img src="images/img-14.jpg" alt="Description of image 4" loading="lazy"></div>
+            <div><img src="images/img-15.jpg" alt="Description of image 5" loading="lazy"></div>
+            <div class="tall"><img src="images/img-2.jpg" alt="Description of image 6" loading="lazy"></div>
+            <div><img src="images/myaw yit.jpg" alt="Description of image 7" loading="lazy"></div>
+            <div><img src="images/img-6.jpg" alt="Description of image 8" loading="lazy"></div>
+            <div class="big"><img src="images/img-8.jpg" alt="Description of image 9" loading="lazy"></div>
+            <div><img src="images/img-11.jpg" alt="Description of image 10" loading="lazy"></div>
+            <div><img src="images/img-7.jpg" alt="Description of image 11" loading="lazy"></div>
+            <div><img src="images/img-10.jpg" alt="Description of image 12" loading="lazy"></div>
+            <div class="tall"><img src="images/img-14.jpg" alt="Description of image 13" loading="lazy"></div>
+            <div><img src="images/img-4.jpg" loading="lazy"></div>
+            <div><img src="images/img-3.jpg" alt="Description of image 15" loading="lazy"></div>
+            <div><img src="images/img-12.jpg" alt="Description of image 14" loading="lazy"></div>
+            <div><img src="images/shin koe shin.jpg" alt="Description of image 15" loading="lazy"></div>
+            <div><img src="images/head-1.jpg" alt="Description of image 15" loading="lazy"></div> 
+        </div>
+      </aside>
+      
+<footer class="custom-footer">
+<div class="footer-container">
+    <div class="footer-section">
+        <h3>Site Map</h3>
+        <table style="width: 100%; color: #f39c12; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 10px;"><a href="index.html" target="_blank">Home</a></td>
+                <td style="padding: 10px;"><a href="kachinmain.html" target="_blank">Kachin State</a></td>
+                <td style="padding: 10px;"><a href="Rakinemain.html" target="_blank">Rakhine State</a></td>
+                <td style="padding: 10px;"><a href="Ayeyarwadymain.html" target="_blank">Ayeyarwady Region</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
+                <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
+                <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
+                <td style="padding: 10px;"><a href="Magwaymain.html" target="_blank">Magway Region</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
+                <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
+                <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
+                <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
+                <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
+                <td style="padding: 10px;"><a href="Yangon.html" target="_blank">Yangon Region</a></td>
+                <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><a href="" target="_blank"></a></td>
+                <td style="padding: 10px;"><a href="Monmain.html" target="_blank">Mon State</a></td>
+                <td style="padding: 10px;"><a href="bagomain.html" target="_blank">Bago Region</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="footer-container">
+    <div class="footer-section">
+        <h3>Start Your Adventure</h3>
+        <p>Join us in exploring around Myanmar. Your journey starts here!</p>
+    </div>
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
+        <p>Phone: <a href="tel:+18001234567">+959255747074</a></p>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
+</div>
+</footer>
+       
 </body>
 </html>
