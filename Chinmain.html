@@ -275,70 +275,49 @@
       margin-top: 7vw;
     }
 
-
-
-
+    /* Default styling (for larger screens) */
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Center all cards */
       padding: 20px;
-      /* Add padding for spacing */
     }
 
     .sectioncard {
       width: 65%;
-      /* Default width for mobile */
       max-width: 800px;
-      /* Set max width for larger screens */
       background-color: whitesmoke;
       border-radius: 25px;
       margin: 15px auto;
-      /* Center cards */
       display: flex;
-      /* Use flexbox for card layout */
       flex-direction: column;
-      /* Stack elements vertically by default */
       padding: 10px;
-      /* Add padding for spacing */
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      /* Optional shadow for depth */
     }
 
     .sectioncard img {
       width: 100%;
-      /* Make image responsive */
       height: 300px;
-      /* Fixed height for uniformity */
       object-fit: cover;
-      /* Maintain aspect ratio and cover */
       border-radius: 25px;
     }
 
     .sectiontext {
       display: flex;
       flex-direction: column;
-      /* Stack text vertically */
       justify-content: center;
-      /* Center text vertically */
       padding: 10px;
-      /* Padding for spacing */
     }
 
     .sectiontext h3 {
       font-size: 24px;
-      /* Set heading size */
       margin: 10px 0;
-      /* Add margin for spacing */
     }
 
     .sectiontext p {
       color: black;
       text-align: justify;
-      /* Justify text */
       margin: 0;
-      /* Remove default margin */
     }
 
     .button4 {
@@ -347,15 +326,10 @@
       border: 2px solid #555555;
       border-radius: 8px;
       cursor: pointer;
-      /* Change cursor on hover */
       margin-top: 10px;
-      /* Add margin to separate from text */
       align-self: flex-start;
-      /* Align button to the left */
       padding: 10px 15px;
-      /* Add padding for the button */
       transition: background-color 0.3s, color 0.3s;
-      /* Smooth transition */
     }
 
     .button4:hover {
@@ -363,36 +337,39 @@
       color: white;
     }
 
-    /* Media Query for Larger Screens */
-    @media (min-width: 768px) {
+    /* Tablet screens (up to 768px) */
+    @media (max-width: 768px) {
       .sectioncard {
-        flex-direction: row;
-        margin-top: 4vw;
-        /* Change layout to row for larger screens */
-      }
-
-      .sectioncard img {
-        width: 100%;
-        /* Image takes 40% of card width */
-        height: 250px;
-        /* Maintain aspect ratio */
-      }
-
-      .sectiontext {
-        padding-left: 20px;
-        /* Increase padding for larger screens */
-        width: 60%;
-        /* Allow text area to take remaining space */
+        width: 80%;
       }
 
       .sectiontext h3 {
-        font-size: 28px;
-        /* Increase heading size for larger screens */
+        font-size: 20px;
       }
 
-      .sectiontext p {
-        font-size: 16px;
-        /* Adjust paragraph font size */
+      .sectioncard img {
+        height: 250px;
+      }
+    }
+
+    /* Mobile screens (up to 480px) */
+    @media (max-width: 480px) {
+      .sectioncard {
+        width: 90%;
+        margin: 10px auto;
+      }
+
+      .sectiontext h3 {
+        font-size: 18px;
+      }
+
+      .sectioncard img {
+        height: 200px;
+      }
+
+      .button4 {
+        padding: 8px 12px;
+        margin-top: 8px;
       }
     }
 
