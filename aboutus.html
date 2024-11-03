@@ -72,7 +72,6 @@
         .hero-section {
             position: relative;
             background-image: url(images/ourt.jpg);
-             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -258,6 +257,7 @@
         }
 
         /* background attachment fixed */
+        /* Default styles (for larger screens) */
         article {
             background-image: url(images/myan.jpg);
             width: 100%;
@@ -266,35 +266,48 @@
             background-attachment: fixed;
             background-position: center;
             z-index: -1;
-            /* Ensure it's behind content */
             overflow: hidden;
         }
 
         article p {
             font-size: 23px;
-            /* Change font size here */
             color: white;
-            /* Text color */
             font-weight: bold;
-            /* Bold text */
             transition: 0.5s;
-            /* Transition effect */
             font-family: "Roboto Slab", serif;
-            /* Font family */
             margin-top: 7vw;
-            /* Adjust margin */
             text-align: center;
-            /* Center text horizontally */
             display: flex;
-            /* Use flexbox for vertical alignment */
             justify-content: center;
-            /* Center text horizontally */
             align-items: center;
-            /* Center text vertically */
             padding: 20px;
-            /* Adjust padding */
         }
 
+        /* Medium screens (tablets) */
+        @media (max-width: 768px) {
+            article {
+                height: 80vh;
+            }
+
+            article p {
+                font-size: 18px;
+                padding: 15px;
+                margin-top: 10vw;
+            }
+        }
+
+        /* Small screens (phones) */
+        @media (max-width: 480px) {
+            article {
+                height: 70vh;
+            }
+
+            article p {
+                font-size: 16px;
+                padding: 10px;
+                margin-top: 12vw;
+            }
+        }
 
         /* Basic Styles */
         body {
@@ -801,139 +814,139 @@
                         country.</div>
                 </a>
 
-                <<a href="" class="card hidden">
+                <a href="" class="card hidden">
                     <img src="images/pla1.jpg" alt="Image 11">
                     <div class="caption">Kachin State <br
                             style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
                         State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan
                         State to the south, and Sagaing Region and India to the west.</div>
-                    </a>
+                </a>
 
-                    <a href="" class="card hidden">
-                        <img src="images/pla12.jpg" alt="Image 24">
-                        <div class="caption">Bago Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
-                            Region is an administrative region of Myanmar, located in the southern central part of the
-                            country.</div>
-                    </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla12.jpg" alt="Image 24">
+                    <div class="caption">Bago Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                        Region is an administrative region of Myanmar, located in the southern central part of the
+                        country.</div>
+                </a>
 
-                    <a href="" class="card hidden">
-                        <img src="images/pla1.jpg" alt="Image 11">
-                        <div class="caption">Kachin State <br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
-                            State is the northernmost state of Myanmar. It is bordered by China to the north and east,
-                            Shan
-                            State to the south, and Sagaing Region and India to the west.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla2.jpg" alt="Image 12">
-                        <div class="caption">Kayah state<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah
-                            State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded
-                            on
-                            the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla3.jpg" alt="Image 13">
-                        <div class="caption">Kayin State<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin
-                            State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An,
-                            also
-                            spelled Pa-An.</div>
-                    </a>
-                    <a href="Chinmain.html" class="card hidden">
-                        <img src="images/165433947700.jpg" alt="Image 14">
-                        <div class="caption">Chin State<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;;">Located
-                            at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands
-                            tall
-                            at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
-                    </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla1.jpg" alt="Image 11">
+                    <div class="caption">Kachin State <br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
+                        State is the northernmost state of Myanmar. It is bordered by China to the north and east,
+                        Shan
+                        State to the south, and Sagaing Region and India to the west.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla2.jpg" alt="Image 12">
+                    <div class="caption">Kayah state<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah
+                        State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded
+                        on
+                        the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla3.jpg" alt="Image 13">
+                    <div class="caption">Kayin State<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin
+                        State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An,
+                        also
+                        spelled Pa-An.</div>
+                </a>
+                <a href="Chinmain.html" class="card hidden">
+                    <img src="images/165433947700.jpg" alt="Image 14">
+                    <div class="caption">Chin State<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;;">Located
+                        at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands
+                        tall
+                        at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
+                </a>
 
-                    <a href="Monmain.html" class="card hidden">
-                        <img src="images/Mon.jpg" alt="Image 15">
-                        <div class="caption">Mon State<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mon
-                            State is an administrative division of Myanmar. It lies between Kayin State to the east, the
-                            Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
-                    </a>
+                <a href="Monmain.html" class="card hidden">
+                    <img src="images/Mon.jpg" alt="Image 15">
+                    <div class="caption">Mon State<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mon
+                        State is an administrative division of Myanmar. It lies between Kayin State to the east, the
+                        Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
+                </a>
 
-                    <a href="" class="card hidden">
-                        <img src="images/pla5.jpg" alt="Image 16">
-                        <div class="caption">Rakhine State<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine
-                            State, formerly known as Arakan State, is a state in Myanmar. Situated on the western coast,
-                            it
-                            is bordered by Chin State to the north, Magway Region, Bago Region.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla6.jpg" alt="Image 17">
-                        <div class="caption">Shan State<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan
-                            State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and
-                            Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla10.jpg" alt="Image 18">
-                        <div class="caption">Magway Region <br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway
-                            Region is an administrative division in central Myanmar. It is the second largest of
-                            Myanmar's
-                            seven divisions, with an area of 44,820 km².</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla8.jpg" alt="Image 19">
-                        <div class="caption">Mandalay Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay
-                            is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy
-                            River.
-                        </div>
-                    </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla5.jpg" alt="Image 16">
+                    <div class="caption">Rakhine State<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine
+                        State, formerly known as Arakan State, is a state in Myanmar. Situated on the western coast,
+                        it
+                        is bordered by Chin State to the north, Magway Region, Bago Region.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla6.jpg" alt="Image 17">
+                    <div class="caption">Shan State<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan
+                        State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and
+                        Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla10.jpg" alt="Image 18">
+                    <div class="caption">Magway Region <br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway
+                        Region is an administrative division in central Myanmar. It is the second largest of
+                        Myanmar's
+                        seven divisions, with an area of 44,820 km².</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla8.jpg" alt="Image 19">
+                    <div class="caption">Mandalay Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay
+                        is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy
+                        River.
+                    </div>
+                </a>
 
-                    <a href="" class="card hidden">
-                        <img src="images/pla7.jpg" alt="Image 20">
-                        <div class="caption">Yangon Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon
-                            is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and
-                            gilded Buddhist pagodas define its skyline.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla9.png" alt="Image 21">
-                        <div class="caption">Sagaing Region <br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
-                            is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
-                            River, 20
-                            km to the south-west of Mandalay on the opposite bank of the river. </div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla11.jpg" alt="Image 22">
-                        <div class="caption">Tanintharyi Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi
-                            Region is a region of Myanmar, covering the long narrow southern part of the country on the
-                            northern Malay Peninsula, reaching to the Kra Isthmus.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla13.jpg" alt="Image 23">
-                        <div class="caption">Ayeyarwady Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady
-                            Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
-                    </a>
-                    <a href="" class="card hidden">
-                        <img src="images/pla12.jpg" alt="Image 24">
-                        <div class="caption">Bago Region<br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
-                            Region is an administrative region of Myanmar, located in the southern central part of the
-                            country.</div>
-                    </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla7.jpg" alt="Image 20">
+                    <div class="caption">Yangon Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon
+                        is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and
+                        gilded Buddhist pagodas define its skyline.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla9.png" alt="Image 21">
+                    <div class="caption">Sagaing Region <br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
+                        is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
+                        River, 20
+                        km to the south-west of Mandalay on the opposite bank of the river. </div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla11.jpg" alt="Image 22">
+                    <div class="caption">Tanintharyi Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi
+                        Region is a region of Myanmar, covering the long narrow southern part of the country on the
+                        northern Malay Peninsula, reaching to the Kra Isthmus.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla13.jpg" alt="Image 23">
+                    <div class="caption">Ayeyarwady Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady
+                        Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
+                </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla12.jpg" alt="Image 24">
+                    <div class="caption">Bago Region<br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                        Region is an administrative region of Myanmar, located in the southern central part of the
+                        country.</div>
+                </a>
 
-                    <a href="" class="card hidden">
-                        <img src="images/pla9.png" alt="Image 21">
-                        <div class="caption">Sagaing Region <br
-                                style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
-                            is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
-                            River, 20
-                            km to the south-west of Mandalay on the opposite bank of the river. </div>
-                    </a>
+                <a href="" class="card hidden">
+                    <img src="images/pla9.png" alt="Image 21">
+                    <div class="caption">Sagaing Region <br
+                            style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
+                        is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
+                        River, 20
+                        km to the south-west of Mandalay on the opposite bank of the river. </div>
+                </a>
             </div>
             <!-- Arrows for showing more cards -->
             <div class="arrow left-arrow" id="showMoreLeft">
@@ -993,8 +1006,9 @@
     <article>
         <p>
             Let me give you a quick look at Myanmar, a country rich in cultural heritage and natural beauty, where
-            ancient temples dot the landscape and bustling markets vibrate with life, there are essential
-            things you need to know, such as travel requirements, local customs, and the best times to visit,
+            ancient temples dot the landscape, bustling markets vibrate with life, and diverse ethnic communities
+            contribute to its vibrant tapestry of traditions and customs; alongside this captivating overview, there are
+            essential things you need to know, such as travel requirements, local customs, and the best times to visit,
             which will help you fully appreciate all that Myanmar has to offer.
         </p>
     </article>
@@ -1213,41 +1227,12 @@
         </div>
         <div class="team-content">
             <div class="box">
-                <img src="images/ZLHtoo.jpg" alt="ZLHtoo">
-                <h3>ZLHtoo</h3>
-                <div class="icons">
-                    <span class="heart-icon" onclick="incrementHeart(this)">
-                        <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
-                    </span>
-
-                    <a href="https://github.com/ZLHtoo" target="_blank">
-                        <i class="ri-github-fill"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="images/spider.jpg" alt="Spider">
-                <h3>Spider</h3>
-                <div class="icons">
-                    <span class="heart-icon" onclick="incrementHeart(this)">
-                        <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
-                    </span>
-                    <a href="https://github.com/username2" target="_blank">
-                        <i class="ri-github-fill"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
                 <img src="images/Sil.jpg" alt="Apple">
                 <h3>Sil</h3>
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/Sill-144 " target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1261,7 +1246,7 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/apple-130" target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1275,7 +1260,7 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/bingle-bb" target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1289,7 +1274,7 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/Tinkerbell-fa1ry" target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1303,7 +1288,7 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/Tsukiko140" target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1317,9 +1302,37 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/kuu9009" target="_blank">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/ZLHtoo.jpg" alt="ZLHtoo">
+                <h3>ZLHtoo</h3>
+                <div class="icons">
+                    <span class="heart-icon" onclick="incrementHeart(this)">
+                        <i class="ri-heart-fill"></i>
+                        <span class="heart-count">5</span>
+                    </span>
+                    <a href="https://github.com/ZLHtoo" target="_blank">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/spider.jpg" alt="Spider">
+                <h3>Spider</h3>
+                <div class="icons">
+                    <span class="heart-icon" onclick="incrementHeart(this)">
+                        <i class="ri-heart-fill"></i>
+                        <span class="heart-count">5</span>
+                    </span>
+                    <a href="https://github.com/username2" target="_blank">
                         <i class="ri-github-fill"></i>
                     </a>
                 </div>
@@ -1331,7 +1344,7 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/username9" target="_blank">
                         <i class="ri-github-fill"></i>
@@ -1345,27 +1358,14 @@
                 <div class="icons">
                     <span class="heart-icon" onclick="incrementHeart(this)">
                         <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
+                        <span class="heart-count">5</span>
                     </span>
                     <a href="https://github.com/username10" target="_blank">
                         <i class="ri-github-fill"></i>
                     </a>
                 </div>
             </div>
-
-            <div class="box">
-                <img src="images/Nico.jpg" alt="Nico">
-                <h3>Nico</h3>
-                <div class="icons">
-                    <span class="heart-icon" onclick="incrementHeart(this)">
-                        <i class="ri-heart-fill"></i>
-                        <span class="heart-count">0</span>
-                    </span>
-                    <a href="https://github.com/username11" target="_blank">
-                        <i class="ri-github-fill"></i>
-                    </a>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -1431,5 +1431,4 @@
         </div>
     </footer>
 </body>
-
 </html>
