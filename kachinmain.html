@@ -82,7 +82,8 @@
   /* Hero Section */
   .hero-section {
     position: relative;
-    background-image: url(images/k1.jpeg);
+    background-image: url(images/nt8.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -122,7 +123,7 @@
   /* <!--style starter for section card --> */
   place {
     width: 100%;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,9 +262,9 @@
 
   /* Default styling for larger screens */
   article {
-    background-image: url(images/k10.jpeg);
+    background-image: url(images/nt9.jpg);
     width: 100%;
-    height: 100vh;
+    height: 500px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -308,121 +309,91 @@
 
   /* General Styles for larger screens */
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center all cards */
+            padding: 20px; /* Add padding for spacing */
+        }
 
-  .sectioncard {
-    width: 65%;
-    /* Default width */
-    background-color: whitesmoke;
-    border-radius: 25px;
-    margin: 5vw auto;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+        .sectioncard {
+            width: 87%; /* Default width for mobile */
+            max-width: 800px; /* Set max width for larger screens */
+            background-color: whitesmoke;
+            border-radius: 25px;
+            margin: 15px auto; /* Center cards */
+            display: flex; /* Use flexbox for card layout */
+            flex-direction: column; /* Stack elements vertically by default */
+            padding: 10px; /* Add padding for spacing */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        }
 
-  .sectioncard img {
-    width: 100%;
-    /* Full width for image */
-    height: 250px;
-    /* Fixed height */
-    border-radius: 25px;
-    object-fit: cover;
-    /* Ensures image fills the height without distortion */
-  }
+        .sectioncard img {
+            width: 100%; /* Make image responsive */
+            height: 300px; /* Fixed height for uniformity */
+            object-fit: cover; /* Maintain aspect ratio and cover */
+            border-radius: 25px;
+        }
 
-  .sectiontext {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5vw;
-  }
+        .sectiontext {
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+            justify-content: center; /* Center text vertically */
+            padding: 10px; /* Padding for spacing */
+        }
 
-  .sectiontext h3 {
-    font-size: 30px;
-  }
+        .sectiontext h3 {
+            font-size: 24px; /* Set heading size */
+            margin: 10px 0; /* Add margin for spacing */
+        }
 
-  .sectiontext p {
-    color: black;
-    text-align: justify;
-  }
+        .sectiontext p {
+            color: black;
+            text-align: justify; /* Justify text */
+            margin: 0; /* Remove default margin */
+        }
 
-  .button4 {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    align-self: flex-start;
-  }
+        .button4 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            border-radius: 8px;
+            cursor: pointer; /* Change cursor on hover */
+            margin-top: 10px; /* Add margin to separate from text */
+            align-self: flex-start; /* Align button to the left */
+            padding: 10px 15px; /* Add padding for the button */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
 
-  .button4:hover {
-    background-color: #555555;
-    color: white;
-  }
+        .button4:hover {
+            background-color: #555555;
+            color: white;
+        }
 
-  /* Tablet screens */
-  @media (max-width: 768px) {
-    .sectioncard {
-      width: 85%;
-      /* Slightly wider on smaller screens */
-      flex-direction: column;
-      /* Stack image and text vertically */
-      padding: 15px;
-    }
+        /* Media Query for Larger Screens */
+        @media (min-width: 768px) {
+            .sectioncard {
+                flex-direction: row;
+                margin-top: 4vw; /* Change layout to row for larger screens */
+            }
 
-    .sectioncard img {
-      width: 100%;
-      /* Full width on smaller screens */
-      height: 200px;
-      /* Reduce image height */
-    }
+            .sectioncard img {
+                width: 337px; /* Image takes 40% of card width */
+                height: 250px; /* Maintain aspect ratio */
+            }
 
-    .sectiontext {
-      width: 100%;
-      /* Full width for text */
-      padding-left: 0;
-      /* Remove padding for better spacing */
-      text-align: center;
-      /* Center-align text */
-    }
+            .sectiontext {
+                padding-left: 20px; /* Increase padding for larger screens */
+                width: 60%; /* Allow text area to take remaining space */
+            }
 
-    .sectiontext h3 {
-      font-size: 26px;
-      /* Slightly reduce heading size */
-    }
-  }
+            .sectiontext h3 {
+                font-size: 28px; /* Increase heading size for larger screens */
+            }
 
-  /* Mobile screens */
-  @media (max-width: 480px) {
-    .sectioncard {
-      width: 100%;
-      /* Full width on mobile */
-      padding: 10px;
-    }
-
-    .sectioncard img {
-      height: 180px;
-      /* Further reduce image height */
-    }
-
-    .sectiontext h3 {
-      font-size: 22px;
-      /* Further reduce heading size */
-    }
-
-    .sectiontext p {
-      font-size: 14px;
-      /* Adjust paragraph font size for readability */
-    }
-
-  }
+            .sectiontext p {
+                font-size: 16px; /* Adjust paragraph font size */
+            }
+        }
 
   figure {
             font-family: 'Poppons', sans-serif;
@@ -496,59 +467,74 @@
                 vertical-align: top; /* Align cards to the top */
             }
         }
-  /* Background Attachment for Summary */
-  summary {
-    background-image: url(images/k1.jpeg);
-    width: 100%;
-    min-height: 100vh;
-    /* Minimum height of 100% viewport height */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    z-index: -1;
-    /* Ensure it's behind content */
-    overflow: hidden;
-    font-size: 45px;
-    color: rgb(218, 195, 69);
-    font-weight: 1000;
-    transition: 0.5s;
-    font-family: "Roboto Slab", serif;
-    margin-top: 7vw;
-    display: flex;
-    /* Optional: for centering content */
-    align-items: center;
-    /* Optional: vertical centering */
-    justify-content: center;
-    /* Optional: horizontal centering */
-  }
+  /* background attachment */
+summary {
+            margin: 0;
+            font-family: "Roboto Slab", serif;
+            color: white;
+            background-image: url(images/nt10.jpg);
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            z-index: -1;
+            overflow: hidden;
+            text-align: left;
+            padding: 20px; /* Add padding for better spacing */
+            box-sizing: border-box; /* Include padding in width calculations */
+        }
 
+        h1 {
+            font-size: 2.5rem; /* Responsive font size */
+            margin-top: 10vw;
+        }
 
-  /* Responsive Adjustments for Tablets */
-  @media (max-width: 768px) {
-    summary {
-      height: 400px;
-      /* Reduce height for tablets */
-      font-size: 36px;
-      /* Adjust font size */
-    }
-  }
+        h2 {
+            font-size: 2rem; /* Responsive font size */
+        }
 
-  /* Responsive Adjustments for Mobile Devices */
-  @media (max-width: 480px) {
-    summary {
-      height: 300px;
-      /* Further reduce height for mobile */
-      font-size: 28px;
-      /* Smaller font size for readability */
-      background-attachment: scroll;
-      /* Disable fixed background for better performance on mobile */
-      margin-top: 5vw;
-      /* Adjust top margin */
-    }
-  }
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+            text-indent: 20px;
+            margin-top: 20px;
+        }
 
-  /* Card Hover Section Styles */
-  section {
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem; /* Smaller heading for mobile */
+                margin-top: 5vw; /* Adjust margin for mobile */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller subheading for mobile */
+            }
+
+            p {
+                font-size: 0.9rem; /* Smaller text for mobile */
+                
+            }
+        }
+
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 3rem; /* Larger heading for larger screens */
+            }
+
+            h2 {
+                font-size: 2.5rem; /* Larger subheading for larger screens */
+            }
+
+            p {
+                font-size: 1.2rem; /* Larger text for larger screens */
+                margin-right: 50vw;
+            }
+        }
+
+        section {
             margin: 5vw auto; /* Center section with auto margins */
             padding: 20px;
             display: flex;
@@ -628,264 +614,158 @@
                 font-size: 12px; /* Smaller text for mobile */
             }
         }
-
-  /* Gallery Styles */
-  aside {
-    margin-top: 3vw;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 10px;
-  }
-
-  aside img {
-    max-width: 100%;
+/* gallery */
+aside {
     height: auto;
-    vertical-align: middle;
-    display: inline-block;
-  }
+margin: 0;
+padding: 0;
+background-color: #f0f0f0; /* Light background for better contrast */
+}
+.gallery {
+box-sizing: border-box;
+background: white;
+padding: 20px;
+}
+.gallery p {
+    margin-top: 0;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: black;
+}
+.myanmar {
+    margin-top: 0;
+color: #D27C2C ;
+font-weight: bold;
+font-size: 50px;
+text-align: center; /* Center text */
 
-  /* Grid Wrapper */
-  .grid-wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 150px;
-    /* Default row height */
-    grid-auto-flow: dense;
-  }
+}
+.grid-wrapper {
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-auto-rows: 150px; /* Default row height */
+grid-auto-flow: dense;
+}
+.grid-wrapper > div {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.grid-wrapper > div > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 5px;
+}
+/* Different heights for specific classes */
+.grid-wrapper .tall {
+grid-row: span 2; /* Makes the image twice the height */
+}
+.grid-wrapper .short {
+grid-row: span 1; /* Default height */
+}
+.grid-wrapper .wide {
+grid-column: span 2; /* Makes the image twice the width */
+}
+.grid-wrapper .big {
+grid-column: span 2;
+grid-row: span 2;
+}
+        /* Responsive Styles */
+@media (max-width: 768px) {
+.myanmar {
+font-size: 36px; /* Adjust font size for mobile */
+}
+}
 
-  .grid-wrapper>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+        .custom-footer {
+            background: #161D6f;
+            color: white;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+        }
 
-  .grid-wrapper>div>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-  }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-  /* Different heights for specific classes */
-  .grid-wrapper .tall {
-    grid-row: span 2;
-    /* Makes the image twice the height */
-  }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
 
-  .grid-wrapper .short {
-    grid-row: span 1;
-    /* Default height */
-  }
+        .footer-section h3 {
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
 
-  .grid-wrapper .wide {
-    grid-column: span 2;
-    /* Makes the image twice the width */
-  }
+        .footer-section p {
+            margin: 10px 0;
+        }
 
-  .grid-wrapper .big {
-    grid-column: span 2;
-    grid-row: span 2;
-    /* Big image taking up more space */
-  }
+        .footer-section a {
+            color: #f39c12;
+            text-decoration: none;
+        }
 
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .grid-wrapper {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      /* Reduce column width */
-      grid-gap: 8px;
-      /* Adjust grid gap */
-    }
-  }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
 
-  @media (max-width: 480px) {
-    aside {
-      padding: 5px;
-    }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
 
-    .grid-wrapper {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      /* Further reduce column width */
-      grid-gap: 5px;
-      /* Smaller gap for compact layout */
-    }
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            width: 70%;
+        }
 
-    .grid-wrapper>div>img {
-      border-radius: 3px;
-      /* Slightly smaller border-radius */
-    }
-  }
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
 
-  .kachin {
-    color: #cc6504;
-    font-size: 50px;
-  }
+        .newsletter button:hover {
+            background-color: #e67e22;
+        }
 
-  .custom-footer {
-    background: #161D6f;
-    color: white;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
-  }
+        .footer-bottom {
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            margin-left: 16vw;
+        }
 
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-  }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-  .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
-  }
+            .footer-section {
+                text-align: center; /* Center text on small screens */
+                margin: 10px 0; /* Adjust margins for mobile */
+            }
 
-  .footer-section h3 {
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
-  }
-
-  .footer-section p {
-    margin: 10px 0;
-  }
-
-  .footer-section a {
-    color: #f39c12;
-    text-decoration: none;
-  }
-
-  .footer-section a:hover {
-    text-decoration: underline;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-
-  .newsletter input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-    width: 70%;
-  }
-
-  .newsletter button {
-    padding: 10px 15px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-  }
-
-  .newsletter button:hover {
-    background-color: #e67e22;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-  }
-
-  .custom-footer {
-    background: #161D6f;
-    color: white;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 15px;
-  }
-
-  .footer-section h3 {
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
-  }
-
-  .footer-section p {
-    margin: 10px 0;
-  }
-
-  .footer-section a {
-    color: #f39c12;
-    text-decoration: none;
-  }
-
-  .footer-section a:hover {
-    text-decoration: underline;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-
-  .newsletter input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 5px;
-    width: 70%;
-  }
-
-  .newsletter button {
-    padding: 10px 15px;
-    background-color: #f39c12;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-  }
-
-  .newsletter button:hover {
-    background-color: #e67e22;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-  }
-
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .footer-section {
-      text-align: center;
-      /* Center text on small screens */
-      margin: 10px 0;
-      /* Adjust margins for mobile */
-    }
-
-    .footer-bottom {
-      font-size: 0.8em;
-      /* Smaller font size for mobile */
-    }
-  }
-
-  .kachin {
-    color: #e67e22;
-  }
+            .footer-bottom {
+                font-size: 0.8em; /* Smaller font size for mobile */
+               
+            }
+        }
 </style>
 </header>
 
@@ -974,7 +854,7 @@
                 ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
                 quam nihil est numquam natus labore.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
@@ -989,7 +869,7 @@
                 ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
                 quam nihil est numquam natus labore.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="kachinmain.html" class="card hidden">
               <img src="images/pla1.jpg" alt="Image 11">
               <div class="caption">Kachin State <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
@@ -997,7 +877,7 @@
                 State to the south, and Sagaing Region and India to the west.</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
@@ -1005,7 +885,7 @@
                 country.</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="kachinmain.html" class="card hidden">
               <img src="images/pla1.jpg" alt="Image 11">
               <div class="caption">Kachin State <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
@@ -1013,7 +893,7 @@
                 State to the south, and Sagaing Region and India to the west.</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
@@ -1021,7 +901,7 @@
                 country.</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="kachinmain.html" class="card hidden">
               <img src="images/pla1.jpg" alt="Image 11">
               <div class="caption">Kachin State <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
@@ -1029,7 +909,7 @@
                 Shan
                 State to the south, and Sagaing Region and India to the west.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Kayarmain.html" class="card hidden">
               <img src="images/pla2.jpg" alt="Image 12">
               <div class="caption">Kayah state<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah
@@ -1037,7 +917,7 @@
                 on
                 the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Kayin.html" class="card hidden">
               <img src="images/pla3.jpg" alt="Image 13">
               <div class="caption">Kayin State<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin
@@ -1062,7 +942,7 @@
                 Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="Rakinemain.html" class="card hidden">
               <img src="images/pla5.jpg" alt="Image 16">
               <div class="caption">Rakhine State<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine
@@ -1070,14 +950,14 @@
                 it
                 is bordered by Chin State to the north, Magway Region, Bago Region.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Shanmain.html" class="card hidden">
               <img src="images/pla6.jpg" alt="Image 17">
               <div class="caption">Shan State<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan
                 State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and
                 Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Magwaymain.html" class="card hidden">
               <img src="images/pla10.jpg" alt="Image 18">
               <div class="caption">Magway Region <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway
@@ -1085,7 +965,7 @@
                 Myanmar's
                 seven divisions, with an area of 44,820 km².</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Mandalaymain.html" class="card hidden">
               <img src="images/pla8.jpg" alt="Image 19">
               <div class="caption">Mandalay Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay
@@ -1094,14 +974,14 @@
               </div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="Yangon.html" class="card hidden">
               <img src="images/pla7.jpg" alt="Image 20">
               <div class="caption">Yangon Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon
                 is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and
                 gilded Buddhist pagodas define its skyline.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="sagaingmain.html" class="card hidden">
               <img src="images/pla9.png" alt="Image 21">
               <div class="caption">Sagaing Region <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
@@ -1109,20 +989,20 @@
                 River, 20
                 km to the south-west of Mandalay on the opposite bank of the river. </div>
             </a>
-            <a href="" class="card hidden">
+            <a href="TanintharyiMain.html" class="card hidden">
               <img src="images/pla11.jpg" alt="Image 22">
               <div class="caption">Tanintharyi Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi
                 Region is a region of Myanmar, covering the long narrow southern part of the country on the
                 northern Malay Peninsula, reaching to the Kra Isthmus.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="Ayeyarwadymain.html" class="card hidden">
               <img src="images/pla13.jpg" alt="Image 23">
               <div class="caption">Ayeyarwady Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady
                 Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
             </a>
-            <a href="" class="card hidden">
+            <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
@@ -1130,7 +1010,7 @@
                 country.</div>
             </a>
 
-            <a href="" class="card hidden">
+            <a href="sagaingmain.html" class="card hidden">
               <img src="images/pla9.png" alt="Image 21">
               <div class="caption">Sagaing Region <br
                   style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
@@ -1198,11 +1078,9 @@
           breathtaking landscapes and vibrant cultures. </h1>
 
       </article>
-
-      <!-- card rolling  -->
       <main>
         <div class="sectioncard">
-          <a href="kachintext1.html"><img src="images/Indawgyi Lake.jpeg" alt="Indawgyi Lake"></a>
+          <a href="kachintext1.html"><img src="images/Indawgyi Lake.jpeg" alt="no image"></a>
           <div class="sectiontext">
             <h3>Indawgyi Lake</h3>
             <p>One of Southeast Asia’s largest freshwater lakes,renowned for its tranquil beauty and surrounding
@@ -1212,7 +1090,7 @@
         </div>
 
         <div class="sectioncard">
-          <a href="kachintext2.html"><img src="images/Hkakabo Razi.jpeg" alt="Hkakabo Razi National Park"></a>
+          <a href="kachintext2.html"><img src="images/Hkakabo Razi.jpeg" alt="no image"></a>
           <div class="sectiontext">
             <h3>Hkakabo Razi National Park</h3>
             <p>A haven for adventurers,featuring Myanmar’s highest peak,Mount Hkakabo Razi and one of Southeast Asia’s
@@ -1222,7 +1100,7 @@
         </div>
 
         <div class="sectioncard">
-          <a href="kachintext3.html"><img src="images/Putao.jpeg" alt="Putao"></a>
+          <a href="kachintext3.html"><img src="images/Putao.jpeg" alt="no image"></a>
           <div class="sectiontext">
             <h3> Putao</h3>
             <p> A scenic,peaceful town set amidst snow-capped Himalayan mountains,offering a gateway to Kachin’s natural
@@ -1232,7 +1110,7 @@
         </div>
 
         <div class="sectioncard">
-          <a href="kachintext4.html"><img src="images/myitkyina.jpeg" alt=" Myitkyina, the capital city"></a>
+          <a href="kachintext4.html"><img src="images/myitkyina.jpeg" alt="no image"></a>
           <div class="sectiontext">
             <h3> Myitkyina, the capital city</h3>
             <p> A scenic, peaceful town set amidst snow-capped Himalayan mountains,offering a gateway to Kachin’s
@@ -1295,15 +1173,14 @@
         </div>
       </figure>
 
-      <summary>
-        <h1 style="margin-left: 8vw;  margin-top: 9vw;">Choose from luxury hotels to cozy hostels. </h1>
-        <h2 style="margin-left: 8vw; font-family: Roboto Slab, serif;"></h2>
-        <p
-          style="text-align: justify;text-justify: inter-word; text-indent: 20px;color: white;margin-left: 8vw;font-size: 20px;margin-right: 55vw;">
-         </p>
-      </summary>
-
+     
       
+      
+    <summary>
+        <h1>Choose from luxury hotels to cozy hostels.</h1>
+        <h2>Book your perfect retreat with ease</h2>
+        <p>In Kachin State, travelers can enjoy a range of accommodations, from traditional guesthouses to modern lodges. Many options offer stunning mountain views and easy access to trekking trails. Experience the warm hospitality of the Chin people, making your stay truly memorable.</p>
+      </summary>
 
       <section>
         <div class="cardwwtg">
@@ -1347,27 +1224,32 @@
         </div>
       </section>
 
+     
+      
       <aside>
-        <div class="grid-wrapper">
-          <div class="tall"><img src="images/k2.jpeg" alt="Description of image 1" loading="lazy"></div>
-          <div class="short"><img src="images/k3.jpeg" alt="Description of image 2" loading="lazy"></div>
-          <div><img src="images/k4.jpeg" alt="Description of image 3" loading="lazy"></div>
-          <div class="wide"><img src="images/k14.jpeg" alt="Description of image 4" loading="lazy"></div>
-          <div><img src="images/k6.jpeg" alt="Description of image 5" loading="lazy"></div>
-          <div class="tall"><img src="images/k9.jpeg" alt="Description of image 6" loading="lazy"></div>
-          <div><img src="images/Putao.jpeg" alt="Description of image 7" loading="lazy"></div>
-          <div><img src="images/Indawgyi Lake.jpeg" alt="Description of image 8" loading="lazy"></div>
-          <div class="big"><img src="images/k10.jpeg" alt="Description of image 9" loading="lazy"></div>
-          <div><img src="images/kcover.jpeg" alt="Description of image 10" loading="lazy"></div>
-          <div><img src="images/kh.jpeg" alt="Description of image 11" loading="lazy"></div>
-          <div><img src="images/k1.jpeg" alt="Description of image 12" loading="lazy"></div>
-          <div class="tall"><img src="images/k7.jpeg" alt="Description of image 13" loading="lazy"></div>
-          <div><img src="images/k8.jpeg" loading="lazy"></div>
-          <div><img src="images/ho1.jpeg" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/k11.jpeg" alt="Description of image 14" loading="lazy"></div>
-          <div><img src="images/k12.jpeg" alt="Description of image 15" loading="lazy"></div>
-          <div><img src="images/k13.jpeg" alt="Description of image 15" loading="lazy"></div>
-        </div>
+        
+            <div class="gallery">
+                <h1 class="myanmar">Explore Myanmar</h1>
+                <div class="grid-wrapper">
+                    <div class="tall"><img src="images/k2.jpeg" alt="Description of image 1" loading="lazy"></div>
+                    <div class="short"><img src="images/k3.jpeg" alt="Description of image 2" loading="lazy"></div>
+                    <div><img src="images/k4.jpeg" alt="Description of image 3" loading="lazy"></div>
+                    <div class="wide"><img src="images/k14.jpeg" alt="Description of image 4" loading="lazy"></div>
+                    <div><img src="images/k6.jpeg" alt="Description of image 5" loading="lazy"></div>
+                    <div class="tall"><img src="images/k9.jpeg" alt="Description of image 6" loading="lazy"></div>
+                    <div><img src="images/Putao.jpeg" alt="Description of image 7" loading="lazy"></div>
+                    <div><img src="images/Indawgyi Lake.jpeg" alt="Description of image 8" loading="lazy"></div>
+                    <div class="big"><img src="images/k10.jpeg" alt="Description of image 9" loading="lazy"></div>
+                    <div><img src="images/kcover.jpeg" alt="Description of image 10" loading="lazy"></div>
+                    <div><img src="images/kh.jpeg" alt="Description of image 11" loading="lazy"></div>
+                    <div><img src="images/k1.jpeg" alt="Description of image 12" loading="lazy"></div>
+                    <div class="tall"><img src="images/k7.jpeg" alt="Description of image 13" loading="lazy"></div>
+                    <div><img src="images/k8.jpeg" loading="lazy"></div>
+                    <div><img src="images/ho1.jpeg" alt="Description of image 15" loading="lazy"></div>
+                    <div><img src="images/k11.jpeg" alt="Description of image 14" loading="lazy"></div>
+                    <div><img src="images/k12.jpeg" alt="Description of image 15" loading="lazy"></div>
+                    <div><img src="images/k13.jpeg" alt="Description of image 15" loading="lazy"></div>
+                  </div>
       </aside>
 
 
