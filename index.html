@@ -171,34 +171,17 @@
     font-family: Arial, sans-serif;
   }
 
-  /* Keyframes for sliding in from the left */
-  @keyframes slideInPlace {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Styles for h1 and h2 */
-  #sectionA {
+  place h1 {
     margin-top: 3vw;
     text-align: center;
     color: #D27C2C;
-    animation: slideInPlace 1s ease-out;
-    animation-delay: 1s;
-    animation-duration: 3s;
   }
 
+  place h2 {
 
-  /* Animation class */
-  .slide-in-left {
-    animation: slideInPlace 1s ease-out forwards;
-  }
+    text-align: center;
+    color: #D27C2C;
+  }  
 
   .container {
     display: flex;
@@ -583,10 +566,8 @@
 
     <place>
       <!-- Here is the starter for section card -->
-      <section>
-        <h1 id="sectionA" class="slide-in-left">Explore the Diversity of States and Regions In Burma</h1>
-
-      </section>
+      <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
+      <h2>In Burma</h2>
 
       <div class="container" id="cardContainer">
         <div class="cards-wrapper" id="cardsWrapper">
@@ -904,7 +885,7 @@
               <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
               <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
               <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
-              <td style="padding: 10px;"><a href="Magwaymain.html" target="_blank">Magway Region</a></td>
+              <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
             </tr>
             <tr>
               <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
