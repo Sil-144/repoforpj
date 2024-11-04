@@ -263,7 +263,7 @@
   article {
     background-image: url(images/Second\ magway\ bg.jfif);
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -458,7 +458,7 @@ summary {
             color: white;
             background-image: url(images/hotal\ bg.jfif);
             width: 100%;
-            height: 500px;
+            height: 600px;
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -788,7 +788,6 @@ font-size: 36px; /* Adjust font size for mobile */
 
         </div>
       </header>
-
       <place><!--here is the stater for section card-->
         <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
         <h2>In Burma</h2>
@@ -816,7 +815,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
                 quam nihil est numquam natus labore.</div>
             </a>
-
+    
             <a href="" class="card hidden">
               <img src="" alt="Image 5">
               <div class="caption">Hpa-An<br
@@ -845,7 +844,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 Region is an administrative region of Myanmar, located in the southern central part of the
                 country.</div>
             </a>
-
+    
             <a href="" class="card hidden">
               <img src="" alt="Image 9">
               <div class="caption">Hpa-An<br
@@ -860,7 +859,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan
                 State to the south, and Sagaing Region and India to the west.</div>
             </a>
-
+    
             <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
@@ -868,7 +867,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 Region is an administrative region of Myanmar, located in the southern central part of the
                 country.</div>
             </a>
-
+    
             <a href="kachinmain.html" class="card hidden">
               <img src="images/pla1.jpg" alt="Image 11">
               <div class="caption">Kachin State <br
@@ -876,7 +875,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan
                 State to the south, and Sagaing Region and India to the west.</div>
             </a>
-
+    
             <a href="bagomain.html" class="card hidden">
               <img src="images/pla12.jpg" alt="Image 24">
               <div class="caption">Bago Region<br
@@ -884,7 +883,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 Region is an administrative region of Myanmar, located in the southern central part of the
                 country.</div>
             </a>
-
+    
             <a href="kachinmain.html" class="card hidden">
               <img src="images/pla1.jpg" alt="Image 11">
               <div class="caption">Kachin State <br
@@ -917,7 +916,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 tall
                 at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
             </a>
-
+    
             <a href="Monmain.html" class="card hidden">
               <img src="images/Mon.jpg" alt="Image 15">
               <div class="caption">Mon State<br
@@ -925,7 +924,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 State is an administrative division of Myanmar. It lies between Kayin State to the east, the
                 Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
             </a>
-
+    
             <a href="Rakinemain.html" class="card hidden">
               <img src="images/pla5.jpg" alt="Image 16">
               <div class="caption">Rakhine State<br
@@ -957,7 +956,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 River.
               </div>
             </a>
-
+    
             <a href="Yangon.html" class="card hidden">
               <img src="images/pla7.jpg" alt="Image 20">
               <div class="caption">Yangon Region<br
@@ -993,7 +992,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 Region is an administrative region of Myanmar, located in the southern central part of the
                 country.</div>
             </a>
-
+    
             <a href="sagaingmain.html" class="card hidden">
               <img src="images/pla9.png" alt="Image 21">
               <div class="caption">Sagaing Region <br
@@ -1011,7 +1010,7 @@ font-size: 36px; /* Adjust font size for mobile */
             <i class="fas fa-chevron-right"></i> <!-- Right arrow icon using Font Awesome -->
           </div>
         </div>
-
+    
         <script>
           const cardsWrapper = document.getElementById('cardsWrapper');
           const showMoreLeft = document.getElementById('showMoreLeft');
@@ -1022,19 +1021,19 @@ font-size: 36px; /* Adjust font size for mobile */
           const cardWidth = 130; // Card width
           const cardMargin = 20; // Margin between cards
           let currentIndex = 0; // Starting index (first card)
-
+    
           /**
            * Update the card position based on the currentIndex
            */
           function updateCardPosition() {
             const offset = currentIndex * (cardWidth + cardMargin); // Total width moved
             cardsWrapper.style.transform = `translateX(-${offset}px)`;
-
+    
             // Show or hide arrows based on the current index
             showMoreLeft.classList.toggle('visible', currentIndex > 0);
             showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
           }
-
+    
           showMoreRight.addEventListener('click', () => {
             currentIndex += moveCount; // Move by 3 cards
             if (currentIndex > totalCards - visibleCards) {
@@ -1042,7 +1041,7 @@ font-size: 36px; /* Adjust font size for mobile */
             }
             updateCardPosition();
           });
-
+    
           showMoreLeft.addEventListener('click', () => {
             currentIndex -= moveCount; // Move by 3 cards
             if (currentIndex < 0) {
@@ -1050,15 +1049,15 @@ font-size: 36px; /* Adjust font size for mobile */
             }
             updateCardPosition();
           });
-
+    
           // Initialize visibility and position on page load
           updateCardPosition();
         </script>
-
+    
         </div>
       </place>
       <article>
-        <h1 style="margin-left: 8vw;  margin-top: 9vw;">Have you ever been to Magway?<br>Let's Explore Explore
+        <h1 style="margin-left: 8vw;  padding-top: 7vw;">Have you ever been to Magway?<br>Let's Explore Explore
           breathtaking landscapes and vibrant cultures. </h1>
 
       </article>
@@ -1177,14 +1176,14 @@ font-size: 36px; /* Adjust font size for mobile */
                     </div>
                     </div>
   
-                    <div class="cardwwtg">
+                    <!-- <div class="cardwwtg">
                         <img src="images/magway city star hotel.jfif" alt="no image">
                         <div class="card-contents">
                           <h1>magway city star hotel</h1>
                           <p>For your travel, You will be satisfied with our spirit of hospitability and warmly welcome.</p>
                            <div><a href="https://maps.app.goo.gl/1mjH26m82hkrhvWW6"><button class=" button5">Learn More</button></a></div> 
                         </div>
-                        </div>
+                        </div> -->
     </section>
           
       
@@ -1230,7 +1229,7 @@ font-size: 36px; /* Adjust font size for mobile */
                 <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
                 <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
                 <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
-                <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
+                <td style="padding: 10px;"><a href="Magwaymain.html" target="_blank">Magway Region</a></td>
               </tr>
               <tr>
                 <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
@@ -1241,7 +1240,7 @@ font-size: 36px; /* Adjust font size for mobile */
               <tr>
                 <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
                 <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
-                <td style="padding: 10px;"><a href="" target="_blank">Yangon Region</a></td>
+                <td style="padding: 10px;"><a href="Yangon.html" target="_blank">Yangon Region</a></td>
                 <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
               </tr>
               <tr>
@@ -1267,9 +1266,5 @@ font-size: 36px; /* Adjust font size for mobile */
           <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
         </div>
       </footer>
-
-
-
 </body>
-
 </html>
