@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destino-visit-Burma</title>
+  <meta name="Description"
+    content="Dive into our in-depth articles about Burma (Myanmar) featuring travel tips, must-visit destinations, cultural insights, and local experiences. Plan your journey with expert advice and discover the wonders of this captivating country.">
+  <meta name="keywords"
+    content="Burma travel tips, Myanmar destinations, cultural insights, travel articles, things to do in Burma, local experiences, Myanmar travel guide, adventure travel Burma, hidden gems Myanmar">
+  <meta name="author" content="Cheerful Chums">
+  <link rel="icon" type="image/x-icon" href="images/Screenshot 2024-09-13 142916.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <!-- Material Symbols Outlined -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Sevillana&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="/C++/Web Application Development/pj-logo.jpg" type="image.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  /* Glassy Navbar Style */
+  .navbar {
+    background: rgba(5, 86, 236, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Center Navbar Links */
+  .navbar-nav {
+    margin: 0 auto;
+  }
+
+  /* Circular Logo */
+  .navbar-brand img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+  }
+
+  /* Nav Links */
+  .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+    background-color: #08118a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Contact Button */
+  .btn-contact {
+    background-color: #08118a;
+    color: white;
+    font-weight: bold;
+    border-radius: 9px;
+    padding: 8px 16px;
+  }
+
+  .btn-contact:hover {
+    background-color: #7a9e25;
+    color: white;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    background-image: url(/images/shwedagonheader.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  /* <!--style starter for section card --> */
+  place {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  place h1 {
+    margin-top: 3vw;
+    text-align: center;
+    color: #D27C2C;
+  }
+
+  place h2 {
+
+    text-align: center;
+    color: #D27C2C;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    overflow: hidden;
+    /* Hide overflowing cards */
+    position: relative;
+    /* For arrow positioning */
+  }
+
+  .cards-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Smooth transition */
+  }
+
+  .card {
+    position: relative;
+    width: 260px;
+    /* Width of the cards */
+    height: 400px;
+    /* Height of the cards */
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  }
+
+  .card:hover {
+    transform: translateY(-20px);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    height: auto;
+  }
+
+  .arrow {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for exact centering */
+    background-color: white;
+    /* White background for visibility */
+    border: 2px solid black;
+    /* Border color */
+    border-radius: 50%;
+    /* Round button */
+    padding: 5px;
+    z-index: 1;
+    /* Ensure arrows are above cards */
+    box-shadow: 0 4px 10px white;
+    display: none;
+    /* Hide arrows initially */
+  }
+
+  .left-arrow {
+    left: 1px;
+    /* Position closer to the first card */
+  }
+
+  .right-arrow {
+    right: 1px;
+    /* Position closer to the fourth card */
+  }
+
+  .arrow.visible {
+    display: block;
+    /* Show arrows when needed */
+  }
+
+  @media (min-width: 992px) and (max-width: 1440px) {
+    .place {
+      height: auto;
+    }
+
+    .container {
+      width: 90%;
+    }
+
+    .card {
+      width: 300px;
+      height: 450px;
+      margin: 15px;
+    }
+
+    .arrow {
+      font-size: 36px;
+      padding: 8px;
+    }
+
+    .left-arrow {
+      left: 20px;
+    }
+
+    .right-arrow {
+      right: 20px;
+    }
+  }
+
+  /* Default styling for larger screens */
+  article {
+    background-image: url(/images/ygnbackground.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+    overflow: hidden;
+    font-size: 45px;
+    color: white;
+    font-weight: 1000;
+    transition: 0.5s;
+    font-family: "Roboto Slab", serif;
+    margin-top: 7vw;
+  }
+
+  /* Tablet screens */
+  @media (max-width: 768px) {
+    article {
+      height: 400px;
+      /* Decrease height for tablets */
+      font-size: 35px;
+      /* Adjust font size */
+      margin-top: 5vw;
+      /* Adjust top margin */
+    }
+  }
+
+  /* Mobile screens */
+  @media (max-width: 480px) {
+    article {
+      height: 300px;
+      /* Further reduce height for mobile */
+      font-size: 25px;
+      /* Adjust font size for readability */
+      margin-top: 3vw;
+      /* Reduce top margin for smaller screens */
+      background-attachment: fixed;
+      /* Disable fixed background on mobile for better performance */
+    }
+  }
+
+
+
+
+  /* General Styles for larger screens */
+  main {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center all cards */
+            padding: 20px; /* Add padding for spacing */
+        }
+
+        .sectioncard {
+            width: 87%; /* Default width for mobile */
+            max-width: 800px; /* Set max width for larger screens */
+            background-color: whitesmoke;
+            border-radius: 25px;
+            margin: 15px auto; /* Center cards */
+            display: flex; /* Use flexbox for card layout */
+            flex-direction: column; /* Stack elements vertically by default */
+            padding: 10px; /* Add padding for spacing */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        }
+
+        .sectioncard img {
+            width: 100%; /* Make image responsive */
+            height: 300px; /* Fixed height for uniformity */
+            object-fit: cover; /* Maintain aspect ratio and cover */
+            border-radius: 25px;
+        }
+
+        .sectiontext {
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+            justify-content: center; /* Center text vertically */
+            padding: 10px; /* Padding for spacing */
+        }
+
+        .sectiontext h3 {
+            font-size: 24px; /* Set heading size */
+            margin: 10px 0; /* Add margin for spacing */
+        }
+
+        .sectiontext p {
+            color: black;
+            text-align: justify; /* Justify text */
+            margin: 0; /* Remove default margin */
+        }
+
+        .button4 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            border-radius: 8px;
+            cursor: pointer; /* Change cursor on hover */
+            margin-top: 10px; /* Add margin to separate from text */
+            align-self: flex-start; /* Align button to the left */
+            padding: 10px 15px; /* Add padding for the button */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        .button4:hover {
+            background-color: #555555;
+            color: white;
+        }
+
+        /* Media Query for Larger Screens */
+        @media (min-width: 768px) {
+            .sectioncard {
+                flex-direction: row;
+                margin-top: 4vw; /* Change layout to row for larger screens */
+            }
+
+            .sectioncard img {
+                width: 337px; /* Image takes 40% of card width */
+                height: 250px; /* Maintain aspect ratio */
+            }
+
+            .sectiontext {
+                padding-left: 20px; /* Increase padding for larger screens */
+                width: 60%; /* Allow text area to take remaining space */
+            }
+
+            .sectiontext h3 {
+                font-size: 28px; /* Increase heading size for larger screens */
+            }
+
+            .sectiontext p {
+                font-size: 16px; /* Adjust paragraph font size */
+            }
+        }
+
+  figure {
+            font-family: 'Poppons', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            margin-top: 3vw;
+            text-align: center;
+        }
+
+        figure h3 {
+            font-weight: bold;
+            color: black;
+            margin-top: 4vw;
+            font-size: 2.5rem; /* Responsive font size */
+        }
+
+        figure h4 {
+            font-weight: bold;
+            color: #D27C2C;
+            font-size: 2rem; /* Responsive font size */
+        }
+
+        .cards {
+            margin: 15px; /* Adjust margin for better spacing */
+            border-radius: 25px;
+            height: auto;
+            border: 3px solid whitesmoke ;
+            overflow: hidden;
+            position: relative;
+            width: 100%; /* Full width for small screens */
+            max-width: 300px; /* Limit max width for larger screens */
+        }
+
+        .cards img {
+            border-radius: 25px 25px 0 0;
+            width: 100%;
+            height: 200px;
+            margin: 0;
+           
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-body h1 {
+            color: #D27C2C;
+            font-size: 1.5rem; /* Responsive font size */
+            margin: 0;
+        }
+
+        .card-body p {
+            text-indent: 25px;
+            text-align: justify;
+            text-justify: inter-word;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            figure h3 {
+                font-size: 3rem; /* Larger font size for desktop */
+            }
+
+            figure h4 {
+                font-size: 2.5rem; /* Larger font size for desktop */
+            }
+
+            .cards {
+                display: inline-block; /* Side by side on larger screens */
+                vertical-align: top; /* Align cards to the top */
+            }
+        }
+  /* background attachment */
+summary {
+            margin: 0;
+            font-family: "Roboto Slab", serif;
+            color: white;
+            background-image: url(/images/summaryygnbg.jpg);
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            z-index: -1;
+            overflow: hidden;
+            text-align: left;
+            padding: 20px; /* Add padding for better spacing */
+            box-sizing: border-box; /* Include padding in width calculations */
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Responsive font size */
+            margin-top: 10vw;
+        }
+
+        h2 {
+            font-size: 2rem; /* Responsive font size */
+        }
+
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+            text-indent: 20px;
+            margin-top: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem; /* Smaller heading for mobile */
+                margin-top: 5vw; /* Adjust margin for mobile */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller subheading for mobile */
+            }
+
+            p {
+                font-size: 0.9rem; /* Smaller text for mobile */
+                
+            }
+        }
+
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 3rem; /* Larger heading for larger screens */
+            }
+
+            h2 {
+                font-size: 2.5rem; /* Larger subheading for larger screens */
+            }
+
+            p {
+                font-size: 1.2rem; /* Larger text for larger screens */
+                margin-right: 50vw;
+            }
+        }
+
+        section {
+            margin: 5vw auto; /* Center section with auto margins */
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+            justify-content: center;
+            gap: 20px;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f8f9fa; /* Light background for better contrast */
+        }
+
+        .cardwwtg {
+            width: 300px; /* Set a base width for cards */
+            height: 400px;
+            border-radius: 10px;
+            border: 2px solid whitesmoke;
+            box-shadow: 0px 2px 4px rgba(0,0,0, 0.3);
+            overflow: hidden;
+            transition: transform 0.6s ease; 
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        .cardwwtg:hover {
+            transform: translateY(-10px); /* Slight lift effect */
+        }
+
+        .cardwwtg img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card-contents {
+            padding: 10px;
+           
+        }
+
+        .card-contents h1 {
+            font-size: 20px; /* Adjusted size for responsiveness */
+            margin: 0; /* Remove default margin */
+        }
+
+        .card-contents p {
+            font-size: 14px; /* Adjusted size for readability */
+            color: black;
+            margin: 5px 0 15px; /* Adjusted margins */
+        }
+
+        .button5 {
+             background-color: white;
+             color: black;
+             border: 2px solid #555555;
+              align-items: center; 
+              border-radius: 8px;
+              padding: 8px;
+               margin-bottom: 5vw;
+             overflow: hidden;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .cardwwtg {
+                width: calc(100% - 40px); /* Full width minus margins */
+                max-width: 300px; /* Max width for larger screens */
+            }
+
+            .card-contents h1 {
+                font-size: 18px; /* Smaller heading for mobile */
+            }
+
+            .card-contents p {
+                font-size: 12px; /* Smaller text for mobile */
+            }
+        }
+/* gallery */
+aside {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background for better contrast */
+}
+.gallery {
+box-sizing: border-box;
+background: white;
+padding: 20px;
+}
+.gallery p {
+    margin-top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+.myanmar {
+    margin-top: 0;
+    color: #D27C2C ;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center; /* Center text */
+
+}
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 150px; /* Default row height */
+    grid-auto-flow: dense;
+}
+.grid-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+    /* Different heights for specific classes */
+    .grid-wrapper .tall {
+    grid-row: span 2; /* Makes the image twice the height */
+    }
+    .grid-wrapper .short {
+    grid-row: span 1; /* Default height */
+    }
+    .grid-wrapper .wide {
+    grid-column: span 2; /* Makes the image twice the width */
+    }
+    .grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+    }
+        /* Responsive Styles */
+@media (max-width: 768px) {
+.myanmar {
+font-size: 36px; /* Adjust font size for mobile */
+}
+}
+
+        .custom-footer {
+            background: #161D6f;
+            color: white;
+            padding: 40px 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+
+        .footer-section h3 {
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+
+        .footer-section p {
+            margin: 10px 0;
+        }
+
+        .footer-section a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            width: 70%;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .newsletter button:hover {
+            background-color: #e67e22;
+        }
+
+        .footer-bottom {
+            align-items: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            margin-left: 16vw;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center; /* Center text on small screens */
+                margin: 10px 0; /* Adjust margins for mobile */
+            }
+
+            .footer-bottom {
+                font-size: 0.8em; /* Smaller font size for mobile */
+               
+            }
+        }
+</style>
+</header>
+
+<body>
+  <header>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/images/destinologo.png" alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+              <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+            </ul>
+
+            <!-- Contact Button -->
+            <a href="form.html" class="btn btn-contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Yangon Region </span></h1>
+
+        </div>
+      </header>
+
+      <place><!--here is the stater for section card-->
+        <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
+        <h2>In Burma</h2>
+        <div class="container" id="cardContainer">
+          <div class="cards-wrapper" id="cardsWrapper">
+            <a href="" class="card">
+              <img src="" alt="Image 1">
+              <div class="caption">Kalaw<br>Shan State</div>
+            </a>
+            <a href="" class="card">
+              <img src="" alt="Image 2">
+              <div class="caption">Image 2</div>
+            </a>
+            <a href="" class="card">
+              <img src="" alt="Image 3">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="" class="card">
+              <img src="" alt="Image 4">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+
+            <a href="" class="card hidden">
+              <img src="" alt="Image 5">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="" class="card hidden">
+              <img src="" alt="Image 6">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="" class="card hidden">
+              <img src="" alt="Image 7">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="bagomain.html" class="card hidden">
+              <img src="images/pla12.jpg" alt="Image 24">
+              <div class="caption">Bago Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                Region is an administrative region of Myanmar, located in the southern central part of the
+                country.</div>
+            </a>
+
+            <a href="" class="card hidden">
+              <img src="" alt="Image 9">
+              <div class="caption">Hpa-An<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Doloremque beatae non, odit et recusandae
+                quam nihil est numquam natus labore.</div>
+            </a>
+            <a href="kachinmain.html" class="card hidden">
+              <img src="images/pla1.jpg" alt="Image 11">
+              <div class="caption">Kachin State <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
+                State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan
+                State to the south, and Sagaing Region and India to the west.</div>
+            </a>
+
+            <a href="bagomain.html" class="card hidden">
+              <img src="images/pla12.jpg" alt="Image 24">
+              <div class="caption">Bago Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                Region is an administrative region of Myanmar, located in the southern central part of the
+                country.</div>
+            </a>
+
+            <a href="kachinmain.html" class="card hidden">
+              <img src="/images/Kachin img.jpg" alt="Image 11">
+              <div class="caption">Kachin State <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
+                State is the northernmost state of Myanmar. It is bordered by China to the north and east, Shan
+                State to the south, and Sagaing Region and India to the west.</div>
+            </a>
+
+            <a href="bagomain.html" class="card hidden">
+              <img src="/images/Bago_img.jpg" alt="Image 24">
+              <div class="caption">Bago Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                Region is an administrative region of Myanmar, located in the southern central part of the
+                country.</div>
+            </a>
+
+            <a href="kachinmain.html" class="card hidden">
+              <img src="/images/Kachin img.jpg" alt="Image 11">
+              <div class="caption">Kachin State <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kachin
+                State is the northernmost state of Myanmar. It is bordered by China to the north and east,
+                Shan
+                State to the south, and Sagaing Region and India to the west.</div>
+            </a>
+            <a href="Kayarmain.html" class="card hidden">
+              <img src="/images/kayah_img.jpg" alt="Image 12">
+              <div class="caption">Kayah state<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayah
+                State, or Karenni State, is a state of Myanmar. Situated in eastern Myanmar, it is bounded
+                on
+                the north by Shan State, on the east by Thailand's Mae Hong Son Province.</div>
+            </a>
+            <a href="Kayin.html" class="card hidden">
+              <img src="/images/kayin_img.jpg" alt="Image 13">
+              <div class="caption">Kayin State<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Kayin
+                State, formerly known as Karen State, is a state of Myanmar. The capital city is Hpa-An,
+                also
+                spelled Pa-An.</div>
+            </a>
+            <a href="Chinmain.html" class="card hidden">
+              <img src="/images/chin_img.jpg" alt="Image 14">
+              <div class="caption">Chin State<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;;">Located
+                at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands
+                tall
+                at 3,053 metres, attracting mountaineers and hikers to visit Chin.</div>
+            </a>
+
+            <a href="Monmain.html" class="card hidden">
+              <img src="/images/Mon_img.jpg" alt="Image 15">
+              <div class="caption">Mon State<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mon
+                State is an administrative division of Myanmar. It lies between Kayin State to the east, the
+                Andaman Sea to the west, Bago Region to the north and Tanintharyi Region to the south</div>
+            </a>
+
+            <a href="Rakinemain.html" class="card hidden">
+              <img src="/images/rakhine_img.jpg" alt="Image 16">
+              <div class="caption">Rakhine State<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Rakhine
+                State, formerly known as Arakan State, is a state in Myanmar. Situated on the western coast,
+                it
+                is bordered by Chin State to the north, Magway Region, Bago Region.</div>
+            </a>
+            <a href="Shanmain.html" class="card hidden">
+              <img src="/images/shan_img.jpg" alt="Image 17">
+              <div class="caption">Shan State<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Shan
+                State is a state of Myanmar. Shan State borders China to the north, Laos to the east, and
+                Thailand to the south, and five administrative divisions of Myanmar in the west. </div>
+            </a>
+            <a href="Magwaymain.html" class="card hidden">
+              <img src="/images/magway_img.jpg" alt="Image 18">
+              <div class="caption">Magway Region <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Magway
+                Region is an administrative division in central Myanmar. It is the second largest of
+                Myanmar's
+                seven divisions, with an area of 44,820 km².</div>
+            </a>
+            <a href="Mandalaymain.html" class="card hidden">
+              <img src="/images/mandalay_img.webp" alt="Image 19">
+              <div class="caption">Mandalay Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Mandalay
+                is a city and former royal capital in northern Myanmar (formerly Burma) on the Irrawaddy
+                River.
+              </div>
+            </a>
+
+            <a href="Yangon.html" class="card hidden">
+              <img src="/images/yangon_img.jpg" alt="Image 20">
+              <div class="caption">Yangon Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Yangon
+                is the largest city in Myanmar.A mix of British colonial architecture, modern high-rises and
+                gilded Buddhist pagodas define its skyline.</div>
+            </a>
+            <a href="sagaingmain.html" class="card hidden">
+              <img src="/images/sagaing_img.jpg" alt="Image 21">
+              <div class="caption">Sagaing Region <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
+                is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
+                River, 20
+                km to the south-west of Mandalay on the opposite bank of the river. </div>
+            </a>
+            <a href="TanintharyiMain.html" class="card hidden">
+              <img src="/images/Tanintharyi _img.jpg" alt="Image 22">
+              <div class="caption">Tanintharyi Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Tanintharyi
+                Region is a region of Myanmar, covering the long narrow southern part of the country on the
+                northern Malay Peninsula, reaching to the Kra Isthmus.</div>
+            </a>
+            <a href="Ayeyarwadymain.html" class="card hidden">
+              <img src="/images/ayeyarwady.jpg" alt="Image 23">
+              <div class="caption">Ayeyarwady Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Ayeyawady
+                Region is a region of Myanmar, occupying the delta region of the Ayeyarwady River.</div>
+            </a>
+            <a href="bagomain.html" class="card hidden">
+              <img src="/images/Bago_img.jpg" alt="Image 24">
+              <div class="caption">Bago Region<br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Bago
+                Region is an administrative region of Myanmar, located in the southern central part of the
+                country.</div>
+            </a>
+
+            <a href="sagaingmain.html" class="card hidden">
+              <img src="/images/sagaing_img.jpg" alt="Image 21">
+              <div class="caption">Sagaing Region <br
+                  style="line-height: 2vw;text-align: justify;text-justify: inter-word;text-indent: 25px;">Sagaing
+                is the former capital of the Sagaing Region of Myanmar. It is located on the Irrawaddy
+                River, 20
+                km to the south-west of Mandalay on the opposite bank of the river. </div>
+            </a>
+          </div>
+          <!-- Arrows for showing more cards -->
+          <div class="arrow left-arrow" id="showMoreLeft">
+            <i class="fas fa-chevron-left"></i> <!-- Left arrow icon using Font Awesome -->
+          </div>
+          <div class="arrow right-arrow" id="showMoreRight">
+            <i class="fas fa-chevron-right"></i> <!-- Right arrow icon using Font Awesome -->
+          </div>
+        </div>
+
+        <script>
+          const cardsWrapper = document.getElementById('cardsWrapper');
+          const showMoreLeft = document.getElementById('showMoreLeft');
+          const showMoreRight = document.getElementById('showMoreRight');
+          const totalCards = document.querySelectorAll('.card').length;
+          const visibleCards = 4; // Number of cards to show at once
+          const moveCount = 3; // Number of cards to move per click
+          const cardWidth = 130; // Card width
+          const cardMargin = 20; // Margin between cards
+          let currentIndex = 0; // Starting index (first card)
+
+          /**
+           * Update the card position based on the currentIndex
+           */
+          function updateCardPosition() {
+            const offset = currentIndex * (cardWidth + cardMargin); // Total width moved
+            cardsWrapper.style.transform = `translateX(-${offset}px)`;
+
+            // Show or hide arrows based on the current index
+            showMoreLeft.classList.toggle('visible', currentIndex > 0);
+            showMoreRight.classList.toggle('visible', currentIndex < totalCards - visibleCards);
+          }
+
+          showMoreRight.addEventListener('click', () => {
+            currentIndex += moveCount; // Move by 3 cards
+            if (currentIndex > totalCards - visibleCards) {
+              currentIndex = totalCards - visibleCards; // Prevent overshooting
+            }
+            updateCardPosition();
+          });
+
+          showMoreLeft.addEventListener('click', () => {
+            currentIndex -= moveCount; // Move by 3 cards
+            if (currentIndex < 0) {
+              currentIndex = 0; // Stay at the start
+            }
+            updateCardPosition();
+          });
+
+          // Initialize visibility and position on page load
+          updateCardPosition();
+        </script>
+
+        </div>
+      </place>
+      <article>
+        <h1 style="margin-left: 8vw;  margin-top: 9vw;">Have you ever been to Kayin ?<br>Let's Explore Explore
+          breathtaking landscapes and vibrant cultures. </h1>
+
+      </article>
+      <main>
+        <div class="sectioncard" ><!--here is next part for section(where to go page)-->
+          <a href="Yangontext1.html"><img src="/images/sdgcard.jpg" width="370px" height="370px"></a>
+          <div class="sectiontext"><div><p style="font-size: 35px;text-align: center;text-align: justify;text-justify: inter-word;">Shwedagon Pagoda</p></div>
+          <!-- <h1 class="sectionheader">Yangon</h1> -->
+          <p>The Shwedagon Pagoda, located in Yangon, Myanmar, is one of the most iconic religious sites in the country and a major pilgrimage destination for Buddhists. </p>
+          <a href="/index.html/Yangontext1.html"><button class="button4">Read More</button></a></div> 
+          <!--<div><a href="/index.html/kayintext1.html"><button class="button4">Read More</button></a></div>-->
+        </div>
+          
+          
+        
+        <div class="sectioncard">
+              <a href="Yangontext2.html"><img src="/images/stcard.jpg" alt="no image"></a>
+              <div class="sectiontext">
+                  <h3>Swe Taw Myat Pagoda</h3>
+                  <p>The Swe Taw Myat Pagoda, also known as the Buddha Tooth Relic Pagoda, is a relatively new place of worship in Yangon, Myanmar</p>
+                  <a href="Yangontext2.html"><button class="button4">Read More</button></a>
+              </div>
+          </div>
+        
+             
+            <div class="sectioncard">
+              <a href="Yangontext3.html"><img src="/images/mlmcard.jpg" alt="no image"></a>
+              <div class="sectiontext">
+                  <h3>Mae Lamu Pagoda</h3>
+                  <p>
+                    The Mae Lamu Pagoda is a fascinating and lesser-known gem in Yangon, Myanmar.
+                  </p>
+                  <a href="Yangontext3.html"><button class="button4">Read More</button></a>
+              </div>
+          </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext4.html"><img src="/images/bttcard.png" alt="no image"></a>
+            <div class="sectiontext">
+                <h3>Botataung Pagoda</h3>
+                <p>
+                  I wanna know about Botataung Pagoda in Yangon.
+                  The Botataung Pagoda is a significant and historic site in Yangon, Myanmar.
+                </p>
+                <a href="Yangontext4.html"><button class="button4">Read More</button></a>
+            </div>
+        </div>
+
+        <div class="sectioncard">
+          <a href="Yangontext5.html"><img src="/images/slcard.jpg" alt="no image"></a>
+          <div class="sectiontext">
+              <h3>Sule Pagoda</h3>
+              <p>
+                The Sule Pagoda is a significant and historic landmark in Yangon, Myanmar.
+              </p>
+              <a href="Yangontext5.html"><button class="button4">Read More</button></a>
+          </div>
+      </div>
+
+            <div class="sectioncard">
+              <a href="Yangontext6.html"><img src="/images/ktgcard.jpg" alt="no image"></a>
+              <div class="sectiontext">
+                  <h3>Kyauk Taw Gyi Pagoda</h3>
+                  <p>
+                    The Kyauk Taw Gyi Pagoda in Yangon is renowned for housing the largest marble Buddha image in Burma
+                  </p>
+                  <a href="Yangontext6.html"><button class="button4">Read More</button></a>
+              </div>
+          </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext7.html"><img src="/images/mwzcard.jpg" alt="no image"></a>
+            <div class="sectiontext">
+                <h3>Maha Wizaya Pagoda</h3>
+                <p>
+                  The Maha Wizaya Pagoda is a beautiful and significant landmark in Yangon, Myanmar.
+                </p>
+                <a href="Yangontext7.html"><button class="button4">Read More</button></a>
+            </div>
+        </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext8.html"><img src="/images/hlawgacard.jpg" alt="no image"></a>
+            <div class="sectiontext">
+                <h3>Hlawga National Park</h3>
+                <p>
+                  The Hlawga National Park is a beautiful and expansive park located in Mingaladon Township, about 22 miles north of Yangon.
+                </p>
+                <a href="Yangontext8.htm"><button class="button4">Read More</button></a>
+            </div>
+        </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext9.html"><img src="/images/mblcard.jpg" alt="no image"></a>
+            <div class="sectiontext">
+                <h3>Maha Bandula Park</h3>
+                <p>
+                  Maha Bandula Park, also known as Maha Bandoola Garden, is a public park located in the heart of Yangon, Myanmar.
+                </p>
+                <a href="Yangontext9.html"><button class="button4">Read More</button></a>
+            </div>
+          </div>
+          
+          <div class="sectioncard">
+              <a href="Yangontext10.html"><img src="/images/nrvcard.jpg" alt="Mno image"></a>
+              <div class="sectiontext">
+                  <h3>The National Races Village</h3>
+                  <p>The National Races Village in Yangon is a fascinating cultural park that showcases the diverse ethnic groups of Myanmar.</p>
+                  <a href="Yangontext10.html"><button class="button4">Read More</button></a>
+              </div>
+          </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext11.html"><img src="/images/ppcard.jpg" alt="Mno image"></a>
+            <div class="sectiontext">
+                <h3>People's Park</h3>
+                <p>
+                  People's Park in Yangon is a large and popular recreational area located near the western entrance of the Shwedagon Pagoda.
+                </p>
+                <a href="Yangontext11.html"><button class="button4">Read More</button></a>
+            </div>
+          </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext12.html"><img src="/images/hdcard.jpg" alt="Mno image"></a>
+            <div class="sectiontext">
+                <h3>Hledan</h3>
+                <p>
+                  The Hledan area in Yangon is a vibrant and bustling neighborhood known for its lively street food scene and the Hledan Centre, a popular shopping destination.
+                </p>
+                <a href="Yangontext12.html"><button class="button4">Read More</button></a>
+            </div>
+          </div>
+
+          <div class="sectioncard">
+            <a href="Yangontext13.html"><img src="/images/nmcard.jpg" alt="Mno image"></a>
+            <div class="sectiontext">
+                <h3>National Museum</h3>
+                <p>The National Museum of Myanmar in Yangon is a fascinating place to explore!
+                </p>
+                <a href="Yangontext13.html"><button class="button4">Read More</button></a>
+            </div>
+          </div>
+
+
+            </main>
+        
+        
+            <!-- traditional food in chin -->
+            <figure>
+            <h3>Food is not rational. Food is culture, habit, craving and identity.</h3>
+            <h4>Popular in Yangon,Myanmar</h4>
+            <div class="cards">
+            <img src="#" class="card-img-top" alt="no image">
+            <div class="card-body">
+              <h2>Food 1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officiis, quam inventore, nemo nihil ex corporis ab repellat, obcaecati nisi ad ipsa? Esse tenetur eos suscipit, inventore debitis doloribus officiis!
+              </p>
+            </div>
+            </div>
+            
+            <div class="cards">
+            <img src="#" class="card-img-top" alt="no image">
+            <div class="card-body">
+              <h2>Food 2</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt porro unde debitis rerum, qui non illum repudiandae, accusamus facere commodi suscipit consequatur tempora, illo repellendus maiores voluptas nobis dolor.</p>
+            </div>
+            </div>
+            <div class="cards">
+            <img src="#" class="card-img-top" alt="no image">
+            <div class="card-body">
+              <h2>Food 3</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum quia adipisci facere nesciunt totam asperiores ex id! Recusandae eius officiis ad facere sapiente impedit aperiam unde nulla atque suscipit?</p>
+            </div>
+            </div>
+            <div class="cards">
+            <img src="#" class="card-img-top" alt="no image">
+            <div class="card-body">
+              <h2>Food 4</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laboriosam illo labore fugiat doloremque quis recusandae nemo libero ullam a! Aliquam ea ipsam dicta veritatis quidem mollitia dolorem reprehenderit. Aspernatur!</p>
+            </div>
+            </div>
+            </figure>
+      
+    <summary>
+        <h1>Choose from luxury hotels to cozy hostels.</h1>
+        <h2>Book your perfect retreat with ease</h2>
+        <p>Yangon offers a variety of hotels to suit different preferences and budgets.</p>
+      </summary>
+      <section>
+        <div class="cardwwtg">
+            <img src="/images/ygnhotel1.jpg" alt="no image">
+            <div class="card-contents">
+              <h1>Chatrium Hotel</h1>
+              <p>A luxurious 5-star hotel located by Kandawgyi Lake, known for its excellent service and beautiful views</p>
+              <div><a href="https://maps.app.goo.gl/SFcX5UMoCnmXyESG7" ><button class=" button5">Learn More</button></a></iframe></div> 
+            </div>
+            </div>
+  
+            <div class="cardwwtg">
+                <img src="/images/ygnhotel2.jpg" alt="no image">
+                <div class="card-contents">
+                  <h1>Pan Pacific Yangon Hotel</h1>
+                  <p>This hotel features luxurious rooms, an outdoor infinity pool, and a spa, all with breathtaking city views.</p>
+                 <div><a href="https://maps.app.goo.gl/ugECXWYzi3932Eeu9"><button class="button5">Learn More</button></a></div> 
+                </div>
+                </div>
+  
+                <div class="cardwwtg">
+                    <img src="/images/ygnhotel3.jpg" alt="no image">
+                    <div class="card-contents">
+                      <h1>Lotte Hotel</h1>
+                      <p>A highly-rated hotel with modern facilities, located near Inya Lake.</p>
+                   <div><a href="https://maps.app.goo.gl/mNVDxsrAakmTMZ9y6"><button class="button5">Learn More</button></a></div> 
+                    </div>
+                    </div>
+  
+                    
+    </section>
+
+      
+    <aside>
+      <div class="grid-wrapper">
+        <div class="tall"><img src="/images/ygngallery16.jpg" alt="Description of image 1" loading="lazy"></div>
+        <div class="short"><img src="/images/ygngallery2.webp" alt="Description of image 2" loading="lazy"></div>
+        <div><img src="/images/ygngallery3.webp" alt="Description of image 3" loading="lazy"></div>
+        <div class="wide"><img src="/images/ygngallery4.jpg" alt="Description of image 4" loading="lazy"></div>
+        <div><img src="/images/ygngallery5.jpg" alt="Description of image 5" loading="lazy"></div>
+        <div class="tall"><img src="/images/ygngallery6.jpg" alt="Description of image 6" loading="lazy"></div>
+        <div><img src="/images/ygngallery7.jpg" alt="Description of image 7" loading="lazy"></div>
+        <div><img src="/images/ygngallery8.jpg" alt="Description of image 8" loading="lazy"></div>
+        <div class="big"><img src="/images/ygngallery10.webp" alt="Description of image 9" loading="lazy"></div>
+        <div><img src="/images/ygngallery15.jpg" alt="Description of image 10" loading="lazy"></div>
+        <div><img src="/images/ygngallery11.jpg" alt="Description of image 11" loading="lazy"></div>
+        <div><img src="/images/ygngallery12.jpg" alt="Description of image 12" loading="lazy"></div>
+        <div class="tall"><img src="/images/ygngallery14.jpg" alt="Description of image 13" loading="lazy"></div>
+        <div><img src="/images/ygngallery13.jpg" loading="lazy"></div>
+        <div><img src="/images/ygngallery9.jpg" alt="Description of image 15" loading="lazy"></div>
+        <div><img src="/images/ygngallery1.jpg" alt="Description of image 14" loading="lazy"></div>
+        <div><img src="/images/ygngallery17.jpg" alt="Description of image 15" loading="lazy"></div>
+        <div><img src="/images/ygngallery18.webp" alt="Description of image 15" loading="lazy"></div> 
+    </div>
+    </aside>
+
+
+      <footer class="custom-footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Site Map</h3>
+            <table style="width: 100%; color: #f39c12; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px;"><a href="index.html" target="_blank">Home</a></td>
+                <td style="padding: 10px;"><a href="kachinmain.html" target="_blank">Kachin State</a></td>
+                <td style="padding: 10px;"><a href="Rakinemain.html" target="_blank">Rakhine State</a></td>
+                <td style="padding: 10px;"><a href="Ayeyarwadymain.html" target="_blank">Ayeyarwady Region</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><a href="aboutus.html" target="_blank">About Us</a></td>
+                <td style="padding: 10px;"><a href="Kayarmain.html" target="_blank">Kayar State</a></td>
+                <td style="padding: 10px;"><a href="Shanmain.html" target="_blank">Shan State</a></td>
+                <td style="padding: 10px;"><a href="" target="_blank">Magway Region</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
+                <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
+                <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
+                <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><a href="form.html" target="_blank">Contact</a></td>
+                <td style="padding: 10px;"><a href="Chinmain.html" target="_blank">Chin State</a></td>
+                <td style="padding: 10px;"><a href="" target="_blank">Yangon Region</a></td>
+                <td style="padding: 10px;"><a href="TanintharyiMain.html" target="_blank">Tanintharyi Region</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><a href="" target="_blank"></a></td>
+                <td style="padding: 10px;"><a href="Monmain.html" target="_blank">Mon State</a></td>
+                <td style="padding: 10px;"><a href="bagomain.html" target="_blank">Bago Region</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Start Your Adventure</h3>
+            <p>Join us in exploring around Myanmar. Your journey starts here!</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:support@travelwebsite.com">support@travelwebsite.com</a></p>
+            <p>Phone: <a href="tel:+18001234567">+959255747074</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+
+</body>
+
+</html>
