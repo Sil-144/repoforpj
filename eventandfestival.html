@@ -353,8 +353,9 @@
         /* Ensures it's a block-level element */
         opacity: 50px;
         /* Start hidden */
-        animation: fadeIn 1.5s forwards;
+        animation: fadeIn 5.5s forwards;
         /* Fade-in animation */
+        animation-delay: 3.5s;
     }
 
     /* Keyframes for fade-in */
@@ -450,14 +451,13 @@
         }
     }
 
-    /* Item Menu Styling */
+    /* Default .item-menu styling */
     .item-menu {
         display: none;
         margin-top: 10px;
         gap: 10px;
         flex-wrap: wrap;
         margin-bottom: 20px;
-
     }
 
     .item-menu button {
@@ -473,8 +473,38 @@
         margin-top: 10px;
     }
 
+    /* Hover effect for buttons */
     .item-menu button:hover {
         background-color: #e0e0e0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .item-menu {
+            gap: 5px;
+        }
+
+        .item-menu button {
+            width: 140px;
+            /* Adjust button width for smaller screens */
+            font-size: 12px;
+            /* Smaller font for better fit */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .item-menu {
+            flex-direction: column;
+            /* Stack buttons vertically on very small screens */
+            gap: 8px;
+        }
+
+        .item-menu button {
+            width: 100%;
+            /* Full-width buttons for small devices */
+            padding: 8px;
+            font-size: 12px;
+        }
     }
 
     /* Content Section Styling */
@@ -984,103 +1014,103 @@
 
         </article>
 
-        
-            <!-- Main Menu with Glass Buttons -->
-            <div class="main-menu">
-                <h1>Myanmar’s history is filled with pride and celebration. Independence Day on January 4th marks a
-                    powerful
-                    moment of freedom, while vibrant festivals like Thingyan and the Thadingyut Festival show the joyful
-                    side
-                    of Myanmar’s culture. Together, these events honor the country’s past and bring people closer in
-                    celebration.</h1>
-                <button onclick="showItemMenu('events')">Historic Events</button>
-                <button onclick="showItemMenu('festivals')">Festivals</button>
+
+        <!-- Main Menu with Glass Buttons -->
+        <div class="main-menu">
+            <h1>Myanmar’s history is filled with pride and celebration. Independence Day on January 4th marks a
+                powerful
+                moment of freedom, while vibrant festivals like Thingyan and the Thadingyut Festival show the joyful
+                side
+                of Myanmar’s culture. Together, these events honor the country’s past and bring people closer in
+                celebration.</h1>
+            <button onclick="showItemMenu('events')">Historic Events</button>
+            <button onclick="showItemMenu('festivals')">Festivals</button>
+        </div>
+
+
+        <!-- Item Menu for Events -->
+        <div class="item-menu" id="events-menu">
+            <button
+                onclick="showContent('event1', 'Independence Day (January 4)', 'Independence Day celebrates Myanmar’s liberation from British colonial rule on January 4, 1948. The day is marked by flag-hoisting ceremonies, parades, and cultural performances across the country. It serves as a reminder of Myanmar’s sovereignty and the struggles faced in the quest for self-rule. In Yangon, people often gather at the Independence Monument in Maha Bandula Park to commemorate this historic day.', 'images/independence-day.jpeg', 'images/independence-day-b.jpeg')">Independence
+                Day</button>
+
+            <button
+                onclick="showContent('event2', 'Union Day (February 12)', 'Union Day commemorates the signing of the Panglong Agreement on February 12, 1947, which aimed to unite Myanmar\'s various ethnic groups under a single nation. The day highlights the country\'s diverse ethnic communities and their roles in shaping Myanmar\'s identity. Celebrations include cultural shows and speeches, focusing on unity, peace, and cooperation.', 'images/union-day.jpeg', 'images/union-day-b.jpeg')">Union
+                Day</button>
+
+            <button
+                onclick="showContent('event3', 'Martyrs\' Day (July 19)', 'Martyrs\' Day honors General Aung San and several other prominent leaders who were assassinated on July 19, 1947, while working towards Myanmar’s independence. Observed as a day of remembrance, people across the nation pay tribute to the martyrs with ceremonies and wreath-laying at the Martyrs’ Mausoleum in Yangon, reflecting on their sacrifices for the country\'s freedom.', 'images/martyrs-day.jpg', 'images/martyrs-day-b.jpg')">Martyrs'
+                Day</button>
+
+            <button
+                onclick="showContent('event3', '8888 Uprising(August 8)', 'The 1988 pro-democracy uprising, known as the 8888 Uprising. It serves as a solemn reminder of the citizens\' demand for democracy and freedom. Events on this day reflect on the sacrifices made by activists and continue to advocate for peace and reconciliation within Myanmar.The uprising symbolizes\ the enduring spirit of the Myanmar people in their struggle for human rights and democratic governance, inspiring future generations to continue the fight for justice and equality.', 'images/reconciliation-day.jpg', 'images/reconciliation-day-b.jpg')">8888
+                Uprising </button>
+
+            <button
+                onclick="showContent('event5', 'Peasant Day (March 2)', 'Peasant Day acknowledges the role of Myanmar\'s agricultural community in sustaining the country’s economy. Celebrated on March 2, the day focuses on supporting farmers and improving rural livelihoods. Government leaders often visit rural areas to express gratitude and discuss initiatives aimed at enhancing agricultural productivity and rural development.', 'images/peasant-day.jpeg', 'images/peasant-day-b.jpeg')">Peasant
+                Day </button>
+
+            <button
+                onclick="showContent('event6', 'The Ongoing Civil War', 'Myanmar’s ongoing civil war is one of the longest-running conflicts in the world, involving numerous ethnic armed groups and the central government. Rooted in historical and ethnic tensions, the conflict affects millions, leading to displacement and humanitarian issues. Despite various peace negotiations, challenges persist in reaching lasting agreements, making peace-building efforts a critical need for the country’s stability and unity.', 'images/civil-war.jpg', 'images/civil-war-b.jpg')">The
+                Ongoing Civil War</button>
+        </div>
+
+
+
+        <!-- Item Menu for Festivals -->
+        <div class="item-menu" id="festivals-menu">
+            <button
+                onclick="showContent('festival1', 'Thingyan (Water Festival)', 'Thingyan, also known as the Water Festival, is the most celebrated festival in Myanmar, marking the beginning of the Burmese New Year. Traditionally, it takes place in mid-April, during the hottest time of the year. The festival is famous for its water-splashing celebrations, where people pour water on each other to wash away sins and bad luck. Streets are filled with joyous crowds, music, and dance, and temporary stages are set up for performances. Many also visit pagodas to pay homage and to pour water over Buddha statues, symbolizing purification and renewal.', 'images/thingyan.jpg', 'images/thingyanb.jpg')">Thingyan
+                (Water Festival)</button>
+
+            <button
+                onclick="showContent('festival2', 'Kason Bo Tree Watering Festival', 'The Kason Bo Tree Watering Festival is celebrated in May and honors the sacred Bo tree, under which the Buddha attained enlightenment. Devotees gather at pagodas and monasteries to water the Bo trees with scented water and to perform various religious rites. This festival is not only a spiritual observance but also a time for families to come together and enjoy festive activities, such as traditional food and cultural performances. The act of watering the tree symbolizes the importance of nurturing wisdom and enlightenment in one’s life.', 'images/kason.jpg', 'images/kasonb.jpg')">Kason
+                Bo Tree Watering Festival</button>
+
+            <button
+                onclick="showContent('festival3', 'Taunggyi Balloon Festival', 'Held in Taunggyi during the Tazaungdaing month, the Taunggyi Balloon Festival is a vibrant and colorful event featuring hot air balloons and fireworks. It is celebrated by various ethnic groups and showcases their unique traditions and cultures. The highlight of the festival is the release of beautifully crafted hot air balloons into the night sky, many of which are adorned with intricate designs. This festival not only offers breathtaking sights but also brings together communities in celebration of their cultural heritage and solidarity.', 'images/taunggyi.jpg', 'images/taunggyib.jpg')">Taunggyi
+                Balloon Festival</button>
+
+            <button
+                onclick="showContent('festival4', 'Shwedagon Pagoda Festival', 'The Shwedagon Pagoda Festival is one of the most significant and revered festivals in Myanmar, taking place at the iconic Shwedagon Pagoda in Yangon. This festival typically occurs during the full moon of the month of Tabaung (March) and lasts several days. It is a time for spiritual reflection, devotion, and community gathering. Devotees come from all over the country to pay homage to the pagoda, which houses sacred relics of the Buddha. The festival features colorful processions, traditional music, and dance performances, as well as various religious ceremonies and offerings made by the faithful. Visitors can witness the stunning sight of the pagoda illuminated by thousands of candles and lights, creating a magical atmosphere that showcases the deep-rooted cultural heritage and spiritual significance of Buddhism in Myanmar.', 'images/shwedagon.jpg', 'images/shwedagonb.jpg')">Shwedagon
+                Pagoda Festival</button>
+
+            <button
+                onclick="showContent('festival5', 'Phaung Daw Oo Pagoda Festival', 'The Phaung Daw Oo Pagoda Festival is one of the most important religious festivals in Myanmar, held in Inle Lake in September or October. During this festival, the revered Phaung Daw Oo Buddha images are paraded on a grand boat, and thousands of locals and tourists participate in the festivities. Traditional boat races, cultural performances, and offerings at the pagoda are significant aspects of the celebration. The event highlights the rich cultural heritage of the Intha people and attracts visitors from all over the country.', 'images/phaung.jpg', 'images/phaungb.jpg')">Phaung
+                Daw Oo Pagoda Festival</button>
+
+            <button
+                onclick="showContent('festival6', 'Thadingyut (Lighting Festival)', 'Thadingyut, also known as the Festival of Lights, is celebrated in October, marking the end of the Buddhist Lent. This festival symbolizes the descent of the Buddha from heaven after preaching to his mother. People decorate their homes and public places with lights, candles, and colorful decorations, creating a magical atmosphere. It is a time for families to come together, visit temples, and pay respect to elders and teachers. The beautiful illumination seen throughout cities and towns during this time represents joy and gratitude.', 'images/thadingyut.jpg', 'images/thadingyutb.jpg')">Thadingyut
+                (Lighting Festival)</button>
+
+            <button
+                onclick="showContent('festival7', 'Tazaungdaing (Kahtein Festival)', 'The Tazaungdaing Festival, celebrated in November, is a significant event for Buddhists in Myanmar. It marks the end of the rainy season and is a time for giving and merit-making. People prepare colorful lights and decorations to honor the Buddha. This festival is known for its sky lanterns, which are released into the night sky, symbolizing hope and wishes for the future. The festivities often include traditional dance, music, and communal feasts, fostering a strong sense of community and cultural pride.', 'images/tazaungdaing.jpg', 'images/tazaungdaingb.jpg')">Tazaungdaing
+                (Kahtein Festival)</button>
+
+            <button
+                onclick="showContent('festival8', 'Tabodwe (Harvest Festival)', 'Tabodwe, or the Harvest Festival, is celebrated in February and marks the end of the harvest season in Myanmar. It is a time for farmers to celebrate their hard work and give thanks for the bountiful crops. During this festival, families come together to enjoy traditional foods, music, and dances. Various cultural activities and competitions are organized, promoting community spirit and cultural exchange. It serves as a reminder of the importance of agriculture in the country’s economy and cultural identity.', 'images/tabodwe.jpg', 'images/tabodweb.jpg')">Tabodwe
+                (Harvest Festival)</button>
+
+            <button
+                onclick="showContent('festival9', 'Kachin Manaw Festival', 'The Kachin Manaw Festival, held annually in January, celebrates the culture and traditions of the Kachin people. It features traditional dances, songs, and rituals, showcasing the rich cultural heritage of this ethnic group. During the festival, the Manaw pole, a symbol of Kachin identity, is erected and adorned with colorful flags and decorations. The festival not only serves as a platform for cultural expression but also strengthens community bonds and promotes unity among the Kachin people.', 'images/kachin.jpg', 'images/kachinb.jpg')">Kachin
+                Manaw Festival</button>
+
+            <button
+                onclick="showContent('festival10', 'Taungbyone Nat Festival', 'The Taungbyone Nat Festival, celebrated in August, is one of the most important spirit festivals in Myanmar. It is dedicated to the worship of Nats, or spirits, and involves various rituals and celebrations to honor them. During this festival, thousands of devotees visit the Taungbyone pagoda, offering food, flowers, and other gifts to the Nats. The atmosphere is filled with music, dance, and traditional performances, creating a vibrant and festive environment. It serves as an important cultural event that reflects the beliefs and traditions of the local communities.', 'images/taungbyone.jpg', 'images/taungbyoneb.jpg')">Taungbyone
+                Nat Festival</button>
+        </div>
+
+
+        <!-- Content Section -->
+        <section class="content" id="content-section">
+            <h1 id="content-title"></h1>
+            <p id="content-description"></p>
+            <div class="image-container">
+                <img id="content-image1" src="" alt="Image 1">
+                <img id="content-image2" src="" alt="Image 2">
             </div>
+        </section>
 
-
-            <!-- Item Menu for Events -->
-            <div class="item-menu" id="events-menu">
-                <button
-                    onclick="showContent('event1', 'Independence Day (January 4)', 'Independence Day celebrates Myanmar’s liberation from British colonial rule on January 4, 1948. The day is marked by flag-hoisting ceremonies, parades, and cultural performances across the country. It serves as a reminder of Myanmar’s sovereignty and the struggles faced in the quest for self-rule. In Yangon, people often gather at the Independence Monument in Maha Bandula Park to commemorate this historic day.', 'images/independence-day.jpeg', 'images/independence-day-b.jpeg')">Independence
-                    Day</button>
-
-                <button
-                    onclick="showContent('event2', 'Union Day (February 12)', 'Union Day commemorates the signing of the Panglong Agreement on February 12, 1947, which aimed to unite Myanmar\'s various ethnic groups under a single nation. The day highlights the country\'s diverse ethnic communities and their roles in shaping Myanmar\'s identity. Celebrations include cultural shows and speeches, focusing on unity, peace, and cooperation.', 'images/union-day.jpeg', 'images/union-day-b.jpeg')">Union
-                    Day</button>
-
-                <button
-                    onclick="showContent('event3', 'Martyrs\' Day (July 19)', 'Martyrs\' Day honors General Aung San and several other prominent leaders who were assassinated on July 19, 1947, while working towards Myanmar’s independence. Observed as a day of remembrance, people across the nation pay tribute to the martyrs with ceremonies and wreath-laying at the Martyrs’ Mausoleum in Yangon, reflecting on their sacrifices for the country\'s freedom.', 'images/martyrs-day.jpg', 'images/martyrs-day-b.jpg')">Martyrs'
-                    Day</button>
-
-                <button
-                    onclick="showContent('event3', '8888 Uprising(August 8)', 'The 1988 pro-democracy uprising, known as the 8888 Uprising. It serves as a solemn reminder of the citizens\' demand for democracy and freedom. Events on this day reflect on the sacrifices made by activists and continue to advocate for peace and reconciliation within Myanmar.The uprising symbolizes\ the enduring spirit of the Myanmar people in their struggle for human rights and democratic governance, inspiring future generations to continue the fight for justice and equality.', 'images/reconciliation-day.jpg', 'images/reconciliation-day-b.jpg')">8888
-                    Uprising </button>
-
-                <button
-                    onclick="showContent('event5', 'Peasant Day (March 2)', 'Peasant Day acknowledges the role of Myanmar\'s agricultural community in sustaining the country’s economy. Celebrated on March 2, the day focuses on supporting farmers and improving rural livelihoods. Government leaders often visit rural areas to express gratitude and discuss initiatives aimed at enhancing agricultural productivity and rural development.', 'images/peasant-day.jpeg', 'images/peasant-day-b.jpeg')">Peasant
-                    Day </button>
-
-                <button
-                    onclick="showContent('event6', 'The Ongoing Civil War', 'Myanmar’s ongoing civil war is one of the longest-running conflicts in the world, involving numerous ethnic armed groups and the central government. Rooted in historical and ethnic tensions, the conflict affects millions, leading to displacement and humanitarian issues. Despite various peace negotiations, challenges persist in reaching lasting agreements, making peace-building efforts a critical need for the country’s stability and unity.', 'images/civil-war.jpg', 'images/civil-war-b.jpg')">The
-                    Ongoing Civil War</button>
-            </div>
-
-
-
-            <!-- Item Menu for Festivals -->
-            <div class="item-menu" id="festivals-menu">
-                <button
-                    onclick="showContent('festival1', 'Thingyan (Water Festival)', 'Thingyan, also known as the Water Festival, is the most celebrated festival in Myanmar, marking the beginning of the Burmese New Year. Traditionally, it takes place in mid-April, during the hottest time of the year. The festival is famous for its water-splashing celebrations, where people pour water on each other to wash away sins and bad luck. Streets are filled with joyous crowds, music, and dance, and temporary stages are set up for performances. Many also visit pagodas to pay homage and to pour water over Buddha statues, symbolizing purification and renewal.', 'images/thingyan.jpg', 'images/thingyanb.jpg')">Thingyan
-                    (Water Festival)</button>
-
-                <button
-                    onclick="showContent('festival2', 'Kason Bo Tree Watering Festival', 'The Kason Bo Tree Watering Festival is celebrated in May and honors the sacred Bo tree, under which the Buddha attained enlightenment. Devotees gather at pagodas and monasteries to water the Bo trees with scented water and to perform various religious rites. This festival is not only a spiritual observance but also a time for families to come together and enjoy festive activities, such as traditional food and cultural performances. The act of watering the tree symbolizes the importance of nurturing wisdom and enlightenment in one’s life.', 'images/kason.jpg', 'images/kasonb.jpg')">Kason
-                    Bo Tree Watering Festival</button>
-
-                <button
-                    onclick="showContent('festival3', 'Taunggyi Balloon Festival', 'Held in Taunggyi during the Tazaungdaing month, the Taunggyi Balloon Festival is a vibrant and colorful event featuring hot air balloons and fireworks. It is celebrated by various ethnic groups and showcases their unique traditions and cultures. The highlight of the festival is the release of beautifully crafted hot air balloons into the night sky, many of which are adorned with intricate designs. This festival not only offers breathtaking sights but also brings together communities in celebration of their cultural heritage and solidarity.', 'images/taunggyi.jpg', 'images/taunggyib.jpg')">Taunggyi
-                    Balloon Festival</button>
-
-                <button
-                    onclick="showContent('festival4', 'Shwedagon Pagoda Festival', 'The Shwedagon Pagoda Festival is one of the most significant and revered festivals in Myanmar, taking place at the iconic Shwedagon Pagoda in Yangon. This festival typically occurs during the full moon of the month of Tabaung (March) and lasts several days. It is a time for spiritual reflection, devotion, and community gathering. Devotees come from all over the country to pay homage to the pagoda, which houses sacred relics of the Buddha. The festival features colorful processions, traditional music, and dance performances, as well as various religious ceremonies and offerings made by the faithful. Visitors can witness the stunning sight of the pagoda illuminated by thousands of candles and lights, creating a magical atmosphere that showcases the deep-rooted cultural heritage and spiritual significance of Buddhism in Myanmar.', 'images/shwedagon.jpg', 'images/shwedagonb.jpg')">Shwedagon
-                    Pagoda Festival</button>
-
-                <button
-                    onclick="showContent('festival5', 'Phaung Daw Oo Pagoda Festival', 'The Phaung Daw Oo Pagoda Festival is one of the most important religious festivals in Myanmar, held in Inle Lake in September or October. During this festival, the revered Phaung Daw Oo Buddha images are paraded on a grand boat, and thousands of locals and tourists participate in the festivities. Traditional boat races, cultural performances, and offerings at the pagoda are significant aspects of the celebration. The event highlights the rich cultural heritage of the Intha people and attracts visitors from all over the country.', 'images/phaung.jpg', 'images/phaungb.jpg')">Phaung
-                    Daw Oo Pagoda Festival</button>
-
-                <button
-                    onclick="showContent('festival6', 'Thadingyut (Lighting Festival)', 'Thadingyut, also known as the Festival of Lights, is celebrated in October, marking the end of the Buddhist Lent. This festival symbolizes the descent of the Buddha from heaven after preaching to his mother. People decorate their homes and public places with lights, candles, and colorful decorations, creating a magical atmosphere. It is a time for families to come together, visit temples, and pay respect to elders and teachers. The beautiful illumination seen throughout cities and towns during this time represents joy and gratitude.', 'images/thadingyut.jpg', 'images/thadingyutb.jpg')">Thadingyut
-                    (Lighting Festival)</button>
-
-                <button
-                    onclick="showContent('festival7', 'Tazaungdaing (Kahtein Festival)', 'The Tazaungdaing Festival, celebrated in November, is a significant event for Buddhists in Myanmar. It marks the end of the rainy season and is a time for giving and merit-making. People prepare colorful lights and decorations to honor the Buddha. This festival is known for its sky lanterns, which are released into the night sky, symbolizing hope and wishes for the future. The festivities often include traditional dance, music, and communal feasts, fostering a strong sense of community and cultural pride.', 'images/tazaungdaing.jpg', 'images/tazaungdaingb.jpg')">Tazaungdaing
-                    (Kahtein Festival)</button>
-
-                <button
-                    onclick="showContent('festival8', 'Tabodwe (Harvest Festival)', 'Tabodwe, or the Harvest Festival, is celebrated in February and marks the end of the harvest season in Myanmar. It is a time for farmers to celebrate their hard work and give thanks for the bountiful crops. During this festival, families come together to enjoy traditional foods, music, and dances. Various cultural activities and competitions are organized, promoting community spirit and cultural exchange. It serves as a reminder of the importance of agriculture in the country’s economy and cultural identity.', 'images/tabodwe.jpg', 'images/tabodweb.jpg')">Tabodwe
-                    (Harvest Festival)</button>
-
-                <button
-                    onclick="showContent('festival9', 'Kachin Manaw Festival', 'The Kachin Manaw Festival, held annually in January, celebrates the culture and traditions of the Kachin people. It features traditional dances, songs, and rituals, showcasing the rich cultural heritage of this ethnic group. During the festival, the Manaw pole, a symbol of Kachin identity, is erected and adorned with colorful flags and decorations. The festival not only serves as a platform for cultural expression but also strengthens community bonds and promotes unity among the Kachin people.', 'images/kachin.jpg', 'images/kachinb.jpg')">Kachin
-                    Manaw Festival</button>
-
-                <button
-                    onclick="showContent('festival10', 'Taungbyone Nat Festival', 'The Taungbyone Nat Festival, celebrated in August, is one of the most important spirit festivals in Myanmar. It is dedicated to the worship of Nats, or spirits, and involves various rituals and celebrations to honor them. During this festival, thousands of devotees visit the Taungbyone pagoda, offering food, flowers, and other gifts to the Nats. The atmosphere is filled with music, dance, and traditional performances, creating a vibrant and festive environment. It serves as an important cultural event that reflects the beliefs and traditions of the local communities.', 'images/taungbyone.jpg', 'images/taungbyoneb.jpg')">Taungbyone
-                    Nat Festival</button>
-            </div>
-
-
-            <!-- Content Section -->
-            <section class="content" id="content-section">
-                <h1 id="content-title"></h1>
-                <p id="content-description"></p>
-                <div class="image-container">
-                    <img id="content-image1" src="" alt="Image 1">
-                    <img id="content-image2" src="" alt="Image 2">
-                </div>
-            </section>
-        
 
         <script>
             // Show the selected item menu
