@@ -28,6 +28,9 @@
         crossorigin="anonymous"></script>
 </head>
 <style>
+    html {
+  scroll-behavior: smooth;
+    }
     /* Glassy Navbar Style */
     .navbar {
         background: rgba(5, 86, 236, 0.1);
@@ -490,6 +493,7 @@
         /* Add some space between the title and content */
         flex-wrap: wrap;
         /* Allow wrapping for smaller screens */
+        margin-buttom:20px;
     }
 
     .content h1 {
@@ -1160,6 +1164,21 @@
                 <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
             </div>
         </footer>
+        
+        <script>
+     // JavaScript for smooth scroll (if you need more control)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+    </script>
 </body>
 
 </html>
