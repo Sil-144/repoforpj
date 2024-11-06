@@ -26,6 +26,9 @@
     crossorigin="anonymous"></script>
 </head>
 <style>
+  html {
+  scroll-behavior: smooth;
+  }
   /* Glassy Navbar Style */
   .navbar {
     background: rgba(5, 86, 236, 0.1);
@@ -122,6 +125,38 @@
   .kachin {
     color:#D27C2C;
   }
+
+  /* Subtitle styling and animation */
+  .hero-title {
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 3.5s ease-out forwards;
+    animation-delay: 1.5s;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  
 
   /* <!--style starter for section card --> */
   place {
@@ -1302,5 +1337,20 @@ font-size: 36px; /* Adjust font size for mobile */
           <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
         </div>
       </footer>
+
+      <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
