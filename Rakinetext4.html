@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
+     html {
+      scroll-behavior: auto;
+    }
 .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
@@ -113,15 +116,41 @@
             z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+      .kachin {
+    color: #f39c12;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   
 
 
@@ -266,11 +295,11 @@
   }
 
 
-        section {
+       section {
             width: 100%;
             height: auto; /* Changed to auto for flexibility */
             font-family: Arial, sans-serif;
-            background-image: url(images/a22.jpg);
+            background-image: url(images/165433947700.jpg);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -282,6 +311,12 @@
             padding: 5vw; /* Added padding for better spacing */
         }
         section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
+        }
+          section h2 {
             color: white;
             font-size: 2.5rem; /* Use rem for responsiveness */
             margin-top: 2vw;
@@ -307,6 +342,9 @@
         }
         @media (max-width: 768px) {
             section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section h2 {
                 font-size: 1.5rem; /* Smaller font size for mobile */
             }
             section p {
@@ -482,24 +520,26 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"></a></li>
-        </ul>
-        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
-    </div>
-</div>
-</nav>
+           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+          </ul>
+  
+          <!-- Contact Button -->
+          <a href="form.html" class="btn btn-contact">Contact</a>
+        </div>
+      </div>
+    </nav>
 
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Htukkanthein Temple</h1>
+   
     
-</div>
-</header>
+ <h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Koe-thaung Temple</span></h1>
+        </header>
 
 <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
@@ -771,9 +811,11 @@ font-size: 36px; /* Adjust font size for mobile */
   </place>
     
       <section>
-        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Rakhine State</h1>
+        
+           <h1 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold;">Rakhine State</h1>
         <p>Rakhine State is located on the western coast of Myanmar. It has a long coastline on the Bay of Bengal in the west. The Arakan Mountains, rising to a height of 10,049 feet at Victoria Peak separate Rakhine State from central Burma. The state has some fairly large islands off the coast such as Cheduba and Myingun Islands. Rakhine hosts the Ngapali Beach, one of Myanmar’s premier beach destinations, located only 45 minutes by air from Yangon. Although the beach is quite popular, it is not very crowded. It is famous for its turquoise waters, wide stretches of white sand, palm tree groves and fishing village, it is relatively unspoilt. Rakhine offers a number of tourist spots such as Mrauk U, the ancient city of the Rakhine dynasty, Sittwe, Shitthaung Pagoda, Dukkanthein Pagoda, Kothaung Pagoda, Laymyatnha Pagoda, Andaw Pagoda and many more.</p>
-        <p style="color: #D27C2C; font-size: 1.5rem;">Koe-thaung Temple</p>
+      
+           <h2 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold ;">Koe-thaung Temple</h2>
         <p>Koe-thaung Temple is the largest Buddhist temple in Mrauk U, Myanmar. The name means "Temple of 90,000 Buddha Images". The temple was built between 1554 and 1556 by King Dikkha.</p>
         <p>There are 108 smaller pagodas surrounding it, all made of sandstone. With a winding corridor it is like a cave tunnel which you have to traverse until you reach the central chamber. The inner gallery has collapsed and is no longer accessible. There is an octagonal pagoda in the middle surrounded by over one hundred smaller pagodas. Unlike some of the other temples, not only sandstone, but bricks were also used.</p> 
         <p>Koe-Thaung Temple was constructed during the reign of King Min Saw Mon, who sought to establish Mrauk U as a prominent center of Buddhism and culture. The temple not only served as a place of worship but also symbolized the power and influence of the Arakan Kingdom at that time.</p> 
@@ -856,5 +898,19 @@ font-size: 36px; /* Adjust font size for mobile */
               <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
           </div>
       </footer>  
+      <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
