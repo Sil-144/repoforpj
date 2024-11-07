@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
+  html {
+      scroll-behavior: auto;
+    }
 .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
@@ -113,15 +116,41 @@
             z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+      .kachin {
+    color: #f39c12;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   
 
 
@@ -269,11 +298,11 @@
   }
 
 
-        section {
+       section {
             width: 100%;
             height: auto; /* Changed to auto for flexibility */
             font-family: Arial, sans-serif;
-            background-image: url(images/b22.jpg);
+            background-image: url(images/165433947700.jpg);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -285,6 +314,12 @@
             padding: 5vw; /* Added padding for better spacing */
         }
         section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
+        }
+          section h2 {
             color: white;
             font-size: 2.5rem; /* Use rem for responsiveness */
             margin-top: 2vw;
@@ -310,6 +345,9 @@
         }
         @media (max-width: 768px) {
             section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section h2 {
                 font-size: 1.5rem; /* Smaller font size for mobile */
             }
             section p {
@@ -485,24 +523,26 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"></a></li>
-        </ul>
-        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
-    </div>
-</div>
-</nav>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+              <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+            </ul>
+
+            <!-- Contact Button -->
+            <a href="form.html" class="btn btn-contact">Contact</a>
+          </div>
+        </div>
+      </nav>
 
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Kakku Pagodas</h1>
     
-</div>
-</header>
+    
+<h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Kakku Pagodas</span></h1>
+        </header>
 
 
       <place><!--here is the stater for section card-->
@@ -775,9 +815,11 @@ font-size: 36px; /* Adjust font size for mobile */
   </place>
 
       <section>
-        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Shan State</h1>
+ 
+            <h1 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold;">Shan State</h1>
         <p>Shan State, located in eastern Myanmar, is known for its stunning landscapes, rich cultural diversity, and historical significance. Covering a vast area, it is the largest state in Myanmar, bordered by China to the north, Laos to the east, and Thailand to the south. The state is characterized by its picturesque mountains, rolling hills, and lush valleys, making it a popular destination for nature lovers and adventure seekers.</p>
-        <p style="color: #D27C2C; font-size: 1.5rem;">Kakku Pagodas</p>
+        
+        <h2 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold ;">Kakku Pagodas</h2>
         <p>Kakku Pagodas, located in Shan State, Myanmar, is a remarkable complex of ancient Buddhist stupas that captivates visitors with its stunning architecture and rich history. Nestled in the hills near the town of Taunggyi, Kakku is home to over 2,000 intricately designed pagodas, many of which date back to the 12th century.</p>
         <p>The site is particularly known for its unique architectural style, characterized by ornate stucco work and intricate carvings that reflect the artistic traditions of the Shan people. Each stupa has its own distinctive features, creating a mesmerizing landscape that invites exploration and reflection.Kakku Pagodas hold significant cultural and spiritual importance, serving as a pilgrimage site for local devotees and visitors alike. The complex is surrounded by lush greenery and picturesque views of the Shan hills, enhancing its serene atmosphere.</p> 
         <p>Visiting Kakku offers a glimpse into the rich heritage of the region, showcasing the historical significance of Buddhism in Shan State. It is not only a spiritual site but also a testament to the artistic and architectural prowess of the past, making it a must-see destination for those exploring the beauty and culture of Myanmar.</p>   
@@ -858,7 +900,21 @@ font-size: 36px; /* Adjust font size for mobile */
           <div class="footer-bottom">
               <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
           </div>
-      </footer>  
+      </footer> 
+    <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
 
