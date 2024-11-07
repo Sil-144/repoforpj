@@ -28,10 +28,11 @@
         crossorigin="anonymous"></script>
 </head>
 <style>
-     /* Disable default smooth scrolling to use custom animation */
+    /* Disable default smooth scrolling to use custom animation */
     html {
-      scroll-behavior: auto;
+        scroll-behavior: auto;
     }
+
     /* Glassy Navbar Style */
     .navbar {
         background: rgba(5, 86, 236, 0.1);
@@ -168,7 +169,7 @@
     /* <!--style starter for section card --> */
     place {
         width: 100%;
-        height: 600px;
+        height: 700px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -286,8 +287,8 @@
         }
 
         .card {
-           width: 250px;
-      height: 390px;
+            width: 300px;
+            height: 450px;
             margin: 15px;
         }
 
@@ -346,7 +347,7 @@
     /* Heading styling */
     .main-menu h1 {
         font-size: 25px;
-        color: #536070;
+        color: #283546;
         font-weight: 700;
         /* Set a proper numeric weight */
         transition: color 0.5s ease;
@@ -457,7 +458,7 @@
 
     /* Default .item-menu styling */
     .item-menu {
-        display: flex;
+        display: none;
         margin-top: 10px;
         gap: 10px;
         flex-wrap: wrap;
@@ -466,7 +467,7 @@
 
     .item-menu button {
         padding: 10px;
-        width: 150px;
+        width: 160px;
         cursor: pointer;
         background-color: #b8a3a3;
         border: 1px solid #ccc;
@@ -475,8 +476,6 @@
         transition: background-color 0.3s;
         text-align: center;
         margin-top: 10px;
-        margin-right:10px;
-        margin-left:10px;
     }
 
     /* Hover effect for buttons */
@@ -484,7 +483,54 @@
         background-color: #e0e0e0;
     }
 
-   
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .item-menu {
+            gap: 5px;
+        }
+
+        .item-menu button {
+            width: 140px;
+            /* Adjust button width for smaller screens */
+            font-size: 12px;
+            /* Smaller font for better fit */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .item-menu {
+            flex-direction: column;
+            /* Stack buttons vertically on very small screens */
+            gap: 8px;
+        }
+
+        .item-menu button {
+            width: 100%;
+            /* Full-width buttons for small devices */
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+
+    /* Content Section Styling */
+    .content {
+        display: flex;
+        /* Makes the entire section a flex container */
+        flex-direction: column;
+        /* Stack children vertically */
+        width: 100%;
+        height: auto;
+        /* Change height to auto for flexibility */
+        margin-top: 5px;
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
     .content-body {
         display: flex;
         /* Use flexbox for horizontal alignment */
@@ -494,7 +540,6 @@
         /* Add some space between the title and content */
         flex-wrap: wrap;
         /* Allow wrapping for smaller screens */
-        margin-buttom:50px;
     }
 
     .content h1 {
@@ -1167,37 +1212,37 @@
         </footer>
 
         <script>
-     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const target = document.querySelector(this.getAttribute('href'));
-    const startPosition = window.pageYOffset;
-    const targetPosition = target.getBoundingClientRect().top + startPosition;
-    const duration = 1000; // Duration in ms for scroll
-    let startTime = null;
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-    function smoothScroll(currentTime) {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
-      
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(smoothScroll);
-    }
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const startPosition = window.pageYOffset;
+                    const targetPosition = target.getBoundingClientRect().top + startPosition;
+                    const duration = 1000; // Duration in ms for scroll
+                    let startTime = null;
 
-    function ease(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    }
+                    function smoothScroll(currentTime) {
+                        if (startTime === null) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
 
-    requestAnimationFrame(smoothScroll);
-  });
-});
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration) requestAnimationFrame(smoothScroll);
+                    }
 
-</script>
+                    function ease(t, b, c, d) {
+                        t /= d / 2;
+                        if (t < 1) return c / 2 * t * t + b;
+                        t--;
+                        return -c / 2 * (t * (t - 2) - 1) + b;
+                    }
+
+                    requestAnimationFrame(smoothScroll);
+                });
+            });
+
+        </script>
 </body>
 
 </html>
