@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
+     html {
+      scroll-behavior: auto;
+    }
 .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
@@ -113,16 +116,41 @@
             z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+       .kachin {
+    color: #f39c12;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
   
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 
 
       /* <!--style starter for section card --> */
@@ -269,7 +297,7 @@
             width: 100%;
             height: auto; /* Changed to auto for flexibility */
             font-family: Arial, sans-serif;
-            background-image: url(images/a21.jpg);
+            background-image: url(images/165433947700.jpg);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -281,6 +309,12 @@
             padding: 5vw; /* Added padding for better spacing */
         }
         section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
+        }
+          section h2 {
             color: white;
             font-size: 2.5rem; /* Use rem for responsiveness */
             margin-top: 2vw;
@@ -306,6 +340,9 @@
         }
         @media (max-width: 768px) {
             section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section h2 {
                 font-size: 1.5rem; /* Smaller font size for mobile */
             }
             section p {
@@ -481,24 +518,28 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"></a></li>
-        </ul>
-        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
-    </div>
-</div>
-</nav>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+          </ul>
+  
+          <!-- Contact Button -->
+          <a href="form.html" class="btn btn-contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
 
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Htukkanthein Temple</h1>
+  
     
-</div>
-</header>
+<h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Htukkanthein Temple</span></h1>
+        </header>
+
 
 <place><!--here is the stater for section card-->
     <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
@@ -769,9 +810,11 @@ font-size: 36px; /* Adjust font size for mobile */
     </div>
   </place>
       <section>
-        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Rakhine State</h1>
+        
+           <h1 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold;">Rakhine State</h1>
         <p>Rakhine State is located on the western coast of Myanmar. It has a long coastline on the Bay of Bengal in the west. The Arakan Mountains, rising to a height of 10,049 feet at Victoria Peak separate Rakhine State from central Burma. The state has some fairly large islands off the coast such as Cheduba and Myingun Islands. Rakhine hosts the Ngapali Beach, one of Myanmar’s premier beach destinations, located only 45 minutes by air from Yangon. Although the beach is quite popular, it is not very crowded. It is famous for its turquoise waters, wide stretches of white sand, palm tree groves and fishing village, it is relatively unspoilt. Rakhine offers a number of tourist spots such as Mrauk U, the ancient city of the Rakhine dynasty, Sittwe, Shitthaung Pagoda, Dukkanthein Pagoda, Kothaung Pagoda, Laymyatnha Pagoda, Andaw Pagoda and many more.</p>
-        <p style="color: #D27C2C; font-size: 1.5rem;">Htukkanthein Temple</p>
+        
+          <h2 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold ;">Htukkanthein Temple</h2>
         <p>Htukkanthein Temple is one of the most famous Buddhist temples in the ancient Arakanese city of Mrauk U, in Rakhine State, Western Myanmar. The name means "Cross-Beam Ordination Hall".</p>
         <p>Like most of Mrauk U's Buddhist temples, it is designed as a dual purpose 'fortress-temple'. Although it is a 'thein' (ordination hall), it is one of the most militaristic buildings in Mrauk U, built on raised ground, with a single entrance and small windows. According to Emil Forchhammer, an archaeologist employed by the British Raj to study Mrauk U in the late 19th century, the temples might have been employed as a refuge for the Buddhist religious order in times of war.</p> 
         <p>The temple enshrining the statues of Buddha was built in 1571 by King Min Phalaung. It is located on a small hill a stone's throw away from the Shite-thaung Temple. At the centre of the temple is a dome topped with a mushroom shaped crown or hti, surrounded by four smaller stupas at the corners. At the facade base of the central dome is a square window designed in such a manner that, at dawn, the sun's rays shine directly onto the main Buddha image inside the central vault. At the west side of the temple is a small meditation chamber, accessible only via the main temple.</p> 
@@ -855,6 +898,19 @@ font-size: 36px; /* Adjust font size for mobile */
               <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
           </div>
       </footer>    
+       <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
         
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script> 
 </body>
 </html>
