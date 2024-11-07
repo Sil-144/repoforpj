@@ -18,7 +18,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
-   .navbar {
+    /* Disable default smooth scrolling to use custom animation */
+    html {
+      scroll-behavior: auto;
+    }
+        .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
             border-radius: 12px;
@@ -123,7 +127,41 @@
             font-size: 1.5rem;
         }
   
+        .Bago {
+    color: #f39c12;
+  }
 
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 
        /* <!--style starter for section card --> */
       place {
@@ -498,7 +536,7 @@ font-size: 36px; /* Adjust font size for mobile */
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Shwethalyaung Buddha</h1>
+    <h1 class="hero-title" id="hero-title">Welcome to <span class="Bago"> Shwethalyaung Buddha</span></h1>
     
 </div>
 </header>
@@ -857,5 +895,39 @@ font-size: 36px; /* Adjust font size for mobile */
       <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
   </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function(e) {
+   e.preventDefault();
+   
+   const target = document.querySelector(this.getAttribute('href'));
+   const startPosition = window.pageYOffset;
+   const targetPosition = target.getBoundingClientRect().top + startPosition;
+   const duration = 1000; // Duration in ms for scroll
+   let startTime = null;
+
+   function smoothScroll(currentTime) {
+     if (startTime === null) startTime = currentTime;
+     const timeElapsed = currentTime - startTime;
+     const run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
+     
+     window.scrollTo(0, run);
+     if (timeElapsed < duration) requestAnimationFrame(smoothScroll);
+   }
+
+   function ease(t, b, c, d) {
+     t /= d / 2;
+     if (t < 1) return c / 2 * t * t + b;
+     t--;
+     return -c / 2 * (t * (t - 2) - 1) + b;
+   }
+
+   requestAnimationFrame(smoothScroll);
+ });
+});
+
+</script>
+
 </body>
 </html>
