@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
+    html {
+      scroll-behavior: auto;
+    }
       .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
@@ -113,15 +116,41 @@
             z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+       .kachin {
+    color: #f39c12;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   
 
 
@@ -271,7 +300,7 @@
             width: 100%;
             height: auto; /* Changed to auto for flexibility */
             font-family: Arial, sans-serif;
-            background-image: url(images/b24.jpg);
+            background-image: url(images/165433947700.jpg);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -283,6 +312,12 @@
             padding: 5vw; /* Added padding for better spacing */
         }
         section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
+        }
+          section h2 {
             color: white;
             font-size: 2.5rem; /* Use rem for responsiveness */
             margin-top: 2vw;
@@ -308,6 +343,9 @@
         }
         @media (max-width: 768px) {
             section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section h2 {
                 font-size: 1.5rem; /* Smaller font size for mobile */
             }
             section p {
@@ -483,24 +521,26 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"></a></li>
-        </ul>
-        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
-    </div>
-</div>
-</nav>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+              <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+            </ul>
+
+            <!-- Contact Button -->
+            <a href="form.html" class="btn btn-contact">Contact</a>
+          </div>
+        </div>
+      </nav>
 
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to The Goteik Viaduct</h1>
+   
     
-</div>
-</header>
+<h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">The Goteik Viaduct</span></h1>
+        </header>
 
 
      <place><!--here is the stater for section card-->
@@ -772,9 +812,11 @@ font-size: 36px; /* Adjust font size for mobile */
     </div>
   </place>
       <section>
-        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Shan State</h1>
+      
+         <h1 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold;">Shan State</h1>
         <p>Shan State, located in eastern Myanmar, is known for its stunning landscapes, rich cultural diversity, and historical significance. Covering a vast area, it is the largest state in Myanmar, bordered by China to the north, Laos to the east, and Thailand to the south. The state is characterized by its picturesque mountains, rolling hills, and lush valleys, making it a popular destination for nature lovers and adventure seekers.</p>
-        <p style="color: #D27C2C; font-size: 1.5rem;">The Goteik Viaduct</p>
+        
+         <h2 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold ;">The Goteik Viaduct</h2>
         <p>The Goteik Viaduct, located in Shan State, Myanmar, is a remarkable feat of engineering and an iconic landmark that showcases the country’s rich history and stunning landscapes. Completed in 1900 during the British colonial period, the viaduct is one of the tallest railway bridges in the world, standing at approximately 102 meters (335 feet) above the Goteik Gorge.</p>
         <p>Spanning 689 meters (2,267 feet), the Goteik Viaduct was constructed using steel and features a lattice design that is both functional and visually striking. At the time of its completion, it was considered one of the most impressive railway bridges globally, and its construction involved skilled workers from various backgrounds, including local laborers and British engineers.</p> 
         <p>The viaduct offers breathtaking views of the surrounding hills and valleys, making it a popular spot for photographers and travelers. As trains traverse the bridge, passengers are treated to panoramic vistas of the lush landscapes and the picturesque Goteik Gorge below, enhancing the overall travel experience.Originally built to connect the Shan State to the rest of Myanmar, the Goteik Viaduct played a crucial role in the development of the region's infrastructure and economy. It facilitated the transport of goods and people, contributing to the growth of trade and tourism in the area.Today, the Goteik Viaduct remains a significant attraction for both locals and tourists. Visitors can experience train rides across the viaduct, enjoying the thrill of crossing this engineering marvel while taking in the natural beauty surrounding it. The bridge also serves as a reminder of Myanmar's colonial past and its journey towards modernity.</p>   
@@ -856,6 +898,20 @@ font-size: 36px; /* Adjust font size for mobile */
           <div class="footer-bottom">
               <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
           </div>
-      </footer>  
+      </footer> 
+     <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
