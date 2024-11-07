@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <style>
+    html {
+      scroll-behavior: auto;
+    }
 .navbar {
             background: rgba(5, 86, 236, 0.1); /* Transparent background */
             backdrop-filter: blur(10px); /* Glass effect */
@@ -113,15 +116,41 @@
             z-index: 2;
         }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+         .kachin {
+    color: #f39c12;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   
 
 
@@ -268,11 +297,11 @@
     }
   }
 
-        section {
+         section {
             width: 100%;
             height: auto; /* Changed to auto for flexibility */
             font-family: Arial, sans-serif;
-            background-image: url(images/b20.jpg);
+            background-image: url(images/165433947700.jpg);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -284,6 +313,12 @@
             padding: 5vw; /* Added padding for better spacing */
         }
         section h1 {
+            color: white;
+            font-size: 2.5rem; /* Use rem for responsiveness */
+            margin-top: 2vw;
+            text-align: center; /* Centered the heading */
+        }
+          section h2 {
             color: white;
             font-size: 2.5rem; /* Use rem for responsiveness */
             margin-top: 2vw;
@@ -309,6 +344,9 @@
         }
         @media (max-width: 768px) {
             section h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            section h2 {
                 font-size: 1.5rem; /* Smaller font size for mobile */
             }
             section p {
@@ -485,24 +523,26 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"></a></li>
-        </ul>
-        <a href="form.html" class="btn btn-login ms-auto">Contact</a>
-    </div>
-</div>
-</nav>
+           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and festivals</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+          </ul>
+  
+          <!-- Contact Button -->
+          <a href="form.html" class="btn btn-contact">Contact</a>
+        </div>
+      </div>
+    </nav>
 
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Inle Lake</h1>
+
     
-</div>
-</header>
+<h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Inle Lake</span></h1>
+        </header>
 
 
      <place><!--here is the stater for section card-->
@@ -776,9 +816,11 @@ font-size: 36px; /* Adjust font size for mobile */
     
 
       <section>
-        <h1 style="font-family: 'Jacques Francois Shadow', serif;">Shan State</h1>
+       
+        <h1 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold;">Shan State</h1>
         <p>Shan State, located in eastern Myanmar, is known for its stunning landscapes, rich cultural diversity, and historical significance. Covering a vast area, it is the largest state in Myanmar, bordered by China to the north, Laos to the east, and Thailand to the south. The state is characterized by its picturesque mountains, rolling hills, and lush valleys, making it a popular destination for nature lovers and adventure seekers.</p>
-        <p style="color: #D27C2C; font-size: 1.5rem;">Inle Lake</p>
+        
+         <h2 style="color:#cc6504;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight:bold ;">Inle Lake</h2>
         <p>Inle Lake is the second largest lake in Myanmar and is located at the heart of the country. The lake is surrounded by mountains on all sides offering a breathtaking natural view. The area is rich in animals and plant species and you can see some of the rarest species here. The lake is home to several ethnic tribes of Myanmar who follow well-preserved traditions and cultures. Inle Lake is one of the must-visit places in Myanmar.</p>
         <p>There are 17 villages on the shore and islands on Inle Lake. Each village has its own culture and traditions which are unique in its own way.People live in houses made on stilts. In fact, spending a night or two at stilt houses are the main tourist attraction of Inle Lake.Inle Lake offers one of its kind shopping experience. Each village has its own floating market where traders wander and sell their products.A visit will provide you with an opportunity to interact with locals and learn some of their traditional ways of planting, fishing, cooking and making handicrafts. The villagers are warm and friendly who are keen to to open up to tourists. You will feel their warmth when you interact with them. Explore Inle and discover nature as you have never seen before.</p> 
         <p>Inle Lake provides the perfect balance of rural Myanmarese lifestyle as well as mesmerising natural beauty. There are 17 villages at this lake where the villagers belong to different ethnic groups such as the Intha who are called the people of Inle Lake, Shan, Taungyo, Pa-Oo, Danu, Kayah, Danaw and Bamar. People in this area are mostly Buddhists and are highly self-sufficient. The main source of livelihood is farming and fishing. The villagers are famous for a one-legged boat rowing technique that can only be seen at Inle Lake. The lake itself contains a variety of endemic species thus becoming one of the most naturally rich area in Myanmar.</p>   
@@ -860,6 +902,20 @@ font-size: 36px; /* Adjust font size for mobile */
               <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
           </div>
       </footer>  
+     <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
 
