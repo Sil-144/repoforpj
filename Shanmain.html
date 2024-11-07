@@ -26,6 +26,9 @@
     crossorigin="anonymous"></script>
 </head>
 <style>
+    html {
+      scroll-behavior: auto;
+    }
   /* Glassy Navbar Style */
   .navbar {
     background: rgba(5, 86, 236, 0.1);
@@ -110,14 +113,40 @@
     z-index: 2;
   }
 
+  .kachin {
+    color: #f39c12;
+  }
+
+  /* Title styling and animation */
   .hero-title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .hero-subtitle {
-    font-size: 1.5rem;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   /* <!--style starter for section card --> */
@@ -800,10 +829,10 @@ font-size: 36px; /* Adjust font size for mobile */
       <!-- Hero Section -->
       <header class="hero-section">
         <div class="hero-content">
-          <h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Shan State</span></h1>
+         
 
-        </div>
-      </header>
+       <h1 class="hero-title" id="hero-title">Welcome to <span class="kachin">Shan State</span></h1>
+        </header>
 
        <place><!--here is the stater for section card-->
         <h1 id="sectionA"> Explore the Diversity of States and Regions</h1>
@@ -1268,5 +1297,19 @@ font-size: 36px; /* Adjust font size for mobile */
           <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
         </div>
       </footer>
+       <script>
+    // JavaScript for smooth scroll (if you need more control)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+      </script>
 </body>
 </html>
