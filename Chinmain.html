@@ -73,7 +73,7 @@
         /* Hero Section */
         .hero-section {
             position: relative;
-            background-image: url(images/165433947700.jpg); /* Replace with your background image path */
+            background-image: url(images/165433947700.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -161,23 +161,18 @@
     justify-content: center;
     width: 80%;
     overflow: hidden;
-    /* Hide overflowing cards */
     position: relative;
-    /* For arrow positioning */
   }
 
   .cards-wrapper {
     display: flex;
     transition: transform 0.5s ease;
-    /* Smooth transition */
   }
 
   .card {
     position: relative;
     width: 260px;
-    /* Width of the cards */
     height: 400px;
-    /* Height of the cards */
     margin: 20px;
     text-decoration: none;
     color: black;
@@ -213,36 +208,26 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    /* Center vertically */
     transform: translateY(-50%);
-    /* Adjust for exact centering */
     background-color: white;
-    /* White background for visibility */
     border: 2px solid black;
-    /* Border color */
     border-radius: 50%;
-    /* Round button */
     padding: 5px;
     z-index: 1;
-    /* Ensure arrows are above cards */
     box-shadow: 0 4px 10px white;
     display: none;
-    /* Hide arrows initially */
   }
 
   .left-arrow {
     left: 1px;
-    /* Position closer to the first card */
   }
 
   .right-arrow {
     right: 1px;
-    /* Position closer to the fourth card */
   }
 
   .arrow.visible {
     display: block;
-    /* Show arrows when needed */
   }
 
   @media (min-width: 992px) and (max-width: 1440px) {
@@ -283,7 +268,7 @@ article{
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  z-index: -1; /* Make sure it's behind content */
+  z-index: -1;
   overflow: hidden;
   font-size: 45px;
   color: white;
@@ -304,40 +289,40 @@ main {
         }
 
         .sectioncard {
-            width: 87%; /* Default width for mobile */
-            max-width: 800px; /* Set max width for larger screens */
+            width: 87%; 
+            max-width: 800px; 
             background-color: whitesmoke;
             border-radius: 25px;
-            margin: 15px auto; /* Center cards */
-            display: flex; /* Use flexbox for card layout */
-            flex-direction: column; /* Stack elements vertically by default */
-            padding: 10px; /* Add padding for spacing */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+            margin: 15px auto;
+            display: flex; 
+            flex-direction: column; 
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
         }
 
         .sectioncard img {
-            width: 100%; /* Make image responsive */
-            height: 300px; /* Fixed height for uniformity */
-            object-fit: cover; /* Maintain aspect ratio and cover */
+            width: 100%; 
+            height: 300px;
+            object-fit: cover;
             border-radius: 25px;
         }
 
         .sectiontext {
             display: flex;
-            flex-direction: column; /* Stack text vertically */
-            justify-content: center; /* Center text vertically */
-            padding: 10px; /* Padding for spacing */
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px; 
         }
 
         .sectiontext h3 {
-            font-size: 24px; /* Set heading size */
-            margin: 10px 0; /* Add margin for spacing */
+            font-size: 24px;
+            margin: 10px 0;
         }
 
         .sectiontext p {
             color: black;
-            text-align: justify; /* Justify text */
-            margin: 0; /* Remove default margin */
+            text-align: justify;
+            margin: 0; 
         }
 
         .button4 {
@@ -345,11 +330,11 @@ main {
             color: black;
             border: 2px solid #555555;
             border-radius: 8px;
-            cursor: pointer; /* Change cursor on hover */
-            margin-top: 10px; /* Add margin to separate from text */
-            align-self: flex-start; /* Align button to the left */
-            padding: 10px 15px; /* Add padding for the button */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            cursor: pointer; 
+            margin-top: 10px;
+            align-self: flex-start;
+            padding: 10px 15px; 
+            transition: background-color 0.3s, color 0.3s; 
         }
 
         .button4:hover {
@@ -357,29 +342,29 @@ main {
             color: white;
         }
 
-        /* Media Query for Larger Screens */
+      
         @media (min-width: 768px) {
             .sectioncard {
                 flex-direction: row;
-                margin-top: 4vw; /* Change layout to row for larger screens */
+                margin-top: 4vw; 
             }
 
             .sectioncard img {
-                width: 337px; /* Image takes 40% of card width */
-                height: 250px; /* Maintain aspect ratio */
+                width: 337px;
+                height: 250px;
             }
 
             .sectiontext {
-                padding-left: 20px; /* Increase padding for larger screens */
-                width: 60%; /* Allow text area to take remaining space */
+                padding-left: 20px;
+                width: 60%; 
             }
 
             .sectiontext h3 {
-                font-size: 28px; /* Increase heading size for larger screens */
+                font-size: 28px; 
             }
 
             .sectiontext p {
-                font-size: 16px; /* Adjust paragraph font size */
+                font-size: 16px;
             }
         }
 
@@ -1228,7 +1213,7 @@ font-size: 36px; /* Adjust font size for mobile */
                         <td style="padding: 10px;"><a href="Magwaymain.html" target="_blank">Magway Region</a></td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px;"><a href="moon festival.html" target="_blank">Events</a></td>
+                        <td style="padding: 10px;"><a href="eventandfestival.html" target="_blank">Events</a></td>
                         <td style="padding: 10px;"><a href="Kayin.html" target="_blank">Kayin State</a></td>
                         <td style="padding: 10px;"><a href="Mandalaymain.html" target="_blank">Mandalay Region</a></td>
                         <td style="padding: 10px;"><a href="sagaingmain.html" target="_blank">Sagaing Region</a></td>
