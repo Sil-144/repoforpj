@@ -87,47 +87,84 @@
             background-color: #7a9e25;
             color: white;
         }
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            background-image: url(images/lampi.jpg); /* Replace with your background image path */
-             background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
+/* Hero Section */
+  .hero-section {
+    position: relative;
+    background-image: url(images/e16.jpg);
+    /* Replace with your background image path */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
-            z-index: 1;
-        }
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay effect */
+    z-index: 1;
+  }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-        }
-  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .lampi {
+    color: #D27C2C;
+  }
+
+  /* Title styling and animation */
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 
 
         place {
@@ -484,10 +521,10 @@ font-size: 36px; /* Adjust font size for mobile */
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Where to go</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Events and Festivals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sectionA">Where to go</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventandfestival.html">Events and Festivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
             <li class="nav-item"><a class="nav-link" href="#"></a></li>
         </ul>
         <a href="form.html" class="btn btn-login ms-auto">Contact</a>
@@ -498,7 +535,7 @@ font-size: 36px; /* Adjust font size for mobile */
 <!-- Hero Section -->
 <header class="hero-section">
 <div class="hero-content">
-    <h1 class="hero-title">Welcome to Lampi Marine National Park</h1>
+    <h1 class="hero-title">Welcome to <span class="lampi"> Lampi Marine National Park</span></h1>
     
 </div>
 </header>
