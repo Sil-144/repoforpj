@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private-section/
+Allow: /public-page.html
+Sitemap: https://followurdreamtotravel.onrender.com/sitemap.xml
