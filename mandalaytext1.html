@@ -492,10 +492,15 @@ font-size: 36px; /* Adjust font size for mobile */
         }
 
         .footer-bottom {
-            align-items: center;
-            margin-top: 20px;
-            font-size: 16px;
-            margin-left: 40%;
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            text-align: center;
+            margin: 20px auto; 
+            font-size: 16px; 
+            padding: 10px; 
+            width: 90%; 
+            box-sizing: border-box; 
         }
 
         @media (max-width: 768px) {
@@ -511,9 +516,15 @@ font-size: 36px; /* Adjust font size for mobile */
 
             
             .footer-bottom {
-                font-size: 11px; 
-                margin-left: 20%;
-               
+                font-size: 12px; 
+                width: 100%; 
+                padding: 8px; 
+            }
+        }
+            @media (max-width: 480px) {
+            .footer-bottom {
+                font-size: 10px; 
+                padding: 5px; 
             }
         }
 </style>
@@ -856,7 +867,7 @@ font-size: 36px; /* Adjust font size for mobile */
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 GB-Cheerful Chums. All rights reserved.</p>
+            <span>Part of Project Work in NUCS . Copyright © 2024 All rights reserved NUCS : National University of Computer Studies <br>This is only the website that used only for Academic Project Testing </span>
         </div>
     </footer>  
     <script>
